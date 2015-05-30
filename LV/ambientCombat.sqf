@@ -202,9 +202,9 @@ while{true}do{
 			};
 		}else{
 			if(surfaceIsWater _spawnPos)then{
-				_grp = [_spawnPos, _side, [10,3]] call LV_fullWaterVehicle;
+				_grp = [_spawnPos, _side, [4,3]] call LV_fullWaterVehicle;
 			}else{
-				_grp = [_spawnPos, _side, [10,3]] call LV_menGroup;
+				_grp = [_spawnPos, _side, [4,3]] call LV_menGroup;
 			};
 		};
 		if(typeName _skills != "STRING")then{_skls = [_grp,_skills] call LV_ACskills;};

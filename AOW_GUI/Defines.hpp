@@ -114,7 +114,7 @@ class Cruoriss_BOX
     idc = 1;
     style = ST_CENTER;
     shadow = 2;
-    colorBackground[] = {0.388,0.482,0.294,1};
+    colorBackground[] = {0.325,0.325,0.325,0.700};
     colorText[] = {0,0,0,1};
     font = "PuristaLight";
     sizeEx = 0.03;

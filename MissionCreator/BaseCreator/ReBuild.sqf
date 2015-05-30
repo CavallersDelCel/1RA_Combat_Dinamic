@@ -27,7 +27,7 @@ if (getMarkerColor "VVS1" == "") then {
 	[[NBShip, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBAmmo, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBAmmo2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	// Modificació dels Cavallers del Cel per CC_Viper
+	/************** Canvis dels Cavallers del Cel per CC_Viper ***************************/
 	[[NBAmmobox, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[cartell01, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[cartell02, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
@@ -38,6 +38,8 @@ if (getMarkerColor "VVS1" == "") then {
 	[[baseFlagPole3, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[tablet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[taulapet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	/************** Fi dels canvis dels Cavallers del Cel per CC_Viper *******************/
+	
 };
 
 // Flag Pole
@@ -58,7 +60,7 @@ _mVVS1 = createMarker ["VVS1", getPos HVVS1];
 _mVVS1 setMarkerType "b_motor_inf";
 _mVVS1 setMarkerText localize "str_AOW_Marker_Car";
 _mVVS1 setMarkerDir (getDir NBCar);
-NBCar setObjectTextureGlobal [0, "images\Car.paa"];
+NBCar setObjectTextureGlobal [0, "images\cart_cotxes.paa"];
 [[NBCar, [localize "str_AOW_Menu_Car",{[["cars"], [], "VVS1"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // ARMORED SPAWNER
@@ -66,7 +68,7 @@ _mVVS2 = createMarker ["VVS2", getPos HVVS2];
 _mVVS2 setMarkerType "b_armor";
 _mVVS2 setMarkerText localize "str_AOW_Marker_Tank";
 _mVVS2 setMarkerDir (getDir NBArmored);
-NBArmored setObjectTextureGlobal [0, "images\Armored.paa"];
+NBArmored setObjectTextureGlobal [0, "images\cart_blindats.paa"];
 [[NBArmored, [localize "str_AOW_Menu_Tank",{[["tanks"], [], "VVS2"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // HELICOPTER SPAWNER
@@ -74,7 +76,7 @@ _mVVS3 = createMarker ["VVS3", getPos HVVS3];
 _mVVS3 setMarkerType "b_air";
 _mVVS3 setMarkerText localize "str_AOW_Marker_Heli";
 _mVVS3 setMarkerDir (getDir HVVS3);
-NBHelicopter setObjectTextureGlobal [0, "images\Helicopter.paa"];
+NBHelicopter setObjectTextureGlobal [0, "images\cart_helicopters.paa"];
 [[NBHelicopter, [localize "str_AOW_Menu_Heli",{[["helicopters"], [], "VVS3"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // SUPPORT SPAWNER
@@ -82,7 +84,7 @@ _mVVS4 = createMarker ["VVS4", getPos HVVS4];
 _mVVS4 setMarkerType "b_support";
 _mVVS4 setMarkerText localize "str_AOW_Marker_Support";
 _mVVS4 setMarkerDir (getDir NBSupport);
-NBSupport setObjectTextureGlobal [0, "images\Support.paa"];
+NBSupport setObjectTextureGlobal [0, "images\cart_suport.paa"];
 [[NBSupport, [localize "str_AOW_Menu_Support",{[["support"], [], "VVS4"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // PLANE SPAWNER
@@ -92,7 +94,7 @@ _HMmVVS5 setMarkerType "b_plane";
 _HMmVVS5 setMarkerText localize "str_AOW_Marker_Plane";
 _HMmVVS5 setMarkerDir (getDir NBPlane);
 _mVVS5 setMarkerDir (getDir HVVS5);
-NBPlane setObjectTextureGlobal [0, "images\Plane.paa"];
+NBPlane setObjectTextureGlobal [0, "images\cart_avions.paa"];
 [[NBPlane, [localize "str_AOW_Menu_SpawnP_1",{[["planes"], [], "AOW_PlaneDelivery"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBPlane, [localize "str_AOW_Menu_SpawnP_2","[] execVM 'MissionCreator\BaseCreator\DialogSpawner.sqf'; AOW_Selected_Spawner = 2",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBPlane, [localize "str_AOW_Menu_SpawnP_3","MissionCreator\BaseCreator\TPPlane.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
@@ -103,7 +105,7 @@ _mVVS6 = createMarker ["VVS6", getPos HVVS6];
 _mVVS6 setMarkerType "b_uav";
 _mVVS6 setMarkerText localize "str_AOW_Marker_Drone";
 _mVVS6 setMarkerDir (getDir NBDrone);
-NBDrone setObjectTextureGlobal [0, "images\Autonomous.paa"];
+NBDrone setObjectTextureGlobal [0, "images\cart_drones.paa"];
 [[NBDrone, [localize "str_AOW_Menu_Drone",{[["autonomous"], [], "VVS6"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // SHIP SPAWNER
@@ -111,34 +113,32 @@ _mVVS7 = createMarker ["VVS7", getPos NBShip];
 _mVVS7 setMarkerType "b_naval";
 _mVVS7 setMarkerText localize "str_AOW_Marker_Ship";
 _mVVS7 setMarkerDir (getDir NBDrone);
-NBShip setObjectTextureGlobal [0, "images\Sea.paa"];
+NBShip setObjectTextureGlobal [0, "images\cart_vaixells.paa"];
 [[NBShip, [localize "str_AOW_Menu_SpawnS_1",{[["ships"], [], "AOW_ShipDelivery"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBShip, [localize "str_AOW_Menu_SpawnS_2","[] execVM 'MissionCreator\BaseCreator\DialogSpawner.sqf'; AOW_Selected_Spawner = 1",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBShip, [localize "str_AOW_Menu_SpawnS_3","MissionCreator\BaseCreator\TPShip.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // AMMO DEPOT
 [[NBAmmo, [localize "str_AOW_Menu_Ammo1","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[NBAmmo, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'AOW_Respawn_Loadout']] call BIS_fnc_saveInventory; profileNamespace setVariable ['AOW_Respawn_Loadout_Check',1]; hint'Loadout Saved';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmo, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'AOW_Respawn_Loadout']] call BIS_fnc_saveInventory; profileNamespace setVariable ['AOW_Respawn_Loadout_Check',1]; hint'Equipament desat';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBAmmo, [localize "str_AOW_Menu_Ammo3","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-NBAmmo setObjectTextureGlobal [0, "images\Ammo.paa"];
-NBAmmo2 setObjectTextureGlobal [0, "images\Ammo2.paa"];
+NBAmmo setObjectTextureGlobal [0, "images\cart_arsenal1.paa"];
+NBAmmo2 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 publicVariable "NBAmmo2";
-NBAmmo3 setObjectTextureGlobal [0, "images\Ammo2.paa"];
-NBAmmo4 setObjectTextureGlobal [0, "images\Ammo2.paa"];
-NBAmmo5 setObjectTextureGlobal [0, "images\Ammo2.paa"];
+NBAmmo3 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
+NBAmmo4 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
+NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 
-// Modificació dels Cavallers del Cel per CC_Viper
+/************** Canvis dels Cavallers del Cel per CC_Viper ***************************/
 //AMMOBOX DEPOT
 [[NBAmmobox, ["<t color='#ff1111'>Virtual Arsenal</t>","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBAmmobox, ["<t color='#ff1111'>Establir l'equipament actual com a perfil de reaparicio</t>","[player, [profileNamespace, 'CD_Equipament']] call BIS_fnc_saveInventory; profileNamespace setVariable ['CD_Equipament_Check',1]; hint'Loadout Saved';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBAmmobox, ["<t color='#ff1111'>Editor d'equipament (Requereix mod)</t>","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
-// Modificació dels Cavallers del Cel per CC_Viper
 // Tablet perfils
 [[tablet, ["<t color='#027CE7'>Desar perfils 1RA</t>","1RAPerfils.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 tablet attachTo [taulapet, [0,0.5,0.57]];
 
-// Modificació dels Cavallers del Cel per CC_Viper
 // Sign images
 Sign1 setObjectTextureGlobal [0, "images\cart_campcavallers.paa"];
 Sign2 setObjectTextureGlobal [0, "images\cart_relax.paa"];
@@ -157,6 +157,7 @@ cartell01 setObjectTextureGlobal [0, "images\Cartell_01_ServerCC_A3.paa"];
 cartell02 setObjectTextureGlobal [0, "images\Cartell_02_ServerCC_A3.paa"];
 cartell03 setObjectTextureGlobal [0, "images\Cartell_03_ServerCC_A3.paa"];
 cartell04 setObjectTextureGlobal [0, "images\Cartell_04_ServerCC_A3.paa"];
+/************** Fi dels canvis dels Cavallers del Cel per CC_Viper *******************/
 
 // Vehicle repair
 _mRepair = createMarker ["Repair_marker", getPos Hrepair];

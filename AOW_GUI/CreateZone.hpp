@@ -262,7 +262,7 @@ class AOW_Zone_Text_11: Cruoriss_RscText
 	text = $STR_AOW_Zone_size; //--- ToDo: Localize;
 	x = 0.391576 * safezoneW + safezoneX;
 	y = 0.695 * safezoneH + safezoneY;
-	w = 0.060 * safezoneW;
+	w = 0.055 * safezoneW;
 	h = 0.033 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
 };

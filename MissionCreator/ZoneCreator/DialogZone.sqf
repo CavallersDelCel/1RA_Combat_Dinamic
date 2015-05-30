@@ -26,12 +26,12 @@ _oldAIFaction = _oldvalues select 10; // Faction
 
 // Pre set option
 _index_zone_preset_0 = lbAdd [4731, "Manual"];
-_index_zone_preset_1 = lbAdd [4731, "Very Easy"];
-_index_zone_preset_2 = lbAdd [4731, "Easy"];
-_index_zone_preset_3 = lbAdd [4731, "Medium"];
-_index_zone_preset_4 = lbAdd [4731, "Hard"];
-_index_zone_preset_5= lbAdd [4731, "Very Hard"];
-_index_zone_preset_6 = lbAdd [4731, "Insane"];
+_index_zone_preset_1 = lbAdd [4731, "Molt facil"];
+_index_zone_preset_2 = lbAdd [4731, "Facil"];
+_index_zone_preset_3 = lbAdd [4731, "Normal"];
+_index_zone_preset_4 = lbAdd [4731, "Dificil"];
+_index_zone_preset_5= lbAdd [4731, "Molt dificil"];
+_index_zone_preset_6 = lbAdd [4731, "Dement"];
 lbSetCurSel [4731, _index_zone_preset_0];
 
 // Marker size X

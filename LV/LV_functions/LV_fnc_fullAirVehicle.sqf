@@ -8,7 +8,7 @@ _ambiantside = (paramsArray select 11);
 switch (_ambiantside) do {
 case 1: {// DEFAULT ARMA 3
 _BLUveh = ["B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Heli_Transport_01_F","B_Heli_Transport_03_F"];
-_OPFveh = ["O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Heli_Light_02_F","O_Heli_Transport_04_bench_F"];
+_OPFveh = ["O_Heli_Light_02_F"];
 _INDveh = ["I_Heli_Transport_02_F","I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F"];
 };
 case 2: {// EAST VS WEST
