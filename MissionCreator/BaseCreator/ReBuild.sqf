@@ -27,6 +27,17 @@ if (getMarkerColor "VVS1" == "") then {
 	[[NBShip, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBAmmo, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBAmmo2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	// Modificació dels Cavallers del Cel per CC_Viper
+	[[NBAmmobox, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[cartell01, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[cartell02, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[cartell03, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[cartell04, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[baseFlagPole, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[baseFlagPole2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[baseFlagPole3, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[tablet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	[[taulapet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 };
 
 // Flag Pole
@@ -116,12 +127,36 @@ NBAmmo3 setObjectTextureGlobal [0, "images\Ammo2.paa"];
 NBAmmo4 setObjectTextureGlobal [0, "images\Ammo2.paa"];
 NBAmmo5 setObjectTextureGlobal [0, "images\Ammo2.paa"];
 
+// Modificació dels Cavallers del Cel per CC_Viper
+//AMMOBOX DEPOT
+[[NBAmmobox, ["<t color='#ff1111'>Virtual Arsenal</t>","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmobox, ["<t color='#ff1111'>Establir l'equipament actual com a perfil de reaparicio</t>","[player, [profileNamespace, 'CD_Equipament']] call BIS_fnc_saveInventory; profileNamespace setVariable ['CD_Equipament_Check',1]; hint'Loadout Saved';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmobox, ["<t color='#ff1111'>Editor d'equipament (Requereix mod)</t>","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+
+// Modificació dels Cavallers del Cel per CC_Viper
+// Tablet perfils
+[[tablet, ["<t color='#027CE7'>Desar perfils 1RA</t>","1RAPerfils.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+tablet attachTo [taulapet, [0,0.5,0.57]];
+
+// Modificació dels Cavallers del Cel per CC_Viper
 // Sign images
-Sign1 setObjectTextureGlobal [0, "images\1.paa"];
-Sign2 setObjectTextureGlobal [0, "images\2.paa"];
-Sign2b setObjectTextureGlobal [0, "images\2.paa"];
-Sign3 setObjectTextureGlobal [0, "images\3.paa"];
-Sign4 setObjectTextureGlobal [0, "images\4.paa"];
+Sign1 setObjectTextureGlobal [0, "images\cart_campcavallers.paa"];
+Sign2 setObjectTextureGlobal [0, "images\cart_relax.paa"];
+Sign2b setObjectTextureGlobal [0, "images\cart_relax.paa"];
+Sign3 setObjectTextureGlobal [0, "images\cart_stop1.paa"];
+Sign4 setObjectTextureGlobal [0, "images\cart_stop2.paa"];
+cart_repair setObjectTextureGlobal [0, "images\cart_reparacio.paa"];
+
+// Textures de banderes
+baseFlagPole setFlagTexture "images\senyera.paa";
+baseFlagPole2 setFlagTexture "images\flag_1ra.paa";
+baseFlagPole3 setFlagTexture "images\flag_cc.paa";
+
+// Imatges de cartells
+cartell01 setObjectTextureGlobal [0, "images\Cartell_01_ServerCC_A3.paa"];
+cartell02 setObjectTextureGlobal [0, "images\Cartell_02_ServerCC_A3.paa"];
+cartell03 setObjectTextureGlobal [0, "images\Cartell_03_ServerCC_A3.paa"];
+cartell04 setObjectTextureGlobal [0, "images\Cartell_04_ServerCC_A3.paa"];
 
 // Vehicle repair
 _mRepair = createMarker ["Repair_marker", getPos Hrepair];
