@@ -1,0 +1,182 @@
+Author = "Cruoriss";
+OnLoadName = "All Out Warfare";
+OnLoadMission = "$STR_AOW_Title";
+loadScreen = "images\Overview.jpg";
+overviewPicture = "images\Overview.jpg";
+disabledAI = 1;
+respawn = 3;
+RespawnDelay = 15;
+respawnTemplates[] = {"Counter","Revive"};
+respawnOnStart = -1;
+reviveDelay = 8;
+reviveForceRespawnDelay = 5;
+reviveBleedOutDelay = 180;
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 42;
+};
+
+// AOW GUI
+#include "AOW_GUI\Defines.hpp"
+#include "AOW_GUI\AowMenu.hpp"
+#include "AOW_GUI\CreateDefense.hpp"
+#include "AOW_GUI\CreateTasks.hpp"
+#include "AOW_GUI\CreateZone.hpp"
+#include "AOW_GUI\CreateBase.hpp"
+#include "AOW_GUI\CreateSpawner.hpp"
+
+// VARIOUS GUI
+#include "ASORVS\menu.hpp"
+#include "ATM_airdrop\dialog.hpp"
+#include "CHVD\dialog.hpp"
+#include "bon_recruit_units\dialog\common.hpp"
+#include "bon_recruit_units\dialog\recruitment.hpp"
+#include "infected\infectedsounds.hpp"
+#include "pxs_satcom_a3\init_interface.hpp"
+
+class CfgFunctions
+{
+  #include "infected\cfgfunctions.hpp"
+  #include "ASORVS\cfgfunctions.hpp"
+  #include "CHVD\CfgFunctions.hpp"
+  #include "EPD\EPDcfgFunctions.hpp"
+  #include "ais_injury\cfgFunctionsAIS.hpp"
+};
+
+class Params
+{
+    class A0W_BlankParam1
+    {// 0
+      title = $STR_AOW_Weather_Option;
+      values[] = {-99999};
+      texts[] = {""};
+      default = -99999;
+    };
+    class AOW_Daytime
+    {// 1
+      title = $STR_AOW_Time_of_day;
+      texts[] = {"0200","0400","0600","0800","1000","1200","1400","1600","1800","2000","2200","2400"};
+      values[] = {2,4,6,8,10,12,14,16,18,20,22,0};
+      default = 14;
+      function = "BIS_fnc_paramDaytime";
+      isGlobal = 0;
+    };
+    class AOW_TimeAcceleration
+    {// 2
+      title = $STR_AOW_Time_AA;
+      values[] = {0,10,20,30,40,50,60};
+      texts[] = {$STR_AOW_Disabled,"10","20",$STR_AOW_Time_AA_1,"40","50",$STR_AOW_Time_AA_2};
+      default = 0;
+    };
+    class AOW_initialWeather
+    {// 3
+      title = $STR_AOW_Dynamic_weather;
+      values[] = {0,1,2,3,4,5};
+      texts[] = {"Clear","Overcast","Rain","Fog","Random","Disabled"};
+      default = 4;
+    };
+    class AOW_BlankParam2
+    {// 4
+      title = $STR_AOW_Misc_Option;
+      values[] = {-99999};
+      texts[] = {""};
+      default = -99999;
+    };
+    class AOW_MaxAI
+    {// 5
+      title = $STR_AOW_Max_AI;
+      values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+      texts[] = {"0 ( Recruit Disabled )","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
+      default = 16;
+    };
+    class AOW_CivilianLife
+    {// 6
+      title = $STR_AOW_Civil_Fact;
+      values[] = {0,1,2};
+      texts[] = {"Altis Civilians","CAF_AG : Middle East Civilians","CAF_AG : Africa Civilians"};
+      default = 0;
+    };
+    class AOW_PlayerFatigue
+    {// 7
+      title = $STR_AOW_Fatigue;
+      values[] = {0,1,2};
+      texts[] = {"No Fatigue / Unlimited Stamina","Normal Fatigue / Normal Stamina","Low fatigue / High Stamina"};
+      default = 1;
+    };
+ class AOW_DamageMultiplier
+// 8
+{
+title = $STR_AOW_DamageMultiplier;
+values[] = {10,1,2,3};
+texts[] = {"0.5 (Hard)","1 (Normal)","2 (Easy)","3 (Very Easy)"};
+default = 1;
+       };
+class AOW_DisableSupport
+// 9
+{
+title = $STR_AOW_Support_requester;
+values[] = {0,1,2,3};
+texts[] = {"Disabled","Only Logistic (Transport/SupplyDrop)","Only Offensive (CAS/Artillery)","All Enabled"};
+default = 3;
+       };
+class AOW_BlankParam5
+// 10
+{
+title = $STR_AOW_IA_Option;
+values[] = {-99999};
+texts[] = {""};
+default = -99999;
+       };
+class AOW_EnableAmbient
+{// 11
+title = $STR_AOW_EnableAmbient;
+values[] = {0,1,2,3,4};
+texts[] = {"No","Yes (No Mod)","Yes (EASTvsWEST)","Yes (RHS ESCALATION)","Yes (IRON FRONT)"};
+default = 0;
+       };
+class AOW_AIAmbiant
+{// 12
+title = $STR_AOW_AIAmbiant;
+values[] = {3,6,9,12,15,18,21};
+texts[] = {"3","6 groups","9","12","15","18","21"};
+default = 6;
+       };
+class AOW_UPSMON_param
+{// 13
+title = $STR_AOW_UPSMON_param;
+values[] = {0,1,2};
+texts[] = {"Disabled","UPSMON (Low performance hit, only affect non ambiant infantry)","VCOM AI (Medium performance hit, affect every unit)"};
+default = 0;
+       };
+class AOW_AISkillAcc
+{// 14
+title = $STR_AOW_AISkillAcc;
+values[] = {1,2,3,4,5,6,7,8,9,10};
+texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
+default = 5;
+       };
+class AOW_AIDistance
+{// 15
+title = $STR_AOW_AIDistance;
+values[] = {1000,1500,2000,2500,3000,4000,5000,0};
+texts[] = {"1000","1500 meters","2000","2500","3000","4000","5000","Unlimited (caching disabled)"};
+default = 1500;
+       };
+class AOW_BlankParam3
+{// 16
+title = $STR_AOW_Revive_Option;
+values[] = {-99999};
+texts[] = {""};
+default = -99999;
+       };
+class AOW_DisableReviveF
+{// 17
+title = $STR_AOW_DisableReviveF;
+values[] = {0,1};
+texts[] = {"Built in revive for players + recruited AI","Off (to be used with addon version revive)"};
+default = 0;
+       };
+};

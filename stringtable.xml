@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="All Out Warfare">
+  <Container name="AOW_Main_Stringtable">
+	<Key ID="STR_AOW_Title">
+      <Original>All Out Warfare is a dynamic coop mission creator, with many features to create your own operations .</Original>
+      <French>All Out Warfare est un créateur dynamique de mission coop, avec de nombreuses possibilités pour créer vos propres opérations .</French>
+    </Key>
+  <Key ID="STR_AOW_Disabled">
+      <Original>Disabled</Original>
+      <French>Désactivé</French>
+    </Key>
+  <Key ID="STR_AOW_Enabled">
+      <Original>Enabled</Original>
+      <French>Activé</French>
+    </Key>
+  <Key ID="STR_AOW_Weather_Option">
+      <Original>----------------------------------- Time/Weather -----------------------------------</Original>
+      <French>----------------------------------- Heure/Météo -----------------------------------</French>
+    </Key>
+  <Key ID="STR_AOW_Time_AA">
+      <Original>Time acceleration</Original>
+      <French>Accélération du temps</French>
+    </Key>
+  <Key ID="STR_AOW_Time_AA_1">
+      <Original>30 (1 day = 48 min)</Original>
+      <French>30 (1 jour  = 48 min)</French>
+    </Key>
+  <Key ID="STR_AOW_Time_AA_2">
+      <Original>60 (1 day = 24 min)</Original>
+      <French>60 (1 jour = 24 min)</French>
+    </Key>
+  <Key ID="STR_AOW_Time_of_day">
+      <Original>Time of day</Original>
+      <French>Heure de la journée</French>
+    </Key>
+  <Key ID="STR_AOW_Dynamic_weather">
+      <Original>Dynamic weather</Original>
+      <French>Météo dynamique</French>
+    </Key>
+  <Key ID="STR_AOW_Misc_Option">
+      <Original>----------------------------------- Misc -----------------------------------</Original>
+      <French>----------------------------------- Divers -----------------------------------</French>
+    </Key>
+  <Key ID="STR_AOW_Max_AI">
+      <Original>Maximum number of AIs that a squad leader can recruit</Original>
+      <French>Nombre d'IA maximum qu'un chef d'équipe peut recruter</French>
+    </Key>
+  <Key ID="STR_AOW_Civil_Fact">
+      <Original>Civilian faction for zone creator</Original>
+      <French>Faction civil du créateur de zone</French>
+    </Key>
+  <Key ID="STR_AOW_Fatigue">
+      <Original>Player fatigue</Original>
+      <French>Fatigue du joueur</French>
+    </Key>
+  <Key ID="STR_AOW_DamageMultiplier">
+      <Original>Damage multiplier (how much damage enemy infantry take)</Original>
+      <French>Multiplicateur de dégats (quantitée de dégats que l'infanterie ennemie reçoit)</French>
+    </Key>
+  <Key ID="STR_AOW_Support_requester">
+      <Original>Support requester</Original>
+      <French>Demande soutien</French>
+    </Key>
+  <Key ID="STR_AOW_IA_Option">
+      <Original>----------------------------------- Enemy AI parameters -----------------------------------</Original>
+      <French>----------------------------------- Paramétrage de l'IA ennemie -----------------------------------</French>
+  </Key>
+  <Key ID="STR_AOW_EnableAmbient">
+      <Original>Ambient combat</Original>
+      <French>Combat ambient</French>
+    </Key>
+  <Key ID="STR_AOW_AIAmbiant">
+      <Original>Ambiant combat intensity (needs ambient combat to be enabled)</Original>
+      <French>Intensité des combats ambients (combat ambient doit être activé)</French>
+    </Key>
+  <Key ID="STR_AOW_UPSMON_param">
+      <Original>Built in AI enhancement script</Original>
+      <French>Utiliser une amélioration de scripts pour l'IA</French>
+    </Key>
+  <Key ID="STR_AOW_AISkillAcc">
+      <Original>Enemy AI skill</Original>
+      <French>Skill de l'IA</French>
+    </Key>
+  <Key ID="STR_AOW_AIDistance">
+      <Original>AI caching distance (How far from players will AI start to get cached, help to incease performance)</Original>
+      <French>Disparition de l'IA en fonction de la distance des joueurs (améliore les performances)</French>
+    </Key>
+  <Key ID="STR_AOW_Revive_Option">
+      <Original>----------------------------------- Revive Options -----------------------------------</Original>
+      <French>----------------------------------- Options de réanimation -----------------------------------</French>
+    </Key>
+  <Key ID="STR_AOW_DisableReviveF">
+      <Original>Revive system</Original>
+      <French>Système de réanimation</French>
+    </Key>
+	<Key ID="str_AOW_Respawn1">
+      <Original>Another player is currently choosing the base location, please wait...</Original>
+      <French>Un autre joueur choisi actuellement la location de la base, veuillez patienter...</French>
+    </Key>
+	<Key ID="str_AOW_Choose_Base">
+      <Original>Choose how to place the Base</Original>
+      <French>Choisir comment placer votre base</French>
+    </Key>
+	<Key ID="str_AOW_Choose_Base2">
+      <Original>Choose delivery point direction</Original>
+      <French>Choisir la direction du lieu de livraison</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base1">
+      <Original>You must be the game master to create tasks</Original>
+      <French>Vous devez être le maïtre du jeu pour créer des missions</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base1_1">
+      <Original>You must be the game master to relocate the base</Original>
+      <French>Vous devez être le maitre du jeu pour relocaliser la base</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base1_2">
+      <Original>You must be the game master to create a enemy zone</Original>
+      <French>Vous devez être le maïtre du jeu pour créer une zone ennemie</French>
+    </Key>
+  <Key ID="str_AOW_Place_Tasks">
+      <Original>Click on the map to create objectives</Original>
+      <French>Cliquez sur la carte pour créer des objectifs</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base_Zone">
+      <Original>Click on the map to create an enemy zone, hold ALT and click on it to delete it</Original>
+      <French>Cliquer sur la carte pour créer une zone ennemie, maintenir ALT et cliquer sur la zone pour la supprimer</French>
+    </Key>
+	<Key ID="str_AOW_Game_Zone">
+      <Original>The zone is being generated, you may experience a few lags</Original>
+      <French>La génération de la zone peut provoquer quelques lags le temps de sa mise en place</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base2">
+      <Original>Base generating, please wait a few seconds</Original>
+      <French>Base en construction, veuillez patienter</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base3">
+      <Original>If using random does nothing after 1 minute, re start the mission and use on map click placement</Original>
+      <French>Si le placement aléatoire ne se lance pas après 1 minute, redémarrer la mission et utiliser le placement sur carte</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base4">
+      <Original>Click on the map where you want the base to be placed (DO NOT EXIT THE MAP BEFORE PLACING IT)</Original>
+      <French>Cliquer sur la carte pour choisir l'emplacement de votre base (NE QUITTEZ PAS LA CARTE AVANT D'AVOIR PLACE VOTRE BASE)</French>
+    </Key>
+	<Key ID="str_AOW_Game_Base5">
+      <Original>Base generation completed, you may experience a few lags while the new base sync</Original>
+      <French>Génération de la base terminée, vous pourrez rencontrer quelques lags le temps de la synchronisation de la base</French>
+    </Key>
+	<Key ID="str_AOW_Flag1">
+      <Original>Getting Started</Original>
+      <French>Créer votre première mission</French>
+    </Key>
+	<Key ID="str_AOW_Flag2">
+      <Original>Create your own mission from the flagpole under the hangar tent, also check the briefing for further intel.</Original>
+      <French>Créer votre première mission depuis le porte-drapeau sous le hangar, lisez aussi le briefing pour plus d'informations.</French>
+    </Key>
+	<Key ID="str_AOW_Menu1">
+      <Original>&lt;t color='#ff0000'&gt;AOW Menu&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Menu AOW&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu2">
+      <Original>&lt;t color='#ff0000'&gt;AI Zone creator&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Créateur de zone d'IA&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu3">
+      <Original>&lt;t color='#ff0000'&gt;Task creator&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Créateur d'objectifs&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu4">
+      <Original>&lt;t color='#ff0000'&gt;Relocate your base&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Relocaliser votre base&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Car">
+      <Original>&lt;t color='#ff0000'&gt;Spawn cars&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître voitures&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Tank">
+      <Original>&lt;t color='#ff0000'&gt;Spawn tanks&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître blindés&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Heli">
+      <Original>&lt;t color='#ff0000'&gt;Spawn helicopters&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître hélicoptères&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Support">
+      <Original>&lt;t color='#ff0000'&gt;Spawn supports&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître supports logistiques&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Drone">
+      <Original>&lt;t color='#ff0000'&gt;Spawn drones&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître drones&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnP_1">
+      <Original>&lt;t color='#ff0000'&gt;Spawn planes on delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître avions sur le lieu de livraison&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnP_2">
+      <Original>&lt;t color='#ff0000'&gt;Place planes delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Placer lieu de livraison pour avions&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnP_3">
+      <Original>&lt;t color='#ff0000'&gt;Teleport on planes delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Téléporter au point de livraison pour avions&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnP_4">
+      <Original>&lt;t color='#ff0000'&gt;Spawn Planes directly flying&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître avion en vol&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnS_1">
+      <Original>&lt;t color='#ff0000'&gt;Spawn ships on delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Faire apparaître bateaux sur le lieu de livraison&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnS_2">
+      <Original>&lt;t color='#ff0000'&gt;Place ships delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Placer lieu de livraison pour bateaux&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_SpawnS_3">
+      <Original>&lt;t color='#ff0000'&gt;Teleport on ships delivery point&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Téléporter au point de lvraison pour bateaux&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Ammo1">
+      <Original>&lt;t color='#ff0000'&gt;Virtual Arsenal&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Arsenal Virtuel&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Ammo2">
+      <Original>&lt;t color='#ff0000'&gt;Save current loadout&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Sauvegarder équipement actuel&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Menu_Ammo3">
+      <Original>&lt;t color='#ff0000'&gt;Loadout Editor A3 (Mod required)&lt;/t&gt;</Original>
+      <French>&lt;t color='#ff0000'&gt;Loadout Editor A3 (Mod requis)&lt;/t&gt;</French>
+    </Key>
+	<Key ID="str_AOW_Place_Plane">
+      <Original>Place a delivery point first</Original>
+      <French>Choisissez d'abord un lieu de livraison</French>
+    </Key>
+	<Key ID="str_AOW_Defense1">
+      <Original>Defense</Original>
+      <French>Défendre</French>
+    </Key>
+	<Key ID="str_AOW_Defense2">
+      <Original>Defend a zone from a massive enemy attack, failed if every player in the zone die or chicken out. ---------------------------------- Defense Color Legend : Blue = Over / Light Orange = Waiting player to start attack countdown / Dark Orange = Attack in progress</Original>
+      <French>Défendre une zone d'une attaque ennemie massive. Echec si tout les joueurs dans la zone sont morts ou s'enfuient. ---------------------------------- Légende des couleurs : Bleu = Fini / Orange clair = Attente du déclenchement de l'attaque par le joueur / Orange foncé = Attaque en cours</French>
+    </Key>
+	<Key ID="str_AOW_Assault1">
+      <Original>Assault</Original>
+      <French>Assaut</French>
+    </Key>
+	<Key ID="str_AOW_Assault2">
+      <Original>Hold the center of the base (where the marker is) during 1 minute, it's highly recomended to add an enemy zone along this task</Original>
+      <French>Tenir le centre de la base (position du marqueur) pendant une minute. Il est fortement recommandé d'ajouter une zone ennemie pour cet objectif</French>
+    </Key>
+	<Key ID="str_AOW_Disarm1">
+      <Original>Disarm</Original>
+      <French>Désarmer</French>
+    </Key>
+	<Key ID="str_AOW_Disarm2">
+      <Original>Disarm the IEDs, approach from them as slowly as possible, task failed if 50% of them or more explode</Original>
+      <French>Désarmer des IEDs. Pour se faire, s'approcher le plus lentement possible est fortement recommandé, la mission sera un échec si 50%  ou plus des IEDs explosent</French>
+    </Key>
+	<Key ID="str_AOW_Capture1">
+      <Original>Capture</Original>
+      <French>Capturer</French>
+    </Key>
+	<Key ID="str_AOW_Capture2">
+      <Original>Get in the motorized vehicle and bring it back to your base</Original>
+      <French>Récupérer le véhicule motorisé et le ramener à votre base</French>
+    </Key>
+	<Key ID="str_AOW_Extraction1">
+      <Original>Rescue</Original>
+      <French>Secourir</French>
+    </Key>
+	<Key ID="str_AOW_Extraction2">
+      <Original>Rescude and escort a VIP back to your base</Original>
+      <French>Secourir et ramener un VIP à votre base</French>
+    </Key>
+	<Key ID="str_AOW_Destroy1">
+      <Original>Destroy</Original>
+      <French>Détruire</French>
+    </Key>
+	<Key ID="str_AOW_Destroy2">
+      <Original>Destroy an abandoned enemy tank</Original>
+      <French>Détruire un tank énemi abandonné</French>
+    </Key>
+	<Key ID="str_AOW_Assassinate1">
+      <Original>Assassinate</Original>
+      <French>Assassiner</French>
+    </Key>
+	<Key ID="str_AOW_Assassinate2">
+      <Original>Take down a an enemy spy disguised as a civilian</Original>
+      <French>Eliminer un espion ennemi déguiser en civil</French>
+    </Key>
+	<Key ID="str_AOW_Find1">
+      <Original>Search and destroy</Original>
+      <French>Rechercher et détruire</French>
+    </Key>
+	<Key ID="str_AOW_Find2">
+      <Original>Find the ammobox and destroy it</Original>
+      <French>Rechercher et détruire une cache d'armes</French>
+    </Key>
+	<Key ID="str_AOW_Sabotage1">
+      <Original>Sabotage</Original>
+      <French>Saboter</French>
+    </Key>
+	<Key ID="str_AOW_Sabotage2">
+      <Original>Find the radio tower and destroy it</Original>
+      <French>Localiser la tour radio et la détruire</French>
+    </Key>
+	<Key ID="str_AOW_IntelT">
+      <Original>------------Tasks Intel ------------</Original>
+      <French>---------Objectifs de mission---------</French>
+    </Key>
+	<Key ID="str_AOW_Tuto1">
+      <Original>How to play?</Original>
+      <French>Comment jouer?</French>
+    </Key>
+	<Key ID="str_AOW_Tuto2">
+      <Original>Use the flagpole under the hangar tent to acces the mission creator as long as a menu with multiple features, you can also acces multiple vehicle spawners and a virutal arsenal located on the noticeboards inside the base.</Original>
+      <French>Utilisez le porte-drapeau dans le hangar de la base pour accéder aux différents menus permettant de créer vos missions. De plus, plusieurs panneaux d'indications vous permettront de faire apparaître de nombreux véhicules ainsi que de personnaliser votre équipement.</French>
+    </Key>
+	<Key ID="str_AOW_Creator1">
+      <Original>Version : 2.7</Original>
+      <French>Version : 2.7</French>
+    </Key>
+	<Key ID="str_AOW_Creator2">
+      <Original>See the forum thread for full changelog : http://forums.bistudio.com/showthread.php?181502-COOP-All-Out-Warfare</Original>
+      <French>Suivez l'actualité et les nouveautés de All Out Warfare : http://forums.bistudio.com/showthread.php?181502-COOP-All-Out-Warfare</French>
+    </Key>
+  <Key ID="str_AOW_Tips1">
+      <Original>Tips</Original>
+      <French>Astuces</French>
+    </Key>
+  <Key ID="str_AOW_Tips2">
+      <Original>You can repair vehicles if you're carrying a toolkit. //// Hold SPACE to revive a player, use action wheel to revive bots. //// Always read the hints that appear on the top right of your screen. //// Press U by default to open the squad manager</Original>
+      <French>Vous pouvez réparer vos véhicules si vous transportez un kit de réparation. //// Maintenez ESPACE pour réannimer un joueur, utilisez le roue d'action pour réanimer un bot. //// Lisez toujours les hints qui apparaissent en haut a droite de votre écran. //// Appuyez sur U par défaut pour ouvrir la gestion d'escouade</French>
+    </Key>
+	<Key ID="STR_AOW_Recrut1">
+      <Original>Unit recruitement</Original>
+      <French>Recrutement d'unités</French>
+    </Key>
+	<Key ID="STR_AOW_Author1">
+      <Original>All Out Warfare by Cruoriss</Original>
+      <French>All Out Warfare par Cruoriss</French>
+    </Key>
+	<Key ID="STR_AOW_Close">
+      <Original>Close</Original>
+      <French>Fermer</French>
+    </Key>
+	<Key ID="STR_AOW_MHQ_Functions">
+      <Original>MHQ Functions</Original>
+      <French>Fonctions MHQ</French>
+    </Key>
+	<Key ID="STR_AOW_Misc_Functions">
+      <Original>Misc</Original>
+      <French>Divers</French>
+    </Key>
+	<Key ID="STR_AOW_Create">
+      <Original>Create</Original>
+      <French>Créer</French>
+    </Key>
+	<Key ID="STR_AOW_Teleport">
+      <Original>Teleport</Original>
+      <French>Téléporter</French>
+    </Key>
+	<Key ID="STR_AOW_HALO">
+      <Original>HALO</Original>
+      <French>HALO</French>
+    </Key>
+	<Key ID="STR_AOW_Recruit">
+      <Original>Recruit</Original>
+      <French>Recruter</French>
+    </Key>
+	<Key ID="STR_AOW_Satcom">
+      <Original>SATCOM</Original>
+      <French>SATCOM</French>
+    </Key>
+	<Key ID="STR_AOW_Settings">
+      <Original>Settings</Original>
+      <French>Options</French>
+    </Key>
+	<Key ID="STR_AOW_Random">
+      <Original>Random</Original>
+      <French>Aléatoire</French>
+    </Key>
+	<Key ID="STR_AOW_On_map_click">
+      <Original>On map click</Original>
+      <French>Sur la carte</French>
+    </Key>
+	<Key ID="STR_AOW_Cancel">
+      <Original>Cancel</Original>
+      <French>Annuler</French>
+    </Key>
+	<Key ID="STR_AOW_On_map_click2">
+      <Original>Base direction (if using on map click placement)</Original>
+      <French>Direction de la base (si vous utilisez le placement sur la carte)</French>
+    </Key>
+  <Key ID="STR_AOW_On_map_click3">
+      <Original>You MUST choose the base location on mission start</Original>
+      <French>Vous DEVEZ choisir la location de la base au début de la mission</French>
+    </Key>
+	<Key ID="STR_AOW_Confirm">
+      <Original>Confirm</Original>
+      <French>Confirmer</French>
+    </Key>
+	<Key ID="STR_AOW_Waves">
+      <Original>Waves</Original>
+      <French>Vagues</French>
+    </Key>
+	<Key ID="STR_AOW_Delay">
+      <Original>Pause</Original>
+      <French>Pause</French>
+    </Key>
+	<Key ID="STR_AOW_Infantry">
+      <Original>Infantry</Original>
+      <French>Infanterie</French>
+    </Key>
+	<Key ID="STR_AOW_Size_Infantry">
+      <Original>Size Infantry</Original>
+      <French>Taille Infanterie</French>
+    </Key>
+	<Key ID="STR_AOW_Motorized">
+      <Original>Motorized</Original>
+      <French>Motorisés</French>
+    </Key>
+	<Key ID="STR_AOW_Armored">
+      <Original>Armored</Original>
+      <French>Blindés</French>
+    </Key>
+	<Key ID="STR_AOW_Static">
+      <Original>Static</Original>
+      <French>Fixes</French>
+    </Key>
+  <Key ID="STR_AOW_UnusedDef">
+      <Original>Unused for defense</Original>
+      <French>Non utilisé pour la défense</French>
+    </Key>
+	<Key ID="STR_AOW_Air">
+      <Original>Air</Original>
+      <French>Aériens</French>
+    </Key>
+	<Key ID="STR_AOW_Faction">
+      <Original>Faction</Original>
+      <French>Faction</French>
+    </Key>
+	<Key ID="STR_AOW_Faction2">
+      <Original>Faction of AIs that will spawn, some require mods</Original>
+      <French>Faction des IA qui apparaîtront dans la zone, des mods peuvent être requis en fonction des factions</French>
+    </Key>
+	<Key ID="STR_AOW_Zone_size">
+      <Original>Zone size</Original>
+      <French>Taille zone</French>
+    </Key>
+	<Key ID="STR_AOW_Manual1">
+      <Original>If you want to use the values bellow, leave manual, if you want the mission to generate random values, choose a difficulty (still need to set zone size and faction)</Original>
+      <French>Si vous souhaitez utiliser les valeurs ci-dessous, utilisez manuel, si vous souhaitez que la mission génère des valeurs aléatoires, choississez un niveau difficulté (vous devez cependant toujours choisir la taille de la zone et la faction ennemie)</French>
+    </Key>
+	<Key ID="STR_AOW_Wave2">
+      <Original>Number of waves</Original>
+      <French>Nombre de vagues</French>
+    </Key>
+	<Key ID="STR_AOW_Delay2">
+      <Original>Pause length between each waves</Original>
+      <French>Temps de la pause entre chaque vagues</French>
+    </Key>
+	<Key ID="STR_AOW_Infantry2">
+      <Original>Number of AI infantry groups that will spawn moving toward the zone</Original>
+      <French>Nombre de groupes d'infanterie gérées par l'IA qui apparaîtront se dirigeant vers la zone</French>
+    </Key>
+	<Key ID="STR_AOW_Size_Infantry2">
+      <Original>Size of each AI infantry groups that will spawn moving toward the zone</Original>
+      <French>Taille de chaque groupe d'infanterie gérées par l'IA qui apparaîtront se dirigeant vers la zone</French>
+    </Key>
+  <Key ID="STR_AOW_Infantry3">
+      <Original>Number of AI infantry groups that will spawn patrolling the zone</Original>
+      <French>Nombre de groupes d'infanterie gérées par l'IA qui apparaîtront patrouillant la zone</French>
+    </Key>
+  <Key ID="STR_AOW_Size_Infantry4">
+      <Original>Size of each AI infantry groups that will spawn patrolling the zone</Original>
+      <French>Taille de chaque groupe d'infanterie gérées par l'IA qui apparaîtront patrouillant la zone</French>
+    </Key>
+	<Key ID="STR_AOW_Moto2">
+      <Original>Number of AI motorized vehicles that will spawn moving toward the zone</Original>
+      <French>Nombre d'engins motorisés gérés par l'IA qui apparaîtront se dirigeant vers la zone</French>
+    </Key>
+  <Key ID="STR_AOW_Moto3">
+      <Original>Number of AI motorized vehicles that will spawn patrolling the zone</Original>
+      <French>Nombre d'engins motorisés gérés par l'IA qui apparaîtront patrouillant la zone</French>
+    </Key>
+	<Key ID="STR_AOW_Armored2">
+      <Original>Number of AI armored vehicles that will spawn moving toward the zone</Original>
+      <French>Nombre d'engins blindés gérés par l'IA qui apparaîtront se dirigeant vers la zone</French>
+    </Key>
+  <Key ID="STR_AOW_Armored3">
+      <Original>Number of AI armored vehicles that will spawn patrolling the zone</Original>
+      <French>Nombre d'engins blindés gérés par l'IA qui apparaîtront patrouillant la zone</French>
+    </Key>
+	<Key ID="STR_AOW_Air2">
+      <Original>Number of AI air vehicles that will spawn moving toward the zone</Original>
+      <French>Nombre de véhicules aériens gérés par l'IA qui apparaîtront se dirigeant vers la zone</French>
+    </Key>
+  <Key ID="STR_AOW_Air3">
+      <Original>Number of AI air vehicles that will spawn patrolling the zone</Original>
+      <French>Nombre de véhicules aériens gérés par l'IA qui apparaîtront patrouillant la zone</French>
+    </Key>
+	<Key ID="STR_AOW_Spawn_Dir">
+      <Original>Direction the spawned vehicles will point at</Original>
+      <French>Direction des véhicules qui apparaîtront</French>
+    </Key>
+	<Key ID="STR_AOW_Def_Pos1">
+      <Original>Number of AI groups that will spawn in a defensive position/building</Original>
+      <French>Nombre de groupes gérées par l'IA qui apparaîtront dans une position défensive ou bâtiment</French>
+    </Key>
+	<Key ID="STR_AOW_Def_Pos2">
+      <Original>Size of each AI infantry groups that will spawn in a defensive position/building</Original>
+      <French>Taille de chaque groupe gérées par l'IA qui apparaîtront dans une position défensif ou bâtiment</French>
+    </Key>
+	<Key ID="STR_AOW_Static_W">
+      <Original>Number of AI occupied static weapons that will spawn</Original>
+      <French>Nombre d'ennemis gérées par l'IA qui occuperont une arme statique à l'apparition</French>
+    </Key>
+	<Key ID="STR_AOW_Infantry_D">
+      <Original>Infantry D</Original>
+      <French>Infanterie D</French>
+    </Key>
+	<Key ID="STR_AOW_Size_Infantry_D">
+      <Original>Size Infantry D</Original>
+      <French>Taille Infanterie D</French>
+    </Key>
+	<Key ID="STR_AOW_Infantry_P">
+      <Original>Infantry P</Original>
+      <French>Infanterie P</French>
+    </Key>
+	<Key ID="STR_AOW_Size_Infantry_P">
+      <Original>Size Infantry P</Original>
+      <French>Taille Infanterie P</French>
+    </Key>
+	<Key ID="STR_AOW_Check_Box">
+      <Original>Check this box to create a zone with no marker</Original>
+      <French>Cochez cette case pour créer une zone sans marqueur</French>
+    </Key>
+	<Key ID="STR_Save_Preset">
+      <Original>Save preset</Original>
+      <French>Sauvegarder sélection</French>
+    </Key>
+	<Key ID="STR_Select_a_slot">
+      <Original>Select a slot:</Original>
+      <French>Sélectionner un slot:</French>
+    </Key>
+	<Key ID="STR_Preset_Name">
+      <Original>Preset name:</Original>
+      <French>Choisir nom:</French>
+    </Key>
+	<Key ID="STR_New_Preset">
+      <Original>New Preset</Original>
+      <French>Nouvelle sélection</French>
+    </Key>
+	<Key ID="STR_Delete">
+      <Original>Delete</Original>
+      <French>Supprimer</French>
+    </Key>
+	<Key ID="STR_Save">
+      <Original>Save</Original>
+      <French>Sauvegarder</French>
+    </Key>
+	<Key ID="STR_Delete_Preset">
+      <Original>Delete Preset</Original>
+      <French>Supprimer sélection</French>
+    </Key>
+	<Key ID="STR_Are_You_Preset">
+      <Original>Are you sure you want to delete the preset?</Original>
+      <French>Etes-vous sûr de vouloir supprimer la sélection?</French>
+    </Key>
+	<Key ID="STR_AOW_Altitude1">
+      <Original>Select your altitude</Original>
+      <French>Sélectionner votre altitude</French>
+    </Key>
+	<Key ID="STR_AOW_Altitude2">
+      <Original>Choose your altitude</Original>
+      <French>Choisir votre altitude</French>
+    </Key>
+	<Key ID="STR_chvd_title">
+      <Original>VIEW DISTANCE SETTINGS</Original>
+      <French>CONFIGURER DISTANCE D'AFFICHAGE</French>
+    </Key>
+	<Key ID="STR_chvd_foot">
+      <Original>ON FOOT</Original>
+      <French>A PIED</French>
+    </Key>
+  <Key ID="STR_chvd_car">
+      <Original>IN CAR</Original>
+      <French>EN VOITURE</French>
+    </Key>
+  <Key ID="STR_chvd_air">
+      <Original>IN AIR</Original>
+      <French>EN VOL</French>
+    </Key>
+	<Key ID="STR_chvd_view">
+      <Original>View</Original>
+      <French>Distance</French>
+    </Key>
+	<Key ID="STR_chvd_object">
+      <Original>Object</Original>
+      <French>Objets</French>
+    </Key>
+	<Key ID="STR_chvd_terrain">
+      <Original>Terrain</Original>
+      <French>Terrain</French>
+    </Key>
+	<Key ID="STR_chvd_sync">
+      <Original>Sync object with view</Original>
+      <French>Syncro objet avec vue</French>
+    </Key>
+    <Key ID="STR_chvd_low">
+      <Original>Low</Original>
+      <French>Bas</French>
+    </Key>
+    <Key ID="STR_chvd_standard">
+      <Original>Standard</Original>
+      <French>Moyen</French>
+    </Key>
+    <Key ID="STR_chvd_high">
+      <Original>High</Original>
+      <French>Eleve</French>
+    </Key>
+    <Key ID="STR_chvd_veryHigh">
+      <Original>Very High</Original>
+      <French>Très Eleve</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Car">
+      <Original>Cars</Original>
+      <French>Voitures</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Tank">
+      <Original>Tanks</Original>
+      <French>Blindés</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Heli">
+      <Original>Helicopteres</Original>
+      <French>Helicoptères</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Support">
+      <Original>Supports</Original>
+      <French>Soutiens</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Plane">
+      <Original>Planes</Original>
+      <French>Avions</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Drone">
+      <Original>Drones</Original>
+      <French>Drones</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_Ship">
+      <Original>Ships</Original>
+      <French>Bateaux</French>
+    </Key>
+	<Key ID="STR_AOW_Marker_V_Service">
+      <Original>Repair</Original>
+      <French>Réparation</French>
+    </Key>
+  <Key ID="STR_AOW_North">
+      <Original>North</Original>
+      <French>Nord</French>
+    </Key>
+  <Key ID="STR_AOW_East">
+      <Original>East</Original>
+      <French>Est</French>
+    </Key>
+  <Key ID="STR_AOW_South">
+      <Original>South</Original>
+      <French>Sud</French>
+    </Key>
+  <Key ID="STR_AOW_West">
+      <Original>West</Original>
+      <French>Ouest</French>
+    </Key>
+  <Key ID="STR_AOW_ShipDeliveryP">
+      <Original>Ship Delivery Point</Original>
+      <French>Lieu Livraison Bateau</French>
+    </Key>
+  <Key ID="STR_AOW_PlaneDeliveryP">
+      <Original>Plane Delivery Point</Original>
+      <French>Lieu Livraison Avion</French>
+    </Key>
+  <Key ID="STR_AOW_WhereDeliveryP">
+      <Original>Choose where to place the vehicle devlivery point</Original>
+      <French>Choisissez ou placer le lieu de livraison des véhicules</French>
+    </Key>
+  <Key ID="STR_AOW_ASORVSSpawn1">
+      <Original>You tried to spawn an hostile drone, vehicle deleted</Original>
+      <French>Vous avez essayer de faire apparaitre un drone hostile, vehicule supprimé</French>
+    </Key>
+  <Key ID="STR_AOW_ASORVSSpawn2">
+      <Original>Check your UAV terminal</Original>
+      <French>Ouvrez votre terminal UAV</French>
+    </Key>
+  <Key ID="STR_AOW_ASORVSSpawn3">
+      <Original>Vehicle spawned on delivery point</Original>
+      <French>Vehicule créer sur le lieu de livraison</French>
+    </Key>
+  <Key ID="STR_AOW_StartSatellite">
+      <Original>Click on the map to insert default satellite coordinates. Then use 1,2,3,4 key to toggle camera mod and -,+ to zoom/unzoom</Original>
+      <French>Cliquez sur la carte pour insérer les coordonées par défault du satellite. Puis utilisez les touches 1,2,3,4 pour changer le mod de caméra et -,+ pour zoomer/dézoomer</French>
+    </Key>
+  <Key ID="STR_AOW_HALOJumpHint">
+      <Original>Select altitude and designate LZ on the map</Original>
+      <French>Sélectionner altitude et désigner ZA sur la map</French>
+    </Key>
+  <Key ID="STR_AOW_HALOJumpHint_1">
+      <Original>loading loadout ...</Original>
+      <French>chargement de l'équipement ...</French>
+    </Key>
+  <Key ID="STR_AOW_MHQTP1">
+      <Original>You need to create the MHQ first</Original>
+      <French>Vous devez d'abord créer le MHQ</French>
+    </Key>
+  <Key ID="STR_AOW_MHQTP2">
+      <Original>Can't teleport , MHQ is moving or dead</Original>
+      <French>Téléportation impossible, le MHQ est en mouvement ou détruit</French>
+    </Key>
+  <Key ID="STR_AOW_MHQCR1">
+      <Original>MHQ already in use</Original>
+      <French>MHQ en cours d'utilisation</French>
+    </Key>
+  <Key ID="STR_AOW_MHQCR2">
+      <Original>MHQ Created</Original>
+      <French>MHQ crée</French>
+    </Key>
+  </Container>
+</Project>

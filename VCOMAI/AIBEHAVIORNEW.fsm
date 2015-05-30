@@ -1,0 +1,2543 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, AIBEHAVIORNEW">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Begin_State",0,250,27.230743,699.276978,117.230728,749.276978,0.000000,"Begin State"};
+item1[] = {"_UseAI_NO",4,218,-71.160217,711.228455,12.189287,747.188538,50.000000,"_UseAI NO"};
+item2[] = {"_UseAI_YES",4,218,21.946590,631.422424,111.946579,681.422424,49.000000,"_UseAI YES"};
+item3[] = {"Exit_FSM",1,250,-162.567444,710.489441,-90.302032,745.710571,0.000000,"Exit FSM"};
+item4[] = {"Set_Basic",2,4346,10.345207,565.656555,100.345222,615.656555,0.000000,"Set Basic"};
+item5[] = {"Check_Rank_0",4,218,194.015747,497.481567,284.015808,547.481567,50.000000,"Check Rank 0"};
+item6[] = {"Check_Rank_1",4,218,100.274544,496.195801,190.274536,546.195740,49.000000,"Check Rank 1"};
+item7[] = {"Check_Rank_2",4,218,9.396902,499.376831,99.396881,549.376648,48.000000,"Check Rank 2"};
+item8[] = {"Check_Rank_3",4,218,-83.806015,500.115814,6.193995,550.115662,47.000000,"Check Rank 3"};
+item9[] = {"Check_Rank_4",4,218,-176.822845,497.514526,-86.822861,547.514343,46.000000,"Check Rank 4"};
+item10[] = {"Check_Rank_5",4,218,-272.254944,497.514526,-182.254959,547.514343,44.000000,"Check Rank 5"};
+item11[] = {"Check_Rank_6",4,218,-375.109497,498.574951,-285.109528,548.574768,43.000000,"Check Rank 6"};
+item12[] = {"Rank_6",2,250,-375.624512,417.206696,-285.624481,467.206696,0.000000,"Rank 6"};
+item13[] = {"Rank_5",2,250,-277.011475,418.267059,-187.011368,468.267059,0.000000,"Rank 5"};
+item14[] = {"Rank_4",2,250,-183.700089,418.267090,-93.700012,468.267090,0.000000,"Rank 4"};
+item15[] = {"Rank_3",2,250,-90.388733,420.387787,-0.388649,470.387787,0.000000,"Rank 3"};
+item16[] = {"Rank_2",2,250,7.164059,422.508545,97.164139,472.508545,0.000000,"Rank 2"};
+item17[] = {"Rank_1",2,250,103.656487,419.327454,193.656586,469.327454,0.000000,"Rank 1"};
+item18[] = {"Rank_0",2,250,206.854980,419.556732,296.855072,469.556732,0.000000,"Rank 0"};
+item19[] = {"Moving_Along",8,218,-104.428688,274.632324,-14.428684,324.632324,0.000000,"Moving Along"};
+item20[] = {"Leader_Or_Not",2,250,-103.217438,160.893967,-13.217361,210.893768,0.000000,"Leader" \n "Or" \n "Not"};
+item21[] = {"Leader",4,218,16.451950,186.622742,106.451927,236.622742,50.000000,"Leader"};
+item22[] = {"SubLeader",4,218,-247.013474,209.645706,-157.013489,259.645660,49.000000,"SubLeader"};
+item23[] = {"Normal_Unit",8,218,-157.555481,58.934967,-67.555428,108.934937,47.000000,"Normal Unit"};
+item24[] = {"Leader_Cycle",3,250,1187.851807,40.542011,1277.851807,90.542007,0.000000,"Leader Cycle"};
+item25[] = {"Wait",4,218,1197.676758,116.578781,1259.359863,146.901001,0.000000,"Wait"};
+item26[] = {"SubLeader_Cycle",3,250,-2386.435059,208.227020,-2296.434814,258.226990,0.000000,"SubLeader Cycle"};
+item27[] = {"Normal_Cycle",3,250,-115.951439,-1407.775391,-25.951466,-1357.775269,0.000000,"Normal Cycle"};
+item28[] = {"Hold_WP",4,218,1427.626343,161.401337,1517.626343,211.401306,48.000000,"Hold WP"};
+item29[] = {"Garrison",2,250,1550.250610,165.896515,1640.250854,215.896759,0.000000,"Garrison"};
+item30[] = {"Wait",4,218,1715.068726,162.434662,1776.752075,192.756897,0.000000,"Wait"};
+item31[] = {"",7,210,1819.086060,180.983612,1827.086060,188.983612,0.000000,""};
+item32[] = {"",7,210,196.524200,353.238403,204.524170,361.238403,0.000000,""};
+item33[] = {"",7,210,1827.956421,304.662964,1835.956421,312.662964,0.000000,""};
+item34[] = {"MoveToCover",4,218,1441.530762,90.814636,1531.530884,140.814667,49.000000,"MoveToCover"};
+item35[] = {"Acc__Discharge_",3,250,1569.203369,84.375999,1659.203369,134.376007,0.000000,"Acc. Discharge&" \n "Evasive" \n "Moves"};
+item36[] = {"Wait",4,218,1709.808472,84.761765,1771.491577,115.084007,0.000000,"Wait"};
+item37[] = {"",7,210,1818.930786,93.326218,1826.930786,101.326218,0.000000,""};
+item38[] = {"Suppressed",4,218,1451.434570,18.155113,1541.434937,68.155098,50.000000,"Suppressed"};
+item39[] = {"Find_Cover_Immed",3,250,1566.747681,15.920826,1656.747559,65.920830,0.000000,"Find Cover" \n "Immediately"};
+item40[] = {"Wait",4,218,1712.781860,6.462860,1774.464966,36.785095,0.000000,"Wait"};
+item41[] = {"",7,210,1822.239136,15.977242,1830.239136,23.977242,0.000000,""};
+item42[] = {"InVehicle",4,218,1455.215210,-46.020844,1545.215698,3.979164,52.000000,"InVehicle"};
+item43[] = {"IsDriver_Check",3,250,1582.054810,-58.702255,1672.054932,-8.702248,0.000000,"IsDriver Check"};
+item44[] = {"NotDriver",4,218,1705.395142,-34.163738,1767.078247,-3.841507,49.000000,"NotDriver"};
+item45[] = {"IsDriver",4,218,1702.525024,-74.501152,1764.208130,-44.178909,50.000000,"IsDriver"};
+item46[] = {"",7,210,1816.498901,-30.901360,1824.498901,-22.901360,0.000000,""};
+item47[] = {"Driver_Checks",3,250,1904.140747,-94.314758,1994.140747,-44.314770,0.000000,"Driver Checks"};
+item48[] = {"Engaged",4,218,1453.574463,-154.612152,1543.574585,-104.612183,48.000000,"Engaged"};
+item49[] = {"FLANKBEHAVIOR",2,250,1585.198364,-162.254730,1675.198120,-112.254784,0.000000,"FLANKBEHAVIOR"};
+item50[] = {"Continue",8,218,1761.033081,-236.968628,1844.819702,-175.784363,30.000000,"Continue"};
+item51[] = {"CheckIfStatic",4,218,1643.172241,-330.866821,1733.172485,-280.866821,54.000000,"CheckIfStatic"};
+item52[] = {"SetupStatic",2,250,1658.376099,-412.999634,1748.376099,-362.999512,0.000000,"SetupStatic"};
+item53[] = {"LightGarrison",4,218,1747.932007,-318.423615,1837.932495,-268.423798,50.000000,"LightGarrison"};
+item54[] = {"Light_Garrison",2,250,1786.012817,-415.065643,1876.012817,-365.065399,0.000000,"Light Garrison"};
+item55[] = {"SatchelPlant",4,218,1543.930542,-337.598053,1633.931030,-287.598175,55.000000,"SatchelPlant"};
+item56[] = {"PlantTheSatch",2,250,1516.588501,-415.251129,1623.237427,-372.051056,0.000000,"PlantTheSatch"};
+item57[] = {"_",-1,250,1909.313599,-302.984924,1909.313599,-283.150787,0.000000,""};
+item58[] = {"ArtyUse_",4,218,1440.171387,-334.917786,1530.171875,-284.917786,35.000000,"ArtyUse" \n ""};
+item59[] = {"ArtilleryCalled",2,250,1381.931641,-417.328522,1492.473389,-368.689484,0.000000,"ArtilleryCalled" \n ""};
+item60[] = {"Wait",4,218,1604.991333,-543.845215,1666.674438,-513.522949,0.000000,"Wait"};
+item61[] = {"",7,210,1974.551636,-525.931702,1982.551636,-517.931702,0.000000,""};
+item62[] = {"",7,210,1865.192505,-200.339569,1873.192505,-192.339569,0.000000,""};
+item63[] = {"",7,210,1953.425415,-333.310394,1961.425415,-325.310394,0.000000,""};
+item64[] = {"CombatNearby",4,218,2082.816895,-206.445038,2172.817871,-156.445038,30.000000,"CombatNearby"};
+item65[] = {"Engaged_1",4,218,1987.588501,-209.015839,2085.585938,-155.588348,40.000000,"Engaged"};
+item66[] = {"CheckNow",2,250,2063.547852,-279.701294,2153.547852,-229.701080,0.000000,"CheckNow"};
+item67[] = {"Wait2",4,218,2059.702637,-354.019226,2153.006348,-303.396667,0.000000,"Wait2"};
+item68[] = {"Engaged",4,218,2173.284668,-205.489899,2271.282227,-152.062469,40.000000,"Engaged"};
+item69[] = {"Wait",4,218,-218.941376,-1404.742798,-157.258240,-1374.420532,0.000000,"Wait"};
+item70[] = {"Wait",4,218,-2373.793945,294.121368,-2312.110840,324.443573,0.000000,"Wait"};
+item71[] = {"",7,210,470.327942,-1241.219238,478.327942,-1233.219238,0.000000,""};
+item72[] = {"MoveToCover",4,218,92.772667,-1331.388184,182.772888,-1281.388184,49.000000,"MoveToCover"};
+item73[] = {"Acc__Discharge__1",3,250,220.445282,-1337.826904,310.445221,-1287.826904,0.000000,"Acc. Discharge&" \n "Evasive" \n "Moves"};
+item74[] = {"Wait",4,218,328.737396,-1320.822754,390.420502,-1290.500732,0.000000,"Wait"};
+item75[] = {"",7,210,470.172791,-1328.876465,478.172791,-1320.876465,0.000000,""};
+item76[] = {"Suppressed",4,218,102.676537,-1404.047607,192.676758,-1354.047607,50.000000,"Suppressed"};
+item77[] = {"Find_Cover_Immed_1",3,250,217.989532,-1406.281982,307.989471,-1356.281982,0.000000,"Find Cover" \n "Immediately"};
+item78[] = {"Wait",4,218,328.017853,-1398.198608,389.700958,-1367.876343,0.000000,"Wait"};
+item79[] = {"",7,210,473.481018,-1406.225586,481.481018,-1398.225586,0.000000,""};
+item80[] = {"InVehicle",4,218,106.457123,-1468.223633,196.457550,-1418.223633,52.000000,"InVehicle"};
+item81[] = {"IsDriver_Check_1",3,250,213.908981,-1476.288940,303.909180,-1426.288940,0.000000,"IsDriver Check"};
+item82[] = {"NotDriver",4,218,400.028809,-1454.520020,461.712036,-1424.197754,49.000000,"NotDriver"};
+item83[] = {"IsDriver",4,218,397.158691,-1485.625000,458.841919,-1455.302734,50.000000,"IsDriver"};
+item84[] = {"",7,210,467.740784,-1453.104248,475.740784,-1445.104248,0.000000,""};
+item85[] = {"Driver_Checks_1",3,250,555.382751,-1516.517578,645.382751,-1466.517578,0.000000,"Driver Checks"};
+item86[] = {"Engaged",4,218,104.816429,-1576.814941,194.816498,-1526.814941,48.000000,"Engaged"};
+item87[] = {"FLANKBEHAVIOR_1",2,250,236.440216,-1584.457520,326.440033,-1534.457520,0.000000,"FLANKBEHAVIOR"};
+item88[] = {"Continue",8,218,412.275116,-1659.171509,496.061584,-1597.987061,30.000000,"Continue"};
+item89[] = {"CheckIfStatic",4,218,294.414154,-1753.069458,384.414520,-1703.069458,45.000000,"CheckIfStatic"};
+item90[] = {"SetupStatic_1",2,250,309.618011,-1835.202271,399.618134,-1785.202271,0.000000,"SetupStatic"};
+item91[] = {"SatchelPlant",4,218,195.172455,-1759.800903,285.172943,-1709.800903,55.000000,"SatchelPlant"};
+item92[] = {"PlantTheSatch_1",2,250,167.830444,-1837.453735,274.479279,-1794.254028,0.000000,"PlantTheSatch"};
+item93[] = {"__1",-1,250,560.555481,-1725.187622,560.555481,-1705.353638,0.000000,""};
+item94[] = {"Wait",4,218,256.233185,-1966.047974,317.916351,-1935.725708,0.000000,"Wait"};
+item95[] = {"",7,210,625.793640,-1948.134399,633.793640,-1940.134399,0.000000,""};
+item96[] = {"",7,210,516.434387,-1622.542480,524.434387,-1614.542480,0.000000,""};
+item97[] = {"",7,210,604.667419,-1755.513306,612.667419,-1747.513306,0.000000,""};
+item98[] = {"CombatNearby",4,218,734.058899,-1628.647949,824.059753,-1578.647949,30.000000,"CombatNearby"};
+item99[] = {"Engaged_1",4,218,638.830383,-1631.218750,736.827820,-1577.791260,40.000000,"Engaged"};
+item100[] = {"CheckNow_1",2,250,714.789856,-1701.903931,804.789978,-1651.903931,0.000000,"CheckNow"};
+item101[] = {"Wait2",4,218,710.944763,-1776.221802,804.248230,-1725.599243,0.000000,"Wait2"};
+item102[] = {"Engaged",4,218,824.526794,-1627.692627,922.524353,-1574.265381,40.000000,"Engaged"};
+item103[] = {"",7,210,-1986.367676,-27.716431,-1978.367676,-19.716431,0.000000,""};
+item104[] = {"MoveToCover",4,218,-2363.922852,-117.885384,-2273.922363,-67.885376,49.000000,"MoveToCover"};
+item105[] = {"Acc__Discharge__2",3,250,-2236.250000,-124.324097,-2146.250488,-74.324097,0.000000,"Acc. Discharge&" \n "Evasive" \n "Moves"};
+item106[] = {"Wait",4,218,-2095.645020,-123.938110,-2033.962036,-93.616089,0.000000,"Wait"};
+item107[] = {"",7,210,-1986.522705,-115.373657,-1978.522705,-107.373657,0.000000,""};
+item108[] = {"Suppressed",4,218,-2354.019043,-190.544800,-2264.018555,-140.544800,50.000000,"Suppressed"};
+item109[] = {"Find_Cover_Immed_2",3,250,-2238.706055,-192.779175,-2148.706055,-142.779175,0.000000,"Find Cover" \n "Immediately"};
+item110[] = {"Wait",4,218,-2092.671875,-202.237183,-2030.988892,-171.914917,0.000000,"Wait"};
+item111[] = {"",7,210,-1983.214600,-192.722778,-1975.214600,-184.722778,0.000000,""};
+item112[] = {"InVehicle",4,218,-2350.238281,-254.720825,-2260.237793,-204.720825,52.000000,"InVehicle"};
+item113[] = {"IsDriver_Check_2",3,250,-2223.398926,-267.402222,-2133.398438,-217.402222,0.000000,"IsDriver Check"};
+item114[] = {"NotDriver",4,218,-2100.058594,-242.863647,-2038.375000,-212.541382,49.000000,"NotDriver"};
+item115[] = {"IsDriver",4,218,-2102.928711,-283.201050,-2041.245117,-252.878784,50.000000,"IsDriver"};
+item116[] = {"",7,210,-1988.954834,-239.601440,-1980.954834,-231.601440,0.000000,""};
+item117[] = {"Driver_Checks_2",3,250,-1901.312744,-303.014771,-1811.312744,-253.014771,0.000000,"Driver Checks"};
+item118[] = {"Engaged",4,218,-2351.878906,-363.312134,-2261.878906,-313.312134,48.000000,"Engaged"};
+item119[] = {"FLANKBEHAVIOR_2",2,250,-2220.255371,-370.954712,-2130.255371,-320.954712,0.000000,"FLANKBEHAVIOR"};
+item120[] = {"Continue",8,218,-2044.420410,-445.668701,-1960.634033,-384.484253,30.000000,"Continue"};
+item121[] = {"CheckIfStatic",4,218,-2162.281250,-539.566650,-2072.280762,-489.566650,45.000000,"CheckIfStatic"};
+item122[] = {"SetupStatic_2",2,250,-2147.077637,-621.699463,-2057.077148,-571.699463,0.000000,"SetupStatic"};
+item123[] = {"SatchelPlant",4,218,-2261.522949,-546.298096,-2171.522461,-496.298096,55.000000,"SatchelPlant"};
+item124[] = {"PlantTheSatch_2",2,250,-2288.865234,-623.950928,-2182.216309,-580.751221,0.000000,"PlantTheSatch"};
+item125[] = {"__2",-1,250,-1896.140137,-511.684814,-1896.140137,-491.850830,0.000000,""};
+item126[] = {"Wait",4,218,-2200.462402,-752.545166,-2138.779297,-722.222900,0.000000,"Wait"};
+item127[] = {"",7,210,-1830.901855,-734.631592,-1822.901855,-726.631592,0.000000,""};
+item128[] = {"",7,210,-1940.261230,-409.039673,-1932.261230,-401.039673,0.000000,""};
+item129[] = {"",7,210,-1852.028076,-542.010498,-1844.028076,-534.010498,0.000000,""};
+item130[] = {"CombatNearby",4,218,-1722.636719,-415.145142,-1632.635742,-365.145142,30.000000,"CombatNearby"};
+item131[] = {"Engaged_1",4,218,-1817.865234,-417.715942,-1719.867676,-364.288452,40.000000,"Engaged"};
+item132[] = {"CheckNow_2",2,250,-1741.905762,-488.401123,-1651.905518,-438.401123,0.000000,"CheckNow"};
+item133[] = {"Wait2",4,218,-1745.750732,-562.718994,-1652.447266,-512.096436,0.000000,"Wait2"};
+item134[] = {"Engaged",4,218,-1632.168701,-414.189819,-1534.171265,-360.762573,40.000000,"Engaged"};
+item135[] = {"",7,210,-2589.481445,230.206131,-2581.481445,238.206146,0.000000,""};
+item136[] = {"",7,210,-2586.472900,-134.691559,-2578.472900,-126.691559,0.000000,""};
+item137[] = {"Dead",4,218,27.005287,112.749390,117.005287,162.749390,55.000000,"Dead"};
+item138[] = {"Dead_Captain",1,250,127.666054,123.350250,217.665970,173.350235,0.000000,"Dead Captain"};
+item139[] = {"Dead",4,218,1277.376709,-262.530518,1367.376709,-212.530533,55.000000,"Dead"};
+item140[] = {"Dead_Captain_1",1,250,1225.660645,-327.315948,1315.660645,-277.315979,0.000000,"Dead Captain"};
+item141[] = {"Dead",4,218,1944.625610,0.519537,2034.625488,50.519501,55.000000,"Dead"};
+item142[] = {"Dead_Captain_2",1,250,1968.296143,89.714622,2058.295410,139.714584,0.000000,"Dead Captain"};
+item143[] = {"Dead",4,218,2290.988770,-316.587769,2380.988770,-266.587799,55.000000,"Dead"};
+item144[] = {"Dead_Captain_3",1,250,2400.257324,-297.773163,2490.256592,-247.773193,0.000000,"Dead Captain"};
+item145[] = {"Dead",4,218,-1807.456665,-203.291061,-1717.456909,-153.291077,55.000000,"Dead"};
+item146[] = {"Dead_Captain_4",1,250,-1698.188354,-184.476425,-1608.188965,-134.476471,0.000000,"Dead Captain"};
+item147[] = {"Dead",4,218,-1585.991943,-530.507202,-1495.991943,-480.507263,55.000000,"Dead"};
+item148[] = {"Dead_Captain_5",1,250,-1476.723389,-511.692627,-1386.724121,-461.692657,0.000000,"Dead Captain"};
+item149[] = {"Dead",4,218,-2326.838867,89.188782,-2236.838867,139.188751,55.000000,"Dead"};
+item150[] = {"Dead_Captain_6",1,250,-2217.570313,108.003387,-2127.571045,158.003357,0.000000,"Dead Captain"};
+item151[] = {"Dead",4,218,-2435.744873,-474.356537,-2345.744873,-424.356598,55.000000,"Dead"};
+item152[] = {"Dead_Captain_7",1,250,-2580.590332,-562.719299,-2490.591064,-512.719360,0.000000,"Dead Captain"};
+item153[] = {"Dead",4,218,-109.157349,-1539.224487,-19.157299,-1489.224487,55.000000,"Dead"};
+item154[] = {"Dead_Captain_8",1,250,-151.496948,-1699.417236,-61.497681,-1649.417236,0.000000,"Dead Captain"};
+item155[] = {"Dead",4,218,652.536865,-1425.974976,742.536926,-1375.974976,55.000000,"Dead"};
+item156[] = {"Dead_Captain_9",1,250,761.805481,-1379.761353,851.804749,-1329.761353,0.000000,"Dead Captain"};
+item157[] = {"Dead",4,218,902.128357,-1762.921021,992.128418,-1712.921021,55.000000,"Dead"};
+item158[] = {"Dead_Captain_10",1,250,1026.229248,-1770.474487,1116.228516,-1720.474487,0.000000,"Dead Captain"};
+item159[] = {"Dead",4,218,34.561653,-1757.072266,124.561707,-1707.072266,55.000000,"Dead"};
+item160[] = {"Dead_Captain_11",1,250,-4.338428,-1886.321655,85.660873,-1836.321655,0.000000,"Dead Captain"};
+item161[] = {"Wait",4,218,541.601807,-1438.300659,603.284912,-1407.978638,0.000000,"Wait"};
+item162[] = {"Wait",4,218,1874.369385,-26.394144,1936.052490,3.927878,0.000000,"Wait"};
+item163[] = {"Wait",4,218,-1929.287354,-207.062592,-1867.604248,-176.740570,0.000000,"Wait"};
+item164[] = {"IsPlayer",4,218,6.864777,57.481201,96.864761,107.481163,60.000000,"IsPlayer"};
+item165[] = {"Exit_Player",1,250,124.390213,61.109131,214.390121,111.109123,0.000000,"Exit Player"};
+item166[] = {"",7,210,418.548309,-1361.354004,426.548309,-1353.354004,0.000000,""};
+item167[] = {"",7,210,1790.266479,129.263763,1798.266479,137.263748,0.000000,""};
+item168[] = {"",7,210,381.312103,-1422.594116,389.312103,-1414.594116,0.000000,""};
+item169[] = {"",7,210,-2056.885742,-150.030396,-2048.885742,-142.030396,0.000000,""};
+item170[] = {"_UseAI_NO",4,218,-224.022461,89.390862,-134.022324,139.390900,1000.000000,"_UseAI NO"};
+item171[] = {"NO_AI",1,250,-281.529327,24.021221,-191.529358,74.021225,0.000000,"NO AI"};
+item172[] = {"_UseAI_NO_1",4,218,-292.322998,106.719582,-202.322800,156.719620,999.000000,"_UseAI NO"};
+item173[] = {"NO_AI_1",1,250,-412.543976,47.239002,-322.544006,97.239014,0.000000,"NO AI"};
+version=1;
+class LayoutItems
+{
+	class Item57
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+	class Item93
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+	class Item125
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,3};
+link3[] = {2,4};
+link4[] = {4,5};
+link5[] = {4,6};
+link6[] = {4,7};
+link7[] = {4,8};
+link8[] = {4,9};
+link9[] = {4,10};
+link10[] = {4,11};
+link11[] = {5,18};
+link12[] = {6,17};
+link13[] = {7,16};
+link14[] = {8,15};
+link15[] = {9,14};
+link16[] = {10,13};
+link17[] = {11,12};
+link18[] = {12,19};
+link19[] = {13,19};
+link20[] = {14,19};
+link21[] = {15,19};
+link22[] = {16,19};
+link23[] = {17,19};
+link24[] = {18,19};
+link25[] = {19,20};
+link26[] = {20,21};
+link27[] = {20,22};
+link28[] = {20,23};
+link29[] = {20,137};
+link30[] = {20,164};
+link31[] = {20,170};
+link32[] = {20,172};
+link33[] = {21,24};
+link34[] = {22,26};
+link35[] = {23,27};
+link36[] = {24,25};
+link37[] = {24,28};
+link38[] = {24,34};
+link39[] = {24,38};
+link40[] = {24,42};
+link41[] = {24,48};
+link42[] = {24,139};
+link43[] = {25,32};
+link44[] = {26,70};
+link45[] = {26,135};
+link46[] = {26,149};
+link47[] = {27,69};
+link48[] = {27,72};
+link49[] = {27,76};
+link50[] = {27,80};
+link51[] = {27,86};
+link52[] = {27,153};
+link53[] = {28,29};
+link54[] = {29,30};
+link55[] = {30,167};
+link56[] = {31,33};
+link57[] = {32,20};
+link58[] = {33,32};
+link59[] = {34,35};
+link60[] = {35,36};
+link61[] = {36,167};
+link62[] = {37,31};
+link63[] = {38,39};
+link64[] = {39,40};
+link65[] = {40,167};
+link66[] = {41,37};
+link67[] = {42,43};
+link68[] = {43,44};
+link69[] = {43,45};
+link70[] = {44,46};
+link71[] = {45,47};
+link72[] = {46,41};
+link73[] = {47,64};
+link74[] = {47,65};
+link75[] = {47,68};
+link76[] = {47,141};
+link77[] = {47,162};
+link78[] = {48,49};
+link79[] = {49,50};
+link80[] = {49,51};
+link81[] = {49,53};
+link82[] = {49,55};
+link83[] = {49,58};
+link84[] = {49,139};
+link85[] = {50,62};
+link86[] = {51,52};
+link87[] = {52,60};
+link88[] = {53,54};
+link89[] = {54,60};
+link90[] = {55,56};
+link91[] = {56,60};
+link92[] = {58,59};
+link93[] = {59,60};
+link94[] = {60,61};
+link95[] = {61,63};
+link96[] = {62,46};
+link97[] = {63,46};
+link98[] = {64,66};
+link99[] = {65,66};
+link100[] = {66,67};
+link101[] = {66,143};
+link102[] = {67,63};
+link103[] = {68,66};
+link104[] = {69,20};
+link105[] = {70,20};
+link106[] = {71,20};
+link107[] = {72,73};
+link108[] = {73,74};
+link109[] = {74,166};
+link110[] = {75,71};
+link111[] = {76,77};
+link112[] = {77,78};
+link113[] = {78,166};
+link114[] = {79,75};
+link115[] = {80,81};
+link116[] = {81,82};
+link117[] = {81,83};
+link118[] = {82,84};
+link119[] = {83,85};
+link120[] = {84,79};
+link121[] = {85,98};
+link122[] = {85,99};
+link123[] = {85,102};
+link124[] = {85,155};
+link125[] = {85,161};
+link126[] = {86,87};
+link127[] = {87,88};
+link128[] = {87,89};
+link129[] = {87,91};
+link130[] = {87,159};
+link131[] = {88,96};
+link132[] = {89,90};
+link133[] = {90,94};
+link134[] = {91,92};
+link135[] = {92,94};
+link136[] = {94,95};
+link137[] = {95,97};
+link138[] = {96,84};
+link139[] = {97,96};
+link140[] = {98,100};
+link141[] = {99,100};
+link142[] = {100,101};
+link143[] = {100,157};
+link144[] = {101,97};
+link145[] = {102,100};
+link146[] = {103,20};
+link147[] = {104,105};
+link148[] = {105,106};
+link149[] = {106,169};
+link150[] = {107,103};
+link151[] = {108,109};
+link152[] = {109,110};
+link153[] = {110,169};
+link154[] = {111,107};
+link155[] = {112,113};
+link156[] = {113,114};
+link157[] = {113,115};
+link158[] = {114,116};
+link159[] = {115,117};
+link160[] = {116,111};
+link161[] = {117,130};
+link162[] = {117,131};
+link163[] = {117,134};
+link164[] = {117,145};
+link165[] = {117,163};
+link166[] = {118,119};
+link167[] = {119,120};
+link168[] = {119,121};
+link169[] = {119,123};
+link170[] = {119,151};
+link171[] = {120,128};
+link172[] = {121,122};
+link173[] = {122,126};
+link174[] = {123,124};
+link175[] = {124,126};
+link176[] = {126,127};
+link177[] = {127,129};
+link178[] = {128,116};
+link179[] = {129,128};
+link180[] = {130,132};
+link181[] = {131,132};
+link182[] = {132,133};
+link183[] = {132,147};
+link184[] = {133,129};
+link185[] = {134,132};
+link186[] = {135,136};
+link187[] = {136,104};
+link188[] = {136,108};
+link189[] = {136,112};
+link190[] = {136,118};
+link191[] = {137,138};
+link192[] = {139,140};
+link193[] = {141,142};
+link194[] = {143,144};
+link195[] = {145,146};
+link196[] = {147,148};
+link197[] = {149,150};
+link198[] = {151,152};
+link199[] = {153,154};
+link200[] = {155,156};
+link201[] = {157,158};
+link202[] = {159,160};
+link203[] = {161,75};
+link204[] = {162,31};
+link205[] = {163,107};
+link206[] = {164,165};
+link207[] = {166,168};
+link208[] = {167,49};
+link209[] = {168,87};
+link210[] = {169,119};
+link211[] = {170,171};
+link212[] = {172,173};
+globals[] = {0.000000,0,0,0,0,640,480,2,281,6316128,1,-756.490662,333.265656,783.717163,-66.453682,1219,951,1};
+window[] = {2,-1,-1,-1,-1,1059,2135,3532,84,3,1237};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "AIBEHAVIORNEW";
+  class States
+  {
+    /*%FSM<STATE "Begin_State">*/
+    class Begin_State
+    {
+      name = "Begin_State";
+      init = /*%FSM<STATEINIT""">*/"_Unit = _this select 0;" \n
+       "" \n
+       "_Unit setVariable [""FSMRunning"",1,false];" \n
+       "" \n
+       "if (VCOM_AIDEBUG == 1) then {" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "while {alive _Unit} do {" \n
+       "sleep 0.25;" \n
+       "if ((side _Unit) == EAST) then {" \n
+       "_arrow = ""Sign_Arrow_Direction_F"" createVehicle [0,0,0];" \n
+       "" \n
+       "[_arrow] spawn {" \n
+       "_arrow = _this select 0;" \n
+       "sleep 10;" \n
+       "deletevehicle _arrow;" \n
+       "MarkerArray = MarkerArray - [_arrow];" \n
+       "};" \n
+       "" \n
+       "_arrow setPosASL (eyePos _Unit);" \n
+       "_arrow setDir (getDir _Unit);" \n
+       "MarkerArray = MarkerArray + [_arrow];" \n
+       "};" \n
+       "if ((side _Unit) == WEST) then {" \n
+       "_arrow = ""Sign_Arrow_Direction_Blue_F"" createVehicle [0,0,0];" \n
+       "" \n
+       "[_arrow] spawn {" \n
+       "_arrow = _this select 0;" \n
+       "sleep 10;" \n
+       "deletevehicle _arrow;" \n
+       "MarkerArray = MarkerArray - [_arrow];" \n
+       "};" \n
+       "" \n
+       "" \n
+       "_arrow setPosASL (eyePos _Unit);" \n
+       "_arrow setDir (getDir _Unit);" \n
+       "MarkerArray = MarkerArray + [_arrow];" \n
+       "};" \n
+       "" \n
+       "};" \n
+       "_arrow = ""Sign_Arrow_Pink_F"" createVehicle [0,0,0];" \n
+       "" \n
+       "[_arrow] spawn {" \n
+       "_arrow = _this select 0;" \n
+       "sleep 10;" \n
+       "deletevehicle _arrow;" \n
+       "MarkerArray = MarkerArray - [_arrow];" \n
+       "};" \n
+       "" \n
+       "" \n
+       "_arrow setPosASL (eyePos _Unit);" \n
+       "_arrow setDir (getDir _Unit);" \n
+       "MarkerArray = MarkerArray + [_arrow];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "" \n
+       "//Determine if this AI should even execute new code" \n
+       "_UseAI = _Unit getVariable ""NOAI"";" \n
+       "if (isNil (""_UseAI"")) then {" \n
+       "_UseAI = 0;" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_UseAI_NO">*/
+        class _UseAI_NO
+        {
+          priority = 50.000000;
+          to="Exit_FSM";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UseAI == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "_UseAI_YES">*/
+        class _UseAI_YES
+        {
+          priority = 49.000000;
+          to="Set_Basic";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UseAI == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_FSM">*/
+    class Exit_FSM
+    {
+      name = "Exit_FSM";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Set_Basic">*/
+    class Set_Basic
+    {
+      name = "Set_Basic";
+      init = /*%FSM<STATEINIT""">*/"" \n
+       "_RankReturn = [_Unit] call VCOM_fnc_DetermineRank;" \n
+       "_CheckEventHandlers = _Unit getvariable ""FSMHandleEvents"";" \n
+       "if (isNil ""_CheckEventHandlers"") then {_CheckEventHandlers = 0};" \n
+       "_Unit setVariable [""FSMHandleEvents"",0,false];" \n
+       "if (_CheckEventHandlers isEqualTo 0) then {" \n
+       "_Unit setVariable [""VCOM_GroupLeader"",0,false];" \n
+       "_Unit setVariable [""VCOM_SubLeader"",0,false];" \n
+       "_Unit setVariable [""VCOM_CHANGEDFORMATION"",0,false];" \n
+       "_Unit setVariable [""VCOM_Unit_Artillery"",0,false];" \n
+       "_Unit setVariable [""VCOM_GARRISONED"",0,false];" \n
+       "_Unit setVariable [""VCOM_Suppressed"",0,false];" \n
+       "_Unit setVariable [""VCOM_MOVINGTOCOVER"",0,false];" \n
+       "_Unit setVariable [""VCOM_FiredTime"",0,false];" \n
+       "_Unit setVariable[""VCOM_MOVINGTOCOVER"",0,false];" \n
+       "_Unit setVariable [""VCOM_Suppressed"",0,false];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "_Unit setVariable [""VCOM_NERVES"",(random 50),false];" \n
+       "_Unit setVariable [""VCOM_HASSTATIC"",0,false];" \n
+       "_Unit setVariable [""VCOM_HASSATCHEL"",0,false];" \n
+       "_Unit setVariable [""VCOM_ISARTILLERY"",0,false];" \n
+       "_Unit setVariable [""VCOM_FLANKING"",0,false];" \n
+       "_Unit setVariable [""VCOM_NOPATHING"",0,false];" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",0,false];" \n
+       "_Unit setVariable [""VCOM_SATCHELBOMB"",[],false];" \n
+       "_Unit setVariable [""VCOM_CALLEDARTILLERY"",0,false];" \n
+       "_Unit setVariable [""VCOM_HASDEPLOYED"",0,false];" \n
+       "_Unit setVariable [""VCOM_DOWNED"",0,false];" \n
+       "_Unit setVariable [""VCOM_GRENADETHROWN"",1,false];" \n
+       "_Unit setVariable [""VCOM_FlankHalfPoint"",Nil,false];" \n
+       "_Unit setVariable [""VCOM_CoverLite"",0,false];" \n
+       "_Unit setVariable [""VCOM_DriverDetectionIsDriver"",0,false];" \n
+       "" \n
+       "_UnitSide = (side _Unit);" \n
+       "_Unit setVariable [""VCOMSIDE"",_UnitSide,false];" \n
+       "_Unit setVariable [""VCOM_Unit_AIWarnDistance"",VCOM_AIWarnDistance,false];" \n
+       "_Unit setVariable [""VCOM_Unit_USESMOKE"",VCOM_USESMOKE,false];" \n
+       "_Unit setVariable [""VCOM_Unit_Artillery"",VCOM_Artillery,false];" \n
+       "" \n
+       "_Unit addEventHandler [""Fired"",{[_this] call FiredAtTarget;}];" \n
+       "_Unit addEventHandler [""Killed"",{_this call VCOM_fnc_ClosestAllyWarn;}];" \n
+       "_Unit addEventHandler [""Hit"",{_this call VCOM_fnc_HitAI;}];" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Check_Rank_0">*/
+        class Check_Rank_0
+        {
+          priority = 50.000000;
+          to="Rank_0";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_1">*/
+        class Check_Rank_1
+        {
+          priority = 49.000000;
+          to="Rank_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_2">*/
+        class Check_Rank_2
+        {
+          priority = 48.000000;
+          to="Rank_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 2"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_3">*/
+        class Check_Rank_3
+        {
+          priority = 47.000000;
+          to="Rank_3";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 3"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_4">*/
+        class Check_Rank_4
+        {
+          priority = 46.000000;
+          to="Rank_4";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 4"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_5">*/
+        class Check_Rank_5
+        {
+          priority = 44.000000;
+          to="Rank_5";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Check_Rank_6">*/
+        class Check_Rank_6
+        {
+          priority = 43.000000;
+          to="Rank_6";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RankReturn == 6"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_6">*/
+    class Rank_6
+    {
+      name = "Rank_6";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank6;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  30;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_5">*/
+    class Rank_5
+    {
+      name = "Rank_5";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank5;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  25;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_4">*/
+    class Rank_4
+    {
+      name = "Rank_4";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank4;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  20;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_3">*/
+    class Rank_3
+    {
+      name = "Rank_3";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank3;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  15;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_2">*/
+    class Rank_2
+    {
+      name = "Rank_2";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank2;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  10;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_1">*/
+    class Rank_1
+    {
+      name = "Rank_1";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank1;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 -  5;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Rank_0">*/
+    class Rank_0
+    {
+      name = "Rank_0";
+      init = /*%FSM<STATEINIT""">*/"[_Unit] call AccuracyFunctionRank0;" \n
+       "" \n
+       "_ModifiedTrait1 = _Unit getvariable ""VCOM_NERVES"";" \n
+       "_ModifiedTrait1 = _ModifiedTrait1 + 2 ;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_NERVES"",_ModifiedTrait1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Moving_Along">*/
+        class Moving_Along
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Leader_Or_Not">*/
+    class Leader_Or_Not
+    {
+      name = "Leader_Or_Not";
+      init = /*%FSM<STATEINIT""">*/"_PositionCheck = [_unit] call VCOM_fnc_DetermineLeader;" \n
+       "_AICOMMANDER = 0;" \n
+       "_Leader = _PositionCheck select 0;" \n
+       "_SubLeader = _PositionCheck select 1;" \n
+       "" \n
+       "" \n
+       "if ((_Unit getVariable ""VCOM_CHANGEDFORMATION"") == 0) then {" \n
+       "[_Unit] spawn VCOM_fnc_ChangeFormation;" \n
+       "[_Unit] spawn VCOM_fnc_CheckBag;" \n
+       "[_Unit] spawn VCOM_fnc_HasMine;" \n
+       "if ((_Unit getVariable ""VCOM_Unit_Artillery"") == 1) then {" \n
+       "[_Unit] spawn VCOM_fnc_Artillery;" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "if (NOAI_FOR_PLAYERLEADERS isEqualTo 1) then {" \n
+       "if (isPlayer (leader _unit) ) then {_AICOMMANDER = 1};" \n
+       "};" \n
+       "" \n
+       "//Determine if this AI should even execute new code" \n
+       "_UseAI = _Unit getVariable ""NOAI"";" \n
+       "if (isNil (""_UseAI"")) then {" \n
+       "_UseAI = 0;" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_UseAI_NO">*/
+        class _UseAI_NO
+        {
+          priority = 1000.000000;
+          to="NO_AI";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UseAI == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "_UseAI_NO_1">*/
+        class _UseAI_NO_1
+        {
+          priority = 999.000000;
+          to="NO_AI_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_AICOMMANDER == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "IsPlayer">*/
+        class IsPlayer
+        {
+          priority = 60.000000;
+          to="Exit_Player";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isPlayer _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Leader">*/
+        class Leader
+        {
+          priority = 50.000000;
+          to="Leader_Cycle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_Leader == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "SubLeader">*/
+        class SubLeader
+        {
+          priority = 49.000000;
+          to="SubLeader_Cycle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_SubLeader == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Normal_Unit">*/
+        class Normal_Unit
+        {
+          priority = 47.000000;
+          to="Normal_Cycle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Leader_Cycle">*/
+    class Leader_Cycle
+    {
+      name = "Leader_Cycle";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_group	= group _Unit;" \n
+       "_index = currentWaypoint _group;" \n
+       "_WaypointIs = waypointType [_group,_index];" \n
+       "" \n
+       "_UnitSuppressed = 0;" \n
+       "_UnitMoveToCover = 0;" \n
+       "" \n
+       "_BOTHERCHECKING = _Unit getVariable ""VCOM_ACTIVELYMOVING"";" \n
+       "" \n
+       "if (_BOTHERCHECKING == 0) then {" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_UnitMoveToCover = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "[_Unit] spawn VCOM_fnc_ArmStatic;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "InVehicle">*/
+        class InVehicle
+        {
+          priority = 52.000000;
+          to="IsDriver_Check";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((vehicle _Unit) != _Unit)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Suppressed">*/
+        class Suppressed
+        {
+          priority = 50.000000;
+          to="Find_Cover_Immed";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "MoveToCover">*/
+        class MoveToCover
+        {
+          priority = 49.000000;
+          to="Acc__Discharge_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitMoveToCover == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 48.000000;
+          to="FLANKBEHAVIOR";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Hold_WP">*/
+        class Hold_WP
+        {
+          priority = 48.000000;
+          to="Garrison";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_WaypointIs == ""HOLD"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "SubLeader_Cycle">*/
+    class SubLeader_Cycle
+    {
+      name = "SubLeader_Cycle";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_UnitSuppressed = 0;" \n
+       "_UnitMoveToCover = 0;" \n
+       "" \n
+       "" \n
+       "_BOTHERCHECKING = _Unit getVariable ""VCOM_ACTIVELYMOVING"";" \n
+       "" \n
+       "" \n
+       "if (_BOTHERCHECKING == 0) then {" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_UnitMoveToCover = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "[_Unit] spawn VCOM_fnc_ArmStatic;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_6";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "InVehicle">*/
+        class InVehicle
+        {
+          priority = 52.000000;
+          to="IsDriver_Check_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((vehicle _Unit) != _Unit)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Suppressed">*/
+        class Suppressed
+        {
+          priority = 50.000000;
+          to="Find_Cover_Immed_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "MoveToCover">*/
+        class MoveToCover
+        {
+          priority = 49.000000;
+          to="Acc__Discharge__2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitMoveToCover == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 48.000000;
+          to="FLANKBEHAVIOR_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Normal_Cycle">*/
+    class Normal_Cycle
+    {
+      name = "Normal_Cycle";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_UnitSuppressed = 0;" \n
+       "_UnitMoveToCover = 0;" \n
+       "" \n
+       "_BOTHERCHECKING = _Unit getVariable ""VCOM_ACTIVELYMOVING"";" \n
+       "" \n
+       "" \n
+       "if (_BOTHERCHECKING == 0) then {" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_UnitMoveToCover = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "[_Unit] spawn VCOM_fnc_ArmStatic;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_8";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "InVehicle">*/
+        class InVehicle
+        {
+          priority = 52.000000;
+          to="IsDriver_Check_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((vehicle _Unit) != _Unit)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Suppressed">*/
+        class Suppressed
+        {
+          priority = 50.000000;
+          to="Find_Cover_Immed_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "MoveToCover">*/
+        class MoveToCover
+        {
+          priority = 49.000000;
+          to="Acc__Discharge__1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitMoveToCover == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 48.000000;
+          to="FLANKBEHAVIOR_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Garrison">*/
+    class Garrison
+    {
+      name = "Garrison";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "if ((_Unit getVariable ""VCOM_GARRISONED"") == 0) then {" \n
+       "[_Unit,(group _Unit)] spawn VCOM_fnc_Garrison;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Acc__Discharge_">*/
+    class Acc__Discharge_
+    {
+      name = "Acc__Discharge_";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 10;" \n
+       "" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_MOVINGTOCOVER"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_EvasiveAI;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Find_Cover_Immed">*/
+    class Find_Cover_Immed
+    {
+      name = "Find_Cover_Immed";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 20;" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_Suppressed"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFire;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "IsDriver_Check">*/
+    class IsDriver_Check
+    {
+      name = "IsDriver_Check";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CheckDriver = [_Unit] call VCOM_fnc_IsDriver;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "IsDriver">*/
+        class IsDriver
+        {
+          priority = 50.000000;
+          to="Driver_Checks";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "NotDriver">*/
+        class NotDriver
+        {
+          priority = 49.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Driver_Checks">*/
+    class Driver_Checks
+    {
+      name = "Driver_Checks";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_GoingToCombat = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "" \n
+       "if (VCOM_ADVANCEDDRIVING isEqualTo 1) then {" \n
+       "_AlreadyExecuted = _Unit getVariable ""VCOM_DriverDetectionIsDriver"";" \n
+       "" \n
+       "if (_AlreadyExecuted isEqualTo 0) then " \n
+       "{" \n
+       "	_Unit setVariable [""VCOM_DriverDetectionIsDriver"",1,false];" \n
+       "	[_Unit] spawn VCOM_fnc_VehicleDetection;" \n
+       "};" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 40.000000;
+          to="CheckNow";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged_1">*/
+        class Engaged_1
+        {
+          priority = 40.000000;
+          to="CheckNow";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CombatNearby">*/
+        class CombatNearby
+        {
+          priority = 30.000000;
+          to="CheckNow";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_GoingToCombat == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "FLANKBEHAVIOR">*/
+    class FLANKBEHAVIOR
+    {
+      name = "FLANKBEHAVIOR";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CallArty = random 100;" \n
+       "" \n
+       "" \n
+       "_CheckIfBag = 0;" \n
+       "_CheckDeployed = 0;" \n
+       "_CoveredAlready = 0;" \n
+       "_CheckSatchel = 0;" \n
+       "_CheckRecentPlant = 0;" \n
+       "" \n
+       "_ClosestEnemy = _Unit findNearestEnemy (getPosASL _Unit);" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFireLite;" \n
+       "" \n
+       "if (!(isNull _ClosestEnemy)) then {" \n
+       "" \n
+       "_CheckSatchel = _Unit getVariable ""VCOM_HASSATCHEL"";" \n
+       "_CheckRecentPlant = _Unit getVariable ""VCOM_SATCHELRECENTLY"";" \n
+       "" \n
+       "_CheckIfBag = _Unit getVariable ""VCOM_HASSTATIC"";" \n
+       "_CheckDeployed = _Unit getVariable ""VCOM_HASDEPLOYED"";" \n
+       "_CoveredAlready = _Unit getvariable ""VCOM_COVEREDRECENTLY"";" \n
+       "};" \n
+       "" \n
+       "_RandomGarrison = random 100;" \n
+       "" \n
+       "_Groupleader = leader _Unit;" \n
+       "if ((_Groupleader getVariable ""VCOM_FLANKING"") == 0) then {" \n
+       "if ((_Unit getVariable ""VCOM_GARRISONED"") == 0) then {" \n
+       "" \n
+       "[_Groupleader] spawn AIPath;" \n
+       "" \n
+       "[_Groupleader] spawn {" \n
+       "_Groupleader = _this select 0;" \n
+       "sleep 300;" \n
+       "_Groupleader setVariable [""VCOM_FLANKING"",0,false];" \n
+       "};" \n
+       "" \n
+       "};" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "SatchelPlant">*/
+        class SatchelPlant
+        {
+          priority = 55.000000;
+          to="PlantTheSatch";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckSatchel isEqualTo 1 && _CheckRecentPlant isEqualTo 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CheckIfStatic">*/
+        class CheckIfStatic
+        {
+          priority = 54.000000;
+          to="SetupStatic";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckIfBag == 1 && _CheckDeployed == 0;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "LightGarrison">*/
+        class LightGarrison
+        {
+          priority = 50.000000;
+          to="Light_Garrison";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_RandomGarrison < 3"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "ArtyUse_">*/
+        class ArtyUse_
+        {
+          priority = 35.000000;
+          to="ArtilleryCalled";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CallArty <= 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Continue">*/
+        class Continue
+        {
+          priority = 30.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "SetupStatic">*/
+    class SetupStatic
+    {
+      name = "SetupStatic";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_Unit setVariable [""VCOM_HASDEPLOYED"",1,false];" \n
+       "_Unit setVariable [""VCOM_HASSTATIC"",0,false];" \n
+       "" \n
+       "_Group1 = (group _Unit);" \n
+       "_Groupleader = leader _Unit;" \n
+       "_GroupPos = getPos _Groupleader;" \n
+       "_SetDownStatic = [_Group1,_GroupPos,_Unit] spawn Vcom_fnc_unpack;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Light_Garrison">*/
+    class Light_Garrison
+    {
+      name = "Light_Garrison";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "if ((_Unit getVariable ""VCOM_GARRISONED"") == 0) then {" \n
+       "[_Unit] spawn VCOM_fnc_LightGarrison;" \n
+       "_Unit setVariable [""VCOM_GARRISONED"",1,false];" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "PlantTheSatch">*/
+    class PlantTheSatch
+    {
+      name = "PlantTheSatch";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "[_Unit] spawn VCOM_fnc_BlowBuilding;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "sleep 60;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",0,false];" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "ArtilleryCalled">*/
+    class ArtilleryCalled
+    {
+      name = "ArtilleryCalled";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "if (VCOM_Artillery == 1) then {" \n
+       "_myNearestEnemy = _Unit findNearestEnemy (Position _Unit);" \n
+       "_EnemyGroup = group _myNearestEnemy;" \n
+       "if ((count (units _EnemyGroup)) > 2) then {" \n
+       "_Groupleader = leader _Unit;" \n
+       "_AlreadyFiring = _Groupleader getVariable ""VCOM_CALLEDARTILLERY"";" \n
+       "if (_AlreadyFiring == 1) exitWith {};" \n
+       "_GroupLeader setVariable [""VCOM_CALLEDARTILLERY"",1,false];" \n
+       "[_GroupLeader] spawn {" \n
+       "_Grouplead = _this select 0;" \n
+       "sleep (60 + (random 200));" \n
+       "_Grouplead setVariable [""VCOM_CALLEDARTILLERY"",0,false];" \n
+       "};" \n
+       "[_GroupLeader,_myNearestEnemy] spawn VCOM_fnc_ArtilleryCalled;" \n
+       "};" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "CheckNow">*/
+    class CheckNow
+    {
+      name = "CheckNow";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_myNearestEnemy = [_Unit] call VCOM_fnc_ClosestEnemy;" \n
+       "[_Unit,_myNearestEnemy] spawn VCOM_fnc_VehicleHandle;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_3";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait2">*/
+        class Wait2
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Acc__Discharge__1">*/
+    class Acc__Discharge__1
+    {
+      name = "Acc__Discharge__1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 10;" \n
+       "" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_MOVINGTOCOVER"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_EvasiveAI;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Find_Cover_Immed_1">*/
+    class Find_Cover_Immed_1
+    {
+      name = "Find_Cover_Immed_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 20;" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_Suppressed"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFire;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "IsDriver_Check_1">*/
+    class IsDriver_Check_1
+    {
+      name = "IsDriver_Check_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CheckDriver = [_Unit] call VCOM_fnc_IsDriver;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "IsDriver">*/
+        class IsDriver
+        {
+          priority = 50.000000;
+          to="Driver_Checks_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "NotDriver">*/
+        class NotDriver
+        {
+          priority = 49.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Driver_Checks_1">*/
+    class Driver_Checks_1
+    {
+      name = "Driver_Checks_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_GoingToCombat = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "" \n
+       "" \n
+       "" \n
+       "" \n
+       "if (VCOM_ADVANCEDDRIVING isEqualTo 1) then {" \n
+       "_AlreadyExecuted = _Unit getvariable ""VCOM_DriverDetectionIsDriver"";" \n
+       "" \n
+       "if (_AlreadyExecuted isEqualTo 0) then " \n
+       "{" \n
+       "	_Unit setVariable [""VCOM_DriverDetectionIsDriver"",1,false];" \n
+       "	[_Unit] spawn VCOM_fnc_VehicleDetection;" \n
+       "};" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_9";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 40.000000;
+          to="CheckNow_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged_1">*/
+        class Engaged_1
+        {
+          priority = 40.000000;
+          to="CheckNow_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CombatNearby">*/
+        class CombatNearby
+        {
+          priority = 30.000000;
+          to="CheckNow_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_GoingToCombat == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "FLANKBEHAVIOR_1">*/
+    class FLANKBEHAVIOR_1
+    {
+      name = "FLANKBEHAVIOR_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CheckIfBag = 0;" \n
+       "_CheckDeployed = 0;" \n
+       "_CoveredAlready = 0;" \n
+       "_CheckSatchel = 0;" \n
+       "_CheckRecentPlant = 0;" \n
+       "" \n
+       "" \n
+       "_ClosestEnemy = _Unit findNearestEnemy (getPosASL _Unit);" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFireLite;" \n
+       "" \n
+       "if (!(isNull _ClosestEnemy)) then {" \n
+       "" \n
+       "_CheckSatchel = _Unit getVariable ""VCOM_HASSATCHEL"";" \n
+       "_CheckRecentPlant = _Unit getVariable ""VCOM_SATCHELRECENTLY"";" \n
+       "" \n
+       "_CheckIfBag = _Unit getVariable ""VCOM_HASSTATIC"";" \n
+       "_CheckDeployed = _Unit getVariable ""VCOM_HASDEPLOYED"";" \n
+       "_CoveredAlready = _Unit getvariable ""VCOM_COVEREDRECENTLY"";" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "SatchelPlant">*/
+        class SatchelPlant
+        {
+          priority = 55.000000;
+          to="PlantTheSatch_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckSatchel isEqualTo 1 && _CheckRecentPlant isEqualTo 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_11";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CheckIfStatic">*/
+        class CheckIfStatic
+        {
+          priority = 45.000000;
+          to="SetupStatic_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckIfBag isEqualTo 1 && _CheckDeployed isEqualTo 0;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Continue">*/
+        class Continue
+        {
+          priority = 30.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "SetupStatic_1">*/
+    class SetupStatic_1
+    {
+      name = "SetupStatic_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_Unit setVariable [""VCOM_HASDEPLOYED"",1,false];" \n
+       "_Unit setVariable [""VCOM_HASSTATIC"",0,false];" \n
+       "" \n
+       "_Group1 = (group _Unit);" \n
+       "_Groupleader = leader _Unit;" \n
+       "_GroupPos = getPos _Groupleader;" \n
+       "_SetDownStatic = [_Group1,_GroupPos,_Unit] spawn Vcom_fnc_unpack;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "PlantTheSatch_1">*/
+    class PlantTheSatch_1
+    {
+      name = "PlantTheSatch_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "[_Unit] spawn VCOM_fnc_BlowBuilding;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "sleep 60;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",0,false];" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "CheckNow_1">*/
+    class CheckNow_1
+    {
+      name = "CheckNow_1";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_myNearestEnemy = [_Unit] call VCOM_fnc_ClosestEnemy;" \n
+       "[_Unit,_myNearestEnemy] spawn VCOM_fnc_VehicleHandle;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_10";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait2">*/
+        class Wait2
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Acc__Discharge__2">*/
+    class Acc__Discharge__2
+    {
+      name = "Acc__Discharge__2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 10;" \n
+       "" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_MOVINGTOCOVER"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_EvasiveAI;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Find_Cover_Immed_2">*/
+    class Find_Cover_Immed_2
+    {
+      name = "Find_Cover_Immed_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "" \n
+       "sleep 20;" \n
+       "if (alive _Unit) then {" \n
+       "_Unit setVariable [""VCOM_Suppressed"",0,true];" \n
+       "_Unit setVariable [""VCOM_ACTIVELYMOVING"",0,false];" \n
+       "};" \n
+       "};" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFire;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="FLANKBEHAVIOR_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "IsDriver_Check_2">*/
+    class IsDriver_Check_2
+    {
+      name = "IsDriver_Check_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CheckDriver = [_Unit] call VCOM_fnc_IsDriver;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "IsDriver">*/
+        class IsDriver
+        {
+          priority = 50.000000;
+          to="Driver_Checks_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "NotDriver">*/
+        class NotDriver
+        {
+          priority = 49.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckDriver == 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Driver_Checks_2">*/
+    class Driver_Checks_2
+    {
+      name = "Driver_Checks_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_UnitSuppressed = _Unit getVariable ""VCOM_Suppressed"";" \n
+       "_GoingToCombat = _Unit getVariable ""VCOM_MOVINGTOCOVER"";" \n
+       "" \n
+       "" \n
+       "" \n
+       "if (VCOM_ADVANCEDDRIVING isEqualTo 1) then {" \n
+       "_AlreadyExecuted = _Unit getvariable ""VCOM_DriverDetectionIsDriver"";" \n
+       "" \n
+       "if (_AlreadyExecuted isEqualTo 0) then " \n
+       "{" \n
+       "	_Unit setVariable [""VCOM_DriverDetectionIsDriver"",1,false];" \n
+       "	[_Unit] spawn VCOM_fnc_VehicleDetection;" \n
+       "};" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_4";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged">*/
+        class Engaged
+        {
+          priority = 40.000000;
+          to="CheckNow_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_UnitSuppressed == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Engaged_1">*/
+        class Engaged_1
+        {
+          priority = 40.000000;
+          to="CheckNow_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((behaviour _Unit) == ""COMBAT"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CombatNearby">*/
+        class CombatNearby
+        {
+          priority = 30.000000;
+          to="CheckNow_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_GoingToCombat == 1;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "FLANKBEHAVIOR_2">*/
+    class FLANKBEHAVIOR_2
+    {
+      name = "FLANKBEHAVIOR_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "_CheckIfBag = 0;" \n
+       "_CheckDeployed = 0;" \n
+       "_CoveredAlready = 0;" \n
+       "_CheckSatchel = 0;" \n
+       "_CheckRecentPlant = 0;" \n
+       "" \n
+       "" \n
+       "_ClosestEnemy = _Unit findNearestEnemy (getPosASL _Unit);" \n
+       "" \n
+       "[_Unit] call VCOM_fnc_ReactToFireLite;" \n
+       "" \n
+       "if (!(isNull _ClosestEnemy)) then {" \n
+       "_CheckSatchel = _Unit getVariable ""VCOM_HASSATCHEL"";" \n
+       "_CheckRecentPlant = _Unit getVariable ""VCOM_SATCHELRECENTLY"";" \n
+       "" \n
+       "_CheckIfBag = _Unit getVariable ""VCOM_HASSTATIC"";" \n
+       "_CheckDeployed = _Unit getVariable ""VCOM_HASDEPLOYED"";" \n
+       "_CoveredAlready = _Unit getvariable ""VCOM_COVEREDRECENTLY"";" \n
+       "};" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "SatchelPlant">*/
+        class SatchelPlant
+        {
+          priority = 55.000000;
+          to="PlantTheSatch_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckSatchel isEqualTo 1 && _CheckRecentPlant isEqualTo 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_7";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CheckIfStatic">*/
+        class CheckIfStatic
+        {
+          priority = 45.000000;
+          to="SetupStatic_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_CheckIfBag == 1 && _CheckDeployed == 0;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Continue">*/
+        class Continue
+        {
+          priority = 30.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "SetupStatic_2">*/
+    class SetupStatic_2
+    {
+      name = "SetupStatic_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_Unit setVariable [""VCOM_HASDEPLOYED"",1,false];" \n
+       "_Unit setVariable [""VCOM_HASSTATIC"",0,false];" \n
+       "" \n
+       "_Group1 = (group _Unit);" \n
+       "_Groupleader = leader _Unit;" \n
+       "_GroupPos = getPos _Groupleader;" \n
+       "_SetDownStatic = [_Group1,_GroupPos,_Unit] spawn Vcom_fnc_unpack;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "PlantTheSatch_2">*/
+    class PlantTheSatch_2
+    {
+      name = "PlantTheSatch_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "[_Unit] spawn VCOM_fnc_BlowBuilding;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",1,false];" \n
+       "[_Unit] spawn {" \n
+       "_Unit = _this select 0;" \n
+       "sleep 60;" \n
+       "_Unit setVariable [""VCOM_SATCHELRECENTLY"",0,false];" \n
+       "" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Wait">*/
+        class Wait
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "CheckNow_2">*/
+    class CheckNow_2
+    {
+      name = "CheckNow_2";
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "_myNearestEnemy = [_Unit] call VCOM_fnc_ClosestEnemy;" \n
+       "[_Unit] call VCOM_fnc_ReactToFire;" \n
+       "[_Unit,_myNearestEnemy] spawn VCOM_fnc_VehicleHandle;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Dead">*/
+        class Dead
+        {
+          priority = 55.000000;
+          to="Dead_Captain_5";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Wait2">*/
+        class Wait2
+        {
+          priority = 0.000000;
+          to="Leader_Or_Not";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + (2 + random 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain">*/
+    class Dead_Captain
+    {
+      name = "Dead_Captain";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_1">*/
+    class Dead_Captain_1
+    {
+      name = "Dead_Captain_1";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_2">*/
+    class Dead_Captain_2
+    {
+      name = "Dead_Captain_2";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_3">*/
+    class Dead_Captain_3
+    {
+      name = "Dead_Captain_3";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_4">*/
+    class Dead_Captain_4
+    {
+      name = "Dead_Captain_4";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_5">*/
+    class Dead_Captain_5
+    {
+      name = "Dead_Captain_5";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_6">*/
+    class Dead_Captain_6
+    {
+      name = "Dead_Captain_6";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_7">*/
+    class Dead_Captain_7
+    {
+      name = "Dead_Captain_7";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_8">*/
+    class Dead_Captain_8
+    {
+      name = "Dead_Captain_8";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_9">*/
+    class Dead_Captain_9
+    {
+      name = "Dead_Captain_9";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_10">*/
+    class Dead_Captain_10
+    {
+      name = "Dead_Captain_10";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Dead_Captain_11">*/
+    class Dead_Captain_11
+    {
+      name = "Dead_Captain_11";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Exit_Player">*/
+    class Exit_Player
+    {
+      name = "Exit_Player";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "NO_AI">*/
+    class NO_AI
+    {
+      name = "NO_AI";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "NO_AI_1">*/
+    class NO_AI_1
+    {
+      name = "NO_AI_1";
+      init = /*%FSM<STATEINIT""">*/"_Unit setVariable [""FSMHandleEvents"",1,false];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Begin_State";
+  finalStates[] =
+  {
+    "Exit_FSM",
+    "Dead_Captain",
+    "Dead_Captain_1",
+    "Dead_Captain_2",
+    "Dead_Captain_3",
+    "Dead_Captain_4",
+    "Dead_Captain_5",
+    "Dead_Captain_6",
+    "Dead_Captain_7",
+    "Dead_Captain_8",
+    "Dead_Captain_9",
+    "Dead_Captain_10",
+    "Dead_Captain_11",
+    "Exit_Player",
+    "NO_AI",
+    "NO_AI_1",
+  };
+};
+/*%FSM</COMPILE>*/
