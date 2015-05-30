@@ -2,6 +2,19 @@
 // ---------------------------------------- AOW V 2.7 ----------------------------------------------------
 //
 
+// Modificació dels Cavallers del Cel per CC_Magnetar. Configuració del Task Force Arrowhead Radio.
+if (isServer or isDedicated) then {
+    tf_no_auto_long_range_radio = true;
+    tf_same_sw_frequencies_for_side = true;
+    tf_same_lr_frequencies_for_side = true;
+
+	// El canal alternatiu no es configura automàticament. Els líders d'esquadra i d'equip ho hauran
+	// de fer manualment. D'aquesta manera les radios de rifleman només podran escoltar pel canal d'equip.
+	tf_freq_west =    [0 ,7, ["201","202","203","204","41","51","61","512"],0, "b", -1];
+	tf_freq_west_lr = [0 ,7, ["41","51","61","42","52","62","43","53","63"],0, "b", -1];
+}; 
+
+
 // Disable save/load that breaks scripts
 enableSaving [false, false];
 
