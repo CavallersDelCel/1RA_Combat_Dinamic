@@ -14,6 +14,7 @@ if (isServer or isDedicated) then {
 	tf_freq_west_lr = [0 ,7, ["41","51","61","42","52","62","43","53","63"],0, "b", -1];
 }; 
 
+[] execVM "cc_ace3_config.sqf";
 
 // Disable save/load that breaks scripts
 enableSaving [false, false];
