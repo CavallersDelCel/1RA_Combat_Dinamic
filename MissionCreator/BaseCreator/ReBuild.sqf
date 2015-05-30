@@ -129,7 +129,7 @@ NBAmmo3 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 NBAmmo4 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 
-/************** Canvis dels Cavallers del Cel per CC_Viper ***************************/
+// 1RA: CC_Viper: Canvis per afegir el virtual arsenal, noves imatges, banderes i cartells //
 //AMMOBOX DEPOT
 [[NBAmmobox, ["<t color='#ff1111'>Virtual Arsenal</t>","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBAmmobox, ["<t color='#ff1111'>Establir l'equipament actual com a perfil de reaparicio</t>","[player, [profileNamespace, 'CD_Equipament']] call BIS_fnc_saveInventory; profileNamespace setVariable ['CD_Equipament_Check',1]; hint'Loadout Saved';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
@@ -157,7 +157,7 @@ cartell01 setObjectTextureGlobal [0, "images\Cartell_01_ServerCC_A3.paa"];
 cartell02 setObjectTextureGlobal [0, "images\Cartell_02_ServerCC_A3.paa"];
 cartell03 setObjectTextureGlobal [0, "images\Cartell_03_ServerCC_A3.paa"];
 cartell04 setObjectTextureGlobal [0, "images\Cartell_04_ServerCC_A3.paa"];
-/************** Fi dels canvis dels Cavallers del Cel per CC_Viper *******************/
+// 1RA: CC_Viper: Fi dels canvis per afegir el virtual arsenal, noves imatges, banderes i cartells //
 
 // Vehicle repair
 _mRepair = createMarker ["Repair_marker", getPos Hrepair];
