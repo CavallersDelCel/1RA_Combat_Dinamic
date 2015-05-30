@@ -1,8 +1,8 @@
-Author = "Cruoriss";
-OnLoadName = "All Out Warfare";
-OnLoadMission = "$STR_AOW_Title";
-loadScreen = "images\Overview.jpg";
-overviewPicture = "images\Overview.jpg";
+Author = "Cruoriss, mod by Viper, Magnetar";
+OnLoadName = "Combat dinamic";
+OnLoadMission = "Combat dinamic (All Out Warfare) es una missió que permet la creacio de tasques i enemics de forma ràpida i efectiva.";
+loadScreen = "images\portada_cd.paa"; // Preview picture
+overviewPicture = "images\portada_cd.paa";
 disabledAI = 1;
 respawn = 3;
 RespawnDelay = 15;
@@ -18,6 +18,8 @@ class Header
 	minPlayers = 1;
 	maxPlayers = 42;
 };
+
+enableDebugConsole = 1;
 
 // AOW GUI
 #include "AOW_GUI\Defines.hpp"
@@ -76,7 +78,7 @@ class Params
       title = $STR_AOW_Dynamic_weather;
       values[] = {0,1,2,3,4,5};
       texts[] = {"Clear","Overcast","Rain","Fog","Random","Disabled"};
-      default = 4;
+      default = 1;
     };
     class AOW_BlankParam2
     {// 4
