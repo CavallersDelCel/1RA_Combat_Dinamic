@@ -3,32 +3,30 @@ class Mission
 {
 	addOns[]=
 	{
+		"A3_Characters_F_BLUFOR",
 		"A3_Structures_F_Civ_Market",
-		"A3_Structures_F_System",
 		"A3_Structures_F_Mil_BagBunker",
-		"A3_Weapons_F_Ammoboxes",
-		"a3_map_stratis",
 		"A3_Modules_F_Curator_Curator",
 		"a3_uav_f_characters_f_gamma",
 		"A3_Modules_F",
 		"A3_Modules_F_Supports",
 		"a3_map_altis",
-		"A3_Data_F_Curator_Characters"
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Modules_F_Supports",
 		"A3_Modules_F",
 		"A3_Modules_F_Curator_Curator",
-		"A3_Data_F_Curator_Characters",
-		"A3_Modules_F_Supports",
 		"a3_map_altis"
 	};
 	randomSeed=9543892;
 	class Intel
 	{
-		briefingName="All Out Warfare";
+		briefingName="[1RA] Combat dinamic [CC] 1.6";
 		overviewText="@STR_AOW_Title";
-		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -46,8 +44,721 @@ class Mission
 	};
 	class Groups
 	{
-		items=58;
+		items=25;
 		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=14;
+				class Item0
+				{
+					position[]={4.6477613,-0.00031932828,9.4731655};
+					azimut=0.052220099;
+					special="NONE";
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					text="zeus1";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'esquadra M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'Esquadra";
+				};
+				class Item1
+				{
+					position[]={4.5164423,0.00017341667,8.0842094};
+					azimut=0.052220099;
+					special="NONE";
+					id=1;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_2";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metge M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Metge";
+				};
+				class Item2
+				{
+					position[]={5.9278421,-0.00081813242,9.615057};
+					azimut=0.052017901;
+					special="NONE";
+					id=2;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_3";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item3
+				{
+					position[]={5.9123411,-0.00036493369,8.1226482};
+					azimut=0.052017901;
+					special="NONE";
+					id=3;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_4";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item4
+				{
+					position[]={5.6797552,0.00023614138,6.522995};
+					azimut=0.052017901;
+					special="NONE";
+					id=4;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_5";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item5
+				{
+					position[]={5.5517797,0.00078072317,4.9145927};
+					azimut=0.052017901;
+					special="NONE";
+					id=5;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_6";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller Automatic";
+				};
+				class Item6
+				{
+					position[]={7.2667646,-0.0012696646,9.7335281};
+					azimut=0.052017901;
+					special="NONE";
+					id=6;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_7";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item7
+				{
+					position[]={7.1711588,-0.00091885502,8.4732523};
+					azimut=0.052017901;
+					special="NONE";
+					id=7;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_8";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item8
+				{
+					position[]={7.2554884,-0.00049073354,6.9363985};
+					azimut=0.052017901;
+					special="NONE";
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_9";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item9
+				{
+					position[]={7.0813665,0.00011866824,5.2344885};
+					azimut=0.052017901;
+					special="NONE";
+					id=9;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_10";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metrallador M240B OCP""]] call BIS_fnc_loadInventory;";
+					description="Metrallador";
+				};
+				class Item10
+				{
+					position[]={8.9856863,-0.0016768702,9.6151543};
+					azimut=0.052017901;
+					special="NONE";
+					id=10;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_11";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item11
+				{
+					position[]={9.0005903,-0.0014436926,8.3278065};
+					azimut=0.052017901;
+					special="NONE";
+					id=11;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_12";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item12
+				{
+					position[]={8.9141321,-0.0010763145,6.9369831};
+					azimut=2.5278101;
+					special="NONE";
+					id=12;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_13";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item13
+				{
+					position[]={8.7298956,-0.00054809992,5.3726034};
+					azimut=-1.06608;
+					special="NONE";
+					id=13;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_14";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller automatic";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=14;
+				class Item0
+				{
+					position[]={11.195083,-0.00018264767,18.059868};
+					azimut=-179.32401;
+					special="NONE";
+					id=14;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					text="BLUFOR_PLAYER_15";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'esquadra M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'Esquadra";
+				};
+				class Item1
+				{
+					position[]={11.342294,0.00045564678,19.593853};
+					azimut=-179.32401;
+					special="NONE";
+					id=15;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_16";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metge M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Metge";
+				};
+				class Item2
+				{
+					position[]={9.6452036,-0.00065955799,18.001883};
+					azimut=-179.32401;
+					special="NONE";
+					id=16;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_17";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item3
+				{
+					position[]={9.7211924,-0.00010918221,19.45141};
+					azimut=-179.32401;
+					special="NONE";
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_18";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item4
+				{
+					position[]={9.8140059,0.00045117509,20.83219};
+					azimut=-179.32401;
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_19";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item5
+				{
+					position[]={10.095521,0.0010833272,22.271362};
+					azimut=-179.32401;
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_20";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller Automatic";
+				};
+				class Item6
+				{
+					position[]={7.8714705,-0.0010930551,18.008575};
+					azimut=-179.32401;
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_21";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item7
+				{
+					position[]={7.9953756,-0.00058907014,19.521767};
+					azimut=-179.32401;
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_22";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item8
+				{
+					position[]={8.1152506,-1.2526638e-005,21.013044};
+					azimut=-179.32401;
+					special="NONE";
+					id=22;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_23";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item9
+				{
+					position[]={8.476594,0.00063017517,22.384697};
+					azimut=-179.32401;
+					special="NONE";
+					id=23;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_24";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metrallador M240B OCP""]] call BIS_fnc_loadInventory;";
+					description="Metrallador";
+				};
+				class Item10
+				{
+					position[]={6.3224573,-0.0013686079,17.977516};
+					azimut=-179.32401;
+					special="NONE";
+					id=24;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_25";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Lider d'equip de foc";
+				};
+				class Item11
+				{
+					position[]={6.3682318,-0.00097797567,19.551888};
+					azimut=-179.32401;
+					special="NONE";
+					id=25;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_26";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller";
+				};
+				class Item12
+				{
+					position[]={6.594842,-0.00043608836,21.083399};
+					azimut=-179.32401;
+					special="NONE";
+					id=26;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=1;
+					text="BLUFOR_PLAYER_27";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					description="Granader";
+				};
+				class Item13
+				{
+					position[]={6.8304014,0.00012010627,22.408302};
+					azimut=-179.32401;
+					special="NONE";
+					id=27;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_28";
+					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					description="Fuseller automatic";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={12.30848,-0.00053337956,16.218613};
+					azimut=-92.330002;
+					special="NONE";
+					id=28;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_43";
+					description="Pilot d'helicopter";
+				};
+				class Item1
+				{
+					position[]={13.63135,-0.00012717431,16.225952};
+					azimut=-92.330002;
+					special="NONE";
+					id=29;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_44";
+					description="Pilot d'helicopter";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={12.111859,-0.0013384058,13.941837};
+					azimut=-92.330002;
+					special="NONE";
+					id=30;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_39";
+					description="Pilot d'helicopter";
+				};
+				class Item1
+				{
+					position[]={13.609983,-0.0010021285,13.856847};
+					azimut=-92.330002;
+					special="NONE";
+					id=31;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_40";
+					description="Pilot d'helicopter";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3.3079004,-0.00041944982,11.382011};
+					azimut=85.7715;
+					special="NONE";
+					id=32;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_29";
+					description="Membre de tripulació";
+				};
+				class Item1
+				{
+					position[]={3.4822588,-0.00093485648,13.039641};
+					azimut=85.7715;
+					special="NONE";
+					id=33;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_30";
+					description="Membre de tripulació";
+				};
+				class Item2
+				{
+					position[]={2.0049639,3.0168972e-005,11.481438};
+					azimut=85.7715;
+					special="NONE";
+					id=34;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_31";
+					description="Membre de tripulació";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={3.7966223,-0.0013447878,14.678191};
+					azimut=-263.91699;
+					special="NONE";
+					id=35;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=1;
+					text="BLUFOR_PLAYER_32";
+					description="Membre de tripulació";
+				};
+				class Item1
+				{
+					position[]={4.0592241,-0.001539417,16.173765};
+					azimut=-263.91699;
+					special="NONE";
+					id=36;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_33";
+					description="Membre de tripulació";
+				};
+				class Item2
+				{
+					position[]={2.4100657,-0.0012943749,16.278463};
+					azimut=85.7715;
+					special="NONE";
+					id=37;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=1;
+					text="BLUFOR_PLAYER_34";
+					description="Membre de tripulació";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={11.717181,-0.0019878824,10.766163};
+					azimut=-92.330002;
+					special="NONE";
+					id=38;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_35";
+					description="Pilot d'avió";
+				};
+				class Item1
+				{
+					position[]={13.331793,-0.0018886885,10.722239};
+					azimut=-92.330002;
+					special="NONE";
+					id=39;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_36";
+					description="Pilot d'avió";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={12.234115,-0.0016193449,12.765938};
+					azimut=-92.330002;
+					special="NONE";
+					id=40;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_37";
+					description="Pilot d'helicopter";
+				};
+				class Item1
+				{
+					position[]={13.460016,-0.0014257532,12.613512};
+					azimut=-92.330002;
+					special="NONE";
+					id=41;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_38";
+					description="Pilot d'helicopter";
+				};
+			};
+		};
+		class Item8
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={12.318858,-0.00095398247,15.021445};
+					azimut=-92.330002;
+					special="NONE";
+					id=42;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_41";
+					description="Pilot d'helicopter";
+				};
+				class Item1
+				{
+					position[]={13.663759,-0.00056136341,15.051039};
+					azimut=-92.330002;
+					special="NONE";
+					id=43;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=1;
+					text="BLUFOR_PLAYER_42";
+					description="Pilot d'helicopter";
+				};
+			};
+		};
+		class Item9
 		{
 			side="LOGIC";
 			class Vehicles
@@ -55,8 +766,711 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25.001572,0.0022527126,67.611816};
-					id=0;
+					position[]={17.603724,0,43.575684};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=44;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Artillery";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All_1";
+					syncId=0;
+					synchronizations[]={1};
+				};
+			};
+		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={22.741173,0,48.824219};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_custom_HQ";
+						};
+						class Item1
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Artillery";
+						};
+						class Item2
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Bombing";
+						};
+						class Item3
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Heli";
+						};
+						class Item4
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Drop";
+						};
+						class Item5
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Transport";
+						};
+						class Item6
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_UAV";
+						};
+					};
+					id=45;
+					side="LOGIC";
+					vehicle="SupportRequester";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All";
+					syncId=1;
+					synchronizations[]={2,3,5,4,0};
+				};
+			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20.471365,0,43.910645};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=46;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_CAS_Bombing";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All_2";
+					syncId=2;
+					synchronizations[]={1};
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={22.95536,0,44.103027};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=47;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_CAS_Heli";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All_3";
+					syncId=3;
+					synchronizations[]={1};
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={28.851357,0,44.331055};
+					class args
+					{
+						items=5;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_crateInit";
+						};
+						class Item3
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=48;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Drop";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All_5";
+					syncId=4;
+					synchronizations[]={1};
+				};
+			};
+		};
+		class Item14
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25.747742,0,44.049316};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=49;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Transport";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_All_4";
+					syncId=5;
+					synchronizations[]={1};
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13.172174,0,34.638184};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_custom_HQ";
+						};
+						class Item1
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Artillery";
+						};
+						class Item2
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Bombing";
+						};
+						class Item3
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Heli";
+						};
+						class Item4
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Drop";
+						};
+						class Item5
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Transport";
+						};
+						class Item6
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_UAV";
+						};
+					};
+					id=50;
+					side="LOGIC";
+					vehicle="SupportRequester";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Logistic";
+					syncId=6;
+					synchronizations[]={8,7};
+				};
+			};
+		};
+		class Item16
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14.66728,0,31.848145};
+					class args
+					{
+						items=5;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_crateInit";
+						};
+						class Item3
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Drop";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=51;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Drop";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Logistic_2";
+					syncId=7;
+					synchronizations[]={6};
+				};
+			};
+		};
+		class Item17
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9.7431765,0,31.860352};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Transport";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=52;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Transport";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Logistic_1";
+					syncId=8;
+					synchronizations[]={6};
+				};
+			};
+		};
+		class Item18
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={26.402744,0,32.542969};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_Artillery";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=53;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_Artillery";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Offensive_3";
+					syncId=9;
+					synchronizations[]={10};
+				};
+			};
+		};
+		class Item19
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23.743069,0,36.194336};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_custom_HQ";
+						};
+						class Item1
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Artillery";
+						};
+						class Item2
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Bombing";
+						};
+						class Item3
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_CAS_Heli";
+						};
+						class Item4
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Drop";
+						};
+						class Item5
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_Transport";
+						};
+						class Item6
+						{
+							value="-1";
+							parentCls="SupportRequester";
+							typeName="BIS_SUPP_limit_UAV";
+						};
+					};
+					id=54;
+					side="LOGIC";
+					vehicle="SupportRequester";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Offensive";
+					syncId=10;
+					synchronizations[]={11,12,9};
+				};
+			};
+		};
+		class Item20
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23.445244,0,31.904297};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_CAS_Bombing";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=55;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_CAS_Bombing";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Offensive_2";
+					syncId=11;
+					synchronizations[]={10};
+				};
+			};
+		};
+		class Item21
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20.217669,0,31.636719};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="[]";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_vehicles";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_vehicleInit";
+						};
+						class Item2
+						{
+							value="Side";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_filter";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="SupportProvider_Virtual_CAS_Heli";
+							typeName="BIS_SUPP_cooldown";
+						};
+					};
+					id=56;
+					side="LOGIC";
+					vehicle="SupportProvider_Virtual_CAS_Heli";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="AOW_Support_Offensive_1";
+					syncId=12;
+					synchronizations[]={10};
+				};
+			};
+		};
+		class Item22
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={24.598061,0,69.896973};
+					id=57;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -65,7 +1479,7 @@ class Mission
 				};
 			};
 		};
-		class Item1
+		class Item23
 		{
 			side="LOGIC";
 			class Vehicles
@@ -73,7 +1487,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={18.106138,0.0018295359,57.746094};
+					position[]={17.702627,0,60.03125};
 					class args
 					{
 						items=4;
@@ -102,7 +1516,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=1;
+					id=58;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -112,183 +1526,7 @@ class Mission
 				};
 			};
 		};
-		class Item2
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={0.5858264,0,0.53710938};
-					azimut=-721.16602;
-					special="NONE";
-					id=2;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-					text="zeus1";
-					description="REPAIR/MEDIC + ZEUS (Y KEY TO USE)";
-				};
-			};
-		};
-		class Item3
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1.7548749,0,0.54150391};
-					azimut=-346.716;
-					special="NONE";
-					id=3;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_2";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item4
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.2513523,0,0.67675781};
-					azimut=-349.62299;
-					special="NONE";
-					id=4;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_19";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item5
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.9014568,0,0.70263672};
-					azimut=-357.60501;
-					special="NONE";
-					id=5;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_18";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item6
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.4596782,0,0.74072266};
-					azimut=-357.48099;
-					special="NONE";
-					id=6;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_12";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item7
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.1479392,0,0.74267578};
-					azimut=-357.12399;
-					special="NONE";
-					id=7;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_11";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item8
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3.6887403,0,0.67626953};
-					azimut=-357.66699;
-					special="NONE";
-					id=8;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_7";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item9
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.4149303,0,0.70898438};
-					azimut=-349.49701;
-					special="NONE";
-					id=9;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_9";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item10
+		class Item24
 		{
 			side="LOGIC";
 			class Vehicles
@@ -296,7 +1534,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={33.064938,0.001811004,57.040527};
+					position[]={32.661423,0,59.325684};
 					class args
 					{
 						items=4;
@@ -325,1443 +1563,13 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=10;
+					id=59;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zCurator_1";
-				};
-			};
-		};
-		class Item11
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={0.62480152,0,1.3325195};
-					azimut=-4.2342238;
-					id=11;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="zeus2";
-					description="REPAIR/MEDIC + ZEUS (Y KEY TO USE)";
-				};
-			};
-		};
-		class Item12
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.0710373,0,0.70507813};
-					azimut=-346.716;
-					special="NONE";
-					id=12;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_8";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item13
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3.2701359,0,0.63916016};
-					azimut=-346.716;
-					special="NONE";
-					id=13;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_6";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item14
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.4939909,0,1.8447266};
-					azimut=-4.23422;
-					id=14;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_17";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item15
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.1442547,0,1.8076172};
-					azimut=-4.23422;
-					id=15;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_16";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item16
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6.7533908,0,1.7773438};
-					azimut=-4.23422;
-					id=16;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_15";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item17
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.8490634,0,1.684082};
-					azimut=-4.23422;
-					id=17;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_10";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item18
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.495841,0,1.6069336};
-					azimut=-4.23422;
-					id=18;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_9";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item19
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.1373343,0,1.590332};
-					azimut=-4.23422;
-					id=19;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_8";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item20
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3.2847071,0,1.5322266};
-					azimut=-4.23422;
-					id=20;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_6";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item21
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.8638663,0,1.4536133};
-					azimut=-4.23422;
-					id=21;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_5";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item22
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.4933689,0,1.4365234};
-					azimut=-4.23422;
-					id=22;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_4";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item23
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.0353892,0,1.4145508};
-					azimut=-4.23422;
-					id=23;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_3";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item24
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.8055959,0,0.75878906};
-					azimut=-346.716;
-					special="NONE";
-					id=24;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_10";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item25
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.7055454,0,1.7998047};
-					azimut=-4.23422;
-					id=25;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_20";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item26
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.3203058,0,1.8056641};
-					azimut=-4.23422;
-					id=26;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_19";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item27
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.906642,0,1.8193359};
-					azimut=-4.23422;
-					id=27;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_18";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item28
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6.3729539,0,1.7431641};
-					azimut=-4.23422;
-					id=28;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_14";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item29
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.9427695,0,1.6801758};
-					azimut=-4.23422;
-					id=29;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_13";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item30
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.5500994,0,1.6625977};
-					azimut=-4.23422;
-					id=30;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_12";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item31
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.1783657,0,1.6767578};
-					azimut=-4.23422;
-					id=31;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_11";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item32
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3.6883049,0,1.5717773};
-					azimut=-4.23422;
-					id=32;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_7";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item33
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1.6666627,0,1.3842773};
-					azimut=-4.23422;
-					id=33;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_2";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item34
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1.2227836,0,1.3305664};
-					azimut=-4.23422;
-					id=34;
-					side="EAST";
-					vehicle="O_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="OPFOR_PLAYER_1";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item35
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1.2893014,0,0.55419922};
-					azimut=-346.716;
-					special="NONE";
-					id=35;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_1";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item36
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.6189814,0,0.61474609};
-					azimut=-349.62299;
-					special="NONE";
-					id=36;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_20";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item37
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.1283052,0,0.49658203};
-					azimut=-357.60501;
-					special="NONE";
-					id=37;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_3";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item38
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.4815719,0,0.48974609};
-					azimut=-357.48099;
-					special="NONE";
-					id=38;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_4";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item39
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.5238485,0,0.75439453};
-					azimut=-357.12399;
-					special="NONE";
-					id=39;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_17";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item40
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7.0757685,0,0.76171875};
-					azimut=-357.66699;
-					special="NONE";
-					id=40;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_16";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item41
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.8817203,0,0.57324219};
-					azimut=-349.49701;
-					special="NONE";
-					id=41;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_5";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item42
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6.650723,0,0.77734375};
-					azimut=-346.716;
-					special="NONE";
-					id=42;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_15";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item43
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6.2657037,0,0.76464844};
-					azimut=-346.716;
-					special="NONE";
-					id=43;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_14";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item44
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.8671618,0,0.76953125};
-					azimut=-346.716;
-					special="NONE";
-					id=44;
-					side="WEST";
-					vehicle="b_soldier_universal_f";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="BLUFOR_PLAYER_13";
-					description="REPAIR/MEDIC";
-				};
-			};
-		};
-		class Item45
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={19.222069,0,41.180664};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=45;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Artillery";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All_1";
-					syncId=0;
-					synchronizations[]={1};
-				};
-			};
-		};
-		class Item46
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={24.359518,0,46.429199};
-					class args
-					{
-						items=7;
-						class Item0
-						{
-							value="";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_custom_HQ";
-						};
-						class Item1
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Artillery";
-						};
-						class Item2
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Bombing";
-						};
-						class Item3
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Heli";
-						};
-						class Item4
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Drop";
-						};
-						class Item5
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Transport";
-						};
-						class Item6
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_UAV";
-						};
-					};
-					id=46;
-					side="LOGIC";
-					vehicle="SupportRequester";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All";
-					syncId=1;
-					synchronizations[]={2,3,5,4,0};
-				};
-			};
-		};
-		class Item47
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={22.089712,0,41.515625};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=47;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_CAS_Bombing";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All_2";
-					syncId=2;
-					synchronizations[]={1};
-				};
-			};
-		};
-		class Item48
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={24.573706,0,41.708008};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=48;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_CAS_Heli";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All_3";
-					syncId=3;
-					synchronizations[]={1};
-				};
-			};
-		};
-		class Item49
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={30.469704,0,41.936035};
-					class args
-					{
-						items=5;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_crateInit";
-						};
-						class Item3
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=49;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Drop";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All_5";
-					syncId=4;
-					synchronizations[]={1};
-				};
-			};
-		};
-		class Item50
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={27.366085,0,41.654297};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=50;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Transport";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_All_4";
-					syncId=5;
-					synchronizations[]={1};
-				};
-			};
-		};
-		class Item51
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={14.790521,0,32.243164};
-					class args
-					{
-						items=7;
-						class Item0
-						{
-							value="";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_custom_HQ";
-						};
-						class Item1
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Artillery";
-						};
-						class Item2
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Bombing";
-						};
-						class Item3
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Heli";
-						};
-						class Item4
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Drop";
-						};
-						class Item5
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Transport";
-						};
-						class Item6
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_UAV";
-						};
-					};
-					id=51;
-					side="LOGIC";
-					vehicle="SupportRequester";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Logistic";
-					syncId=6;
-					synchronizations[]={8,7};
-				};
-			};
-		};
-		class Item52
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={16.285627,0,29.453125};
-					class args
-					{
-						items=5;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="[[_this, [""<t color='#ff1111'>Virtual Arsenal</t>"",""scripts\arsenal.sqf"",[],6,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;  [[_this, [""<t color='#ff1111'>Loadout Editor (Mod required)</t>"",""userconfig\LEA\loadout.sqf"",[],5.8,false,true,"""",""""]],""MHQ_fnc_addAction"",true,true] spawn BIS_fnc_MP;";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_crateInit";
-						};
-						class Item3
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Drop";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=52;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Drop";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Logistic_2";
-					syncId=7;
-					synchronizations[]={6};
-				};
-			};
-		};
-		class Item53
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={11.361523,0,29.465332};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Transport";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=53;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Transport";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Logistic_1";
-					syncId=8;
-					synchronizations[]={6};
-				};
-			};
-		};
-		class Item54
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={28.021093,0,30.147949};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_Artillery";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=54;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_Artillery";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Offensive_3";
-					syncId=9;
-					synchronizations[]={10};
-				};
-			};
-		};
-		class Item55
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={25.361416,0,33.799316};
-					class args
-					{
-						items=7;
-						class Item0
-						{
-							value="";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_custom_HQ";
-						};
-						class Item1
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Artillery";
-						};
-						class Item2
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Bombing";
-						};
-						class Item3
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_CAS_Heli";
-						};
-						class Item4
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Drop";
-						};
-						class Item5
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_Transport";
-						};
-						class Item6
-						{
-							value="-1";
-							parentCls="SupportRequester";
-							typeName="BIS_SUPP_limit_UAV";
-						};
-					};
-					id=55;
-					side="LOGIC";
-					vehicle="SupportRequester";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Offensive";
-					syncId=10;
-					synchronizations[]={11,12,9};
-				};
-			};
-		};
-		class Item56
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={25.063591,0,29.509277};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_CAS_Bombing";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=56;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_CAS_Bombing";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Offensive_2";
-					syncId=11;
-					synchronizations[]={10};
-				};
-			};
-		};
-		class Item57
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={21.836014,0,29.241699};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="[]";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_vehicles";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_vehicleInit";
-						};
-						class Item2
-						{
-							value="Side";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_filter";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="SupportProvider_Virtual_CAS_Heli";
-							typeName="BIS_SUPP_cooldown";
-						};
-					};
-					id=57;
-					side="LOGIC";
-					vehicle="SupportProvider_Virtual_CAS_Heli";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="AOW_Support_Offensive_1";
-					syncId=12;
-					synchronizations[]={10};
 				};
 			};
 		};
@@ -1782,7 +1590,7 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={52.233513,0,56.294434};
+			position[]={59.814598,0,60.991089};
 			a=6;
 			b=10;
 			rectangular=1;
@@ -1790,7 +1598,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="Repair_trigger";
+			name="Repair_trigger_1";
 			expCond="(""LandVehicle"" countType thislist > 0) && ((getpos (thislist select 0)) select 2 < 1)";
 			expActiv="0 = (thislist select 0) execVM ""scripts\x_reload.sqf"";";
 			class Effects
@@ -1799,13 +1607,13 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={15.263435,-0.0070435163,1.2978516};
+			position[]={3.5538929,0,7.4190674};
 			a=20;
-			b=5;
+			b=20;
 			rectangular=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="AOW_EDITOR_DEBUG";
+			name="AOW_EDITOR_DEBUG_1";
 			expCond="!isMultiplayer";
 			expActiv="{if (!isPlayer _x) then {deleteVehicle _x}} forEach allUnits";
 			class Effects
@@ -1818,7 +1626,6 @@ class Intro
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
@@ -1849,7 +1656,6 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
@@ -1880,7 +1686,6 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
