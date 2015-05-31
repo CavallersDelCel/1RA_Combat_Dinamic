@@ -33,7 +33,7 @@ enableDebugConsole = 1;
 // VARIOUS GUI
 #include "ASORVS\menu.hpp"
 #include "ATM_airdrop\dialog.hpp"
-#include "CHVD\dialog.hpp"
+// #include "CHVD\dialog.hpp"
 #include "bon_recruit_units\dialog\common.hpp"
 #include "bon_recruit_units\dialog\recruitment.hpp"
 #include "infected\infectedsounds.hpp"
@@ -43,7 +43,7 @@ class CfgFunctions
 {
   #include "infected\cfgfunctions.hpp"
   #include "ASORVS\cfgfunctions.hpp"
-  #include "CHVD\CfgFunctions.hpp"
+//  #include "CHVD\CfgFunctions.hpp"
   #include "EPD\EPDcfgFunctions.hpp"
   #include "ais_injury\cfgFunctionsAIS.hpp"
 };
@@ -142,9 +142,9 @@ default = 0;
 class AOW_AIAmbiant
 {// 12
 title = $STR_AOW_AIAmbiant;
-values[] = {3,6,9,12,15,18,21};
-texts[] = {"3","6 groups","9","12","15","18","21"};
-default = 6;
+values[] = {2,3,6,9,12,15,18,21};
+texts[] = {"2","3","6 groups","9","12","15","18","21"};
+default = 2;
        };
 class AOW_UPSMON_param
 {// 13
@@ -179,6 +179,6 @@ class AOW_DisableReviveF
 title = $STR_AOW_DisableReviveF;
 values[] = {0,1};
 texts[] = {"Built in revive for players + recruited AI","Off (to be used with addon version revive)"};
-default = 0;
+default = 1;
        };
 };
