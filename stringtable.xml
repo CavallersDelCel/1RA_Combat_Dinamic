@@ -724,7 +724,7 @@
 	<Key ID="STR_chvd_title">
       <Original>VIEW DISTANCE SETTINGS</Original>
       <French>CONFIGURER DISTANCE D'AFFICHAGE</French>
-	  <Spanish>Distancia de visio</Spanish>
+	  <Spanish>&lt;t color='#ff6000'&gt;Distancia de visio&lt;/t&gt;</Spanish>
     </Key>
 	<Key ID="STR_chvd_foot">
       <Original>ON FOOT</Original>

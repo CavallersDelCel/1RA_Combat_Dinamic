@@ -41,10 +41,10 @@ switch (paramsArray select 9) do
 	case 3: {player synchronizeObjectsAdd [AOW_Support_All];};
 };
 
-// Use saved loadout if it exist
-_respawnloadout = profileNamespace getVariable "AOW_Respawn_Loadout_Check";
-if (!isNil "_respawnloadout") then {
-	[player, [profileNamespace, "AOW_Respawn_Loadout"]] call BIS_fnc_loadInventory;};
+// 1RA: CC_Viper: Use saved loadout if it exist
+// _respawnloadout = profileNamespace getVariable "CD_Equipament_Check";
+// if (!isNil "_respawnloadout") then {
+//	[player, [profileNamespace, "CD_Equipament"]] call BIS_fnc_loadInventory;};
 player linkItem "ItemMap";
 
 // Enable player movement

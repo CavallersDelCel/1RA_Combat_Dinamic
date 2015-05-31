@@ -26,9 +26,9 @@ switch (paramsArray select 9) do
 };
 
 // Use saved loadout if it exist
-_respawnloadout = profileNamespace getVariable "AOW_Respawn_Loadout_Check";
+_respawnloadout = profileNamespace getVariable "CD_Equipament_Check";
 if (!isNil "_respawnloadout") then {
-	[player, [profileNamespace, "AOW_Respawn_Loadout"]] call BIS_fnc_loadInventory;};
+	[player, [profileNamespace, "CD_Equipament"]] call BIS_fnc_loadInventory;};
 
 sleep 1;
 // If game just started then create base, if player jip or another player create base then teleport to base

@@ -118,10 +118,10 @@ NBShip setObjectTextureGlobal [0, "images\cart_vaixells.paa"];
 [[NBShip, [localize "str_AOW_Menu_SpawnS_2","[] execVM 'MissionCreator\BaseCreator\DialogSpawner.sqf'; AOW_Selected_Spawner = 1",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[NBShip, [localize "str_AOW_Menu_SpawnS_3","MissionCreator\BaseCreator\TPShip.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
-// AMMO DEPOT
-[[NBAmmo, [localize "str_AOW_Menu_Ammo1","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[NBAmmo, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'AOW_Respawn_Loadout']] call BIS_fnc_saveInventory; profileNamespace setVariable ['AOW_Respawn_Loadout_Check',1]; hint'Equipament desat';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[NBAmmo, [localize "str_AOW_Menu_Ammo3","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+// AMMO DEPOT (Cartell)
+// [[NBAmmo, [localize "str_AOW_Menu_Ammo1","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+// [[NBAmmo, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'AOW_Respawn_Loadout']] call BIS_fnc_saveInventory; profileNamespace setVariable ['AOW_Respawn_Loadout_Check',1]; hint'Equipament desat';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+// [[NBAmmo, [localize "str_AOW_Menu_Ammo3","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 NBAmmo setObjectTextureGlobal [0, "images\cart_arsenal1.paa"];
 NBAmmo2 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 publicVariable "NBAmmo2";
@@ -131,9 +131,9 @@ NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 
 // 1RA: CC_Viper: Canvis per afegir el virtual arsenal, noves imatges, banderes i cartells //
 //AMMOBOX DEPOT
-[[NBAmmobox, ["<t color='#ff1111'>Virtual Arsenal</t>","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[NBAmmobox, ["<t color='#ff1111'>Establir l'equipament actual com a perfil de reaparicio</t>","[player, [profileNamespace, 'CD_Equipament']] call BIS_fnc_saveInventory; profileNamespace setVariable ['CD_Equipament_Check',1]; hint'Loadout Saved';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[NBAmmobox, ["<t color='#ff1111'>Editor d'equipament (Requereix mod)</t>","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmobox, [localize "str_AOW_Menu_Ammo1","scripts\arsenal.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmobox, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'CD_Equipament']] call BIS_fnc_saveInventory; profileNamespace setVariable ['CD_Equipament_Check',1]; hint'Equipament desat';",[],5.9,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
+[[NBAmmobox, [localize "str_AOW_Menu_Ammo3","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
 // Tablet perfils
 [[tablet, ["<t color='#027CE7'>Desar perfils 1RA</t>","1RAPerfils.sqf",[],6,false,true,"",""]],"MHQ_fnc_addAction",true,true] spawn BIS_fnc_MP;
