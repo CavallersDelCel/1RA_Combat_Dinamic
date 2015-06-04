@@ -21,14 +21,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Major Level AI
 AccuracyFunctionRank5 = {
@@ -36,14 +36,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Captain Level AI
 AccuracyFunctionRank4 = {
@@ -51,14 +51,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Lieutenant Level AI
 AccuracyFunctionRank3 = {
@@ -66,14 +66,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Sergeant Level AI
 AccuracyFunctionRank2 = {
@@ -81,14 +81,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Corporal Level AI
 AccuracyFunctionRank1 = {
@@ -96,14 +96,14 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };
 //Private Level AI
 AccuracyFunctionRank0 = {
@@ -111,12 +111,12 @@ _Unit = _this select 0;
 
 _Unit setSkill ["aimingAccuracy",AIskill];
 _Unit setSkill ["aimingShake",AIskill];
-_Unit setSkill ["spotDistance",1];
-_Unit setSkill ["spotTime",1];
+_Unit setSkill ["spotDistance",AIskill];
+_Unit setSkill ["spotTime",AIskill];
 _Unit setSkill ["courage",1];
-_Unit setSkill ["commanding",1];
-_Unit setSkill ["aimingSpeed",1];
+_Unit setSkill ["commanding",AIskill];
+_Unit setSkill ["aimingSpeed",AIskill];
 _Unit setSkill ["general",AIskill];
-_Unit setSkill ["endurance",1];
-_Unit setSkill ["reloadSpeed",1];
+_Unit setSkill ["endurance",AIskill];
+_Unit setSkill ["reloadSpeed",AIskill];
 };

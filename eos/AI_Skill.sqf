@@ -1,77 +1,72 @@
-_AI1 = (paramsArray select 14);
-_AI = _AI1/10;
+_AIskill = (paramsArray select 14)/10;
+
 // INFANTRY SKILL
 _InfskillSet = [
-_AI,        // aimingAccuracy
-_AI,        // aimingShake
-1,        // aimingSpeed
-1,         // spotDistance
-1,        // spotTime
+_AISkill,        // aimingAccuracy
+_AISkill,        // aimingShake
+_AISkill,        // aimingSpeed
+_AISkill,         // spotDistance
+_AISkill,        // spotTime
 1,        // courage
-1,        // reloadSpeed
-1,        // commanding
-_AI,        // general
-1         // endurance
+_AISkill,        // reloadSpeed
+_AISkill,        // commanding
+_AISkill        // general
 ];
 
 
 // ARMOUR SKILL
 _ArmSkillSet = [
-_AI,        // aimingAccuracy
-_AI,        // aimingShake
-1,        // aimingSpeed
-1,         // spotDistance
-1,        // spotTime
+_AISkill,        // aimingAccuracy
+_AISkill,        // aimingShake
+_AISkill,        // aimingSpeed
+_AISkill,         // spotDistance
+_AISkill,        // spotTime
 1,        // courage
-1,        // reloadSpeed
-1,        // commanding
-_AI,        // general
-1         // endurance
+_AISkill,        // reloadSpeed
+_AISkill,        // commanding
+_AISkill       // general
 ];
 
 
 // LIGHT VEHICLE skill
 _LigSkillSet = [
-_AI,        // aimingAccuracy
-_AI,        // aimingShake
-1,        // aimingSpeed
-1,         // spotDistance
-1,        // spotTime
+_AISkill,        // aimingAccuracy
+_AISkill,        // aimingShake
+_AISkill,        // aimingSpeed
+_AISkill,         // spotDistance
+_AISkill,        // spotTime
 1,        // courage
-1,        // reloadSpeed
-1,        // commanding
-_AI,        // general
-1         // endurance
+_AISkill,        // reloadSpeed
+_AISkill,        // commanding
+_AISkill        // general
 ];
 
 
 // HELICOPTER SKILL
 _AIRskillSet = [
-0.1,        // aimingAccuracy
-0.1,        // aimingShake
-0.1,        // aimingSpeed
-1,         // spotDistance
-1,        // spotTime
+_AISkill,        // aimingAccuracy
+_AISkill,        // aimingShake
+_AISkill,        // aimingSpeed
+_AISkill,         // spotDistance
+_AISkill,        // spotTime
 1,        // courage
-1,        // reloadSpeed
-1,        // commanding
-_AI,        // general
-1         // endurance
+_AISkill,        // reloadSpeed
+_AISkill,        // commanding
+_AISkill        // general
 ];
 
 
 // STATIC SKILL
 _STAskillSet = [
-0.5,        // aimingAccuracy
-0.5,        // aimingShake
-0.5,        // aimingSpeed
-1,         // spotDistance
-0.5,        // spotTime
+_AISkill,        // aimingAccuracy
+_AISkill,        // aimingShake
+_AISkill,        // aimingSpeed
+_AISkill,         // spotDistance
+_AISkill,        // spotTime
 1,        // courage
-1,        // reloadSpeed
-1,        // commanding
-_AI,        // general
-1         // endurance
+_AISkill,        // reloadSpeed
+_AISkill,        // commanding
+_AISkill        // general
 ];
 
 server setvariable ["INFskill",_InfskillSet];

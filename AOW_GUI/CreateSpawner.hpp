@@ -36,7 +36,7 @@ class AOW_Base_Button_2: Cruoriss_RscButton
 	w = 0.1 * safezoneW;
 	h = 0.077 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
-     action = "if (AOW_Selected_Spawner == 2) then {[] execVM 'MissionCreator\BaseCreator\VPlane1.sqf'} else {[] execVM 'MissionCreator\BaseCreator\VShip1.sqf'};";
+     action = "if (AOW_Selected_Spawner == 2) then {[] execVM 'AOW_MissionCreator\BaseCreator\VPlane1.sqf'} else {[] execVM 'AOW_MissionCreator\BaseCreator\VShip1.sqf'};";
 };
 class AOW_Base_Combo: Cruoriss_RscCombo
 {

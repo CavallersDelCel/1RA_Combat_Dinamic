@@ -102,7 +102,7 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 	for "_counter" from 1 to _cGrps do {
 	if (isnil "_cGrp") then {_cGrp=[];};
 
-		_newpos=[_mkr,50] call EOS_fnc_findSafePos;
+		_newpos=[_mkr,50,0] call EOS_fnc_findSafePos;
 			if (surfaceiswater _newpos) then {_vehType=8;_cargoType=10;}else{_vehType=7;_cargoType=9;};
 
 					_cGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
@@ -123,7 +123,7 @@ if (typename _cGroup != "SCALAR") then {
 	for "_counter" from 1 to _dGrps do {
 	if (isnil "_dGrp") then {_dGrp=[];};
 
-		_newpos=[_mkr,50] call EOS_fnc_findSafePos;
+		_newpos=[_mkr,50,0] call EOS_fnc_findSafePos;
 			if (surfaceiswater _newpos) then {_vehType=8;}else{_vehType=2;};
 
 					_dGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
@@ -140,10 +140,7 @@ if (typename _dGroup != "SCALAR") then {
 //SPAWN STATIC PLACEMENTS
 	for "_counter" from 1 to _eGrps do {
 		if (isnil "_eGrp") then {_eGrp=[];};
-		_newpos=[_mkr,50] call EOS_fnc_findSafePos;
-		if (surfaceisWater _newpos) then {_newpos = [_mkr,_mkrX] call EOS_fnc_findSafePos};
-		if (surfaceisWater _newpos) then {_newpos = [_mkr,_mkrX] call EOS_fnc_findSafePos};
-		if (surfaceisWater _newpos) then {_newpos = [_mkr,_mkrX] call EOS_fnc_findSafePos};
+		_newpos=[_mkr,50,1] call EOS_fnc_findSafePos;
 		if (surfaceisWater _newpos) exitwith {};
 					_eGroup=[_newpos,_side,_faction,5]call EOS_fnc_spawnvehicle;
 

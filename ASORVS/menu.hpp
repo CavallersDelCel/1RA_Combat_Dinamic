@@ -264,7 +264,7 @@ class ASORVS_Main_Dialog {
 	name= "ASORVS_Main_Dialog";
 	movingEnable = 1;
 	enableSimulation = true;
-	onLoad = "ASORVS_Open = true; [] spawn ASORVS_fnc_ReloadMainDialog; ";
+	onLoad = "ASORVS_Open = true; [] spawn ASORVS_fnc_ReloadMainDialog; AOW_Checkbox_ASORVS = false;";
 	onUnload = "ASORVS_Open = false; [] spawn ASORVS_fnc_Closed; ";
 	onMouseMoving = "_this spawn ASORVS_fnc_RotateClone";
 	class controlsBackground {
@@ -348,7 +348,7 @@ class ASORVS_Main_Dialog {
 		class spawnVehicleButton : ASORVS_PlusButton {
 			idc = 26010;
 			textureNoShortcut =  "" ;
-			text = "<t size='2' align='center'>ISSUE VEHICLE</t>";
+			text = $STR_AOW_ASORVSCREATE;
 			onButtonClick = "[] spawn ASORVS_fnc_SpawnVehicle; closeDialog 0;";
 			w = 0.5;
 			h = ITEM_HEIGHT*2;
@@ -378,6 +378,28 @@ class ASORVS_Main_Dialog {
 			onMouseExit="[] spawn ASORVS_fnc_HidePIP;";
 		};
 
+		class AOW_Zone_Text_ASORVS: Cruoriss_RscText
+		{
+			idc = 1001;
+			text = "MHQ : ";
+			x = safezoneX +safezoneW - 0.9;
+			y = safezoneY + safezoneH - (ITEM_HEIGHT*2);
+			w = 0.113587 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorText[] = {1,1,1,1};
+			sizeEx = "0.029 / (getResolution select 5)";
+		};
+
+		class AOW_Zone_Checkbox_ASORVS: Cruoriss_RscCheckbox
+		{
+			idc = 4732;
+			onCheckedChanged = "if(AOW_Checkbox_ASORVS) then {AOW_Checkbox_ASORVS = false;} else {AOW_Checkbox_ASORVS = true;};";
+			x = safezoneX +safezoneW - 0.7;
+			y = safezoneY + safezoneH - (ITEM_HEIGHT*1.5);
+			w = 0.03	 * safezoneW;
+			h = 0.03 * safezoneH;
+			tooltip = $STR_AOW_Check_Box_ASORVS;
+		};
 
 		class rotateDragThing : ASORVS_RscPicture
 		{
@@ -468,7 +490,7 @@ class ASORVS_SaveDialog {
 		};
 		class CancelButton : ASORVS_RscButtonMenu {
 			idd = 421002;
-			text = $STR_Cancel";
+			text = $STR_Cancel;
 			x = safezoneX + DIALOG_MARGIN;
 			y = TOP + (ITEM_HEIGHT*4) + (CATEGORY_SPACING*2) + 1;
 			w = (TOTAL_WIDTH / 3) - ((DIALOG_MARGIN/2)*2) - DIALOG_MARGIN;

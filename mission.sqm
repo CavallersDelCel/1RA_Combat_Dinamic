@@ -25,7 +25,7 @@ class Mission
 	randomSeed=9543892;
 	class Intel
 	{
-		briefingName="[1RA] Combat dinamic [CC] 1.7";
+		briefingName="[1RA] Combat dinamic [CC] 1.8";
 		overviewText="@STR_AOW_Title";
 		startWeather=0;
 		startWind=0.099999994;
@@ -1522,7 +1522,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="zCurator";
+					text="AOW_Curator_1";
 				};
 			};
 		};
@@ -1569,7 +1569,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="zCurator_1";
+					text="AOW_Curator_2";
 				};
 			};
 		};
@@ -1598,7 +1598,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="Repair_trigger_1";
+			name="Repair_trigger";
 			expCond="(""LandVehicle"" countType thislist > 0) && ((getpos (thislist select 0)) select 2 < 1)";
 			expActiv="0 = (thislist select 0) execVM ""scripts\x_reload.sqf"";";
 			class Effects

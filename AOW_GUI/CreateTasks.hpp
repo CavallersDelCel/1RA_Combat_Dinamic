@@ -56,7 +56,7 @@ class AOW_Tasks_Button: Cruoriss_RscButton
 	w = 0.0671199 * safezoneW;
 	h = 0.077 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
-    action = "_nul = execVM ""MissionCreator\TasksCreator\Tasks2.sqf""";
+    action = "_nul = execVM ""AOW_MissionCreator\TasksCreator\Tasks2.sqf""";
 };
 class AOW_Tasks_Button1: Cruoriss_RscButton
 {

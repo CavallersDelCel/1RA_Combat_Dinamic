@@ -1,7 +1,7 @@
 _zombie = 0;
 _grp=(_this select 0);
 _skillArray=(_this select 1);
-if (_this select 2 == 1) then {_zombie = 1} else {_grp allowFleeing 0;};
+if (_this select 2 == 1) then {_zombie = 1};
 
 
 
@@ -27,7 +27,7 @@ _skillset = server getvariable _skillArray;
         {
         _skillvalue = (_skillset select _forEachIndex);
         _unit setSkill [_x,_skillvalue];
-    } forEach ['aimingAccuracy','aimingShake','aimingSpeed','spotDistance','spotTime','courage','reloadSpeed','commanding','general','endurance'];
+    } forEach ['aimingAccuracy','aimingShake','aimingSpeed','spotDistance','spotTime','courage','reloadSpeed','commanding','general'];
 
 
     if (EOS_DAMAGE_MULTIPLIER != 1) then {
