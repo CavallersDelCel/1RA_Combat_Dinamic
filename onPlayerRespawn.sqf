@@ -5,14 +5,14 @@ waitUntil {alive player};
 [] spawn {
     _voice = speaker player;
 	player setSpeaker "NoVoice";
-	sleep 2;
+	sleep 5;
 	player setSpeaker _voice;
 };
 
 // onPlayerRespawn is also triggered by getting incapacited
 if (player getVariable "BIS_revive_incapacitated") exitWith {
 	if (paramsArray select 17 == 0) then {
-		[player] spawn tcb_fnc_sendaihealer;
+		[player] call btc_qr_fnc_call_for_help
 	};
 };
 
@@ -37,13 +37,16 @@ if (player distance [0,0,0] < 100 && isNil "baseFlagPole") then {
     if (AOW_can_create_base && player == AOW_base_creation_player) then {
 		AOW_can_create_base = false;
 		publicVariable "AOW_can_create_base";
-	    [] execVM "MissionCreator\BaseCreator\DialogBase.sqf";} else
-	{
-	hint ( localize "str_AOW_Respawn1" );
+	    [] execVM "AOW_MissionCreator\BaseCreator\DialogBase.sqf";
+	} else {
+	hint localize "str_AOW_Respawn1";
 	waitUntil {getMarkerColor "VVS1" != ""};
-	player setPos [(getMarkerpos "respawn_west" select 0) + random 5 - random 5, (getMarkerpos "respawn_west" select 1) + random 5 - random 5,0]}
+	player setPos [(getMarkerpos "respawn_west" select 0) + random 4 - random 4, (getMarkerpos "respawn_west" select 1) + random 4 - random 4,0];
+	player setDir (markerDir "VVS1");
+};
 };
 if (player distance [0,0,0] < 100 && !isNil "baseFlagPole") then {
 	waitUntil {getMarkerColor "VVS1" != ""};
-	player setPos [(getMarkerpos "respawn_west" select 0) + random 5 - random 5, (getMarkerpos "respawn_west" select 1) + random 5 - random 5,0]
+	player setPos [(getMarkerpos "respawn_west" select 0) + random 4 - random 4, (getMarkerpos "respawn_west" select 1) + random 4 - random 4,0];
+	player setDir (markerDir "VVS1");
 };

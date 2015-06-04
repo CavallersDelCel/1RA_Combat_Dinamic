@@ -67,16 +67,15 @@ class MTHI_TEXT_4: Cruoriss_RscText
 	h = 0.044 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
 };
-class MTHI_GUI_5: Cruoriss_RscButton
+class AOW_Base_Combo: Cruoriss_RscCombo
 {
-	idc = -2;
-	text = $STR_AOW_Create; //--- ToDo: Localize;
-	x = 0.303803 * safezoneW + safezoneX;
-	y = 0.687 * safezoneH + safezoneY;
-	w = 0.0567937 * safezoneW;
-	h = 0.033 * safezoneH;
+	idc = 4603;
+	x = 0.305 * safezoneW + safezoneX;
+	y = 0.682 * safezoneH + safezoneY;
+	w = 0.065 * safezoneW;
+	h = 0.04 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
-     action = "_nil=[]ExecVM ""scripts\MHQ\SpawnMHQ.sqf""";
+	tooltip = $STR_AOW_MHQCR3;
 };
 class MTHI_GUI_6: Cruoriss_RscButton
 {
@@ -87,7 +86,7 @@ class MTHI_GUI_6: Cruoriss_RscButton
 	w = 0.0722829 * safezoneW;
 	h = 0.033 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
-     action = "closeDialog 0;_nil=[]ExecVM ""scripts\MHQ\TPmhq.sqf"","""",5,false,true,"""",""""";
+     action = "_nil=[]ExecVM ""AOW_MHQ\TPmhq.sqf""";
 };
 class MTHI_GUI_7: Cruoriss_RscButton
 {

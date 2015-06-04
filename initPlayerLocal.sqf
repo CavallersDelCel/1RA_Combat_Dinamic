@@ -17,8 +17,11 @@ waitUntil {alive player};
 
 // Disable revive if no revive choosed in parameters
 if (paramsArray select 17 == 1) then {
-	player setVariable ["BIS_revive_disableRevive", true, true]
+	player setVariable ["BIS_revive_disableRevive", true, true];
 };
+
+// Disable negative score
+player addEventHandler ["HandleRating", { if((_this select 1) < 0) then {0}; }];
 
 // Disable player movement
 player enableSimulation false;
@@ -45,7 +48,6 @@ switch (paramsArray select 9) do
 _respawnloadout = profileNamespace getVariable "AOW_Respawn_Loadout_Check";
 if (!isNil "_respawnloadout") then {
 	[player, [profileNamespace, "AOW_Respawn_Loadout"]] call BIS_fnc_loadInventory;};
-player linkItem "ItemMap";
 
 // Enable player movement
 [] spawn {
@@ -56,19 +58,23 @@ player linkItem "ItemMap";
 };
 
 sleep 1;
+player linkItem "ItemMap";
 // If game just started then create base, if player jip or another player create base then teleport to base
 if (player distance [0,0,0] < 100 && isNil "baseFlagPole") then {
     waitUntil {!isNil "AOW_base_creation_player"};
     if (AOW_can_create_base && player == AOW_base_creation_player) then {
 		AOW_can_create_base = false;
 		publicVariable "AOW_can_create_base";
-	    [] execVM "MissionCreator\BaseCreator\DialogBase.sqf";} else
-	{
+	    [] execVM "AOW_MissionCreator\BaseCreator\DialogBase.sqf";
+	} else {
 	hint localize "str_AOW_Respawn1";
 	waitUntil {getMarkerColor "VVS1" != ""};
-	player setPos [(getMarkerpos "respawn_west" select 0) + random 5 - random 5, (getMarkerpos "respawn_west" select 1) + random 5 - random 5,0]}
+	player setPos [(getMarkerpos "respawn_west" select 0) + random 4 - random 4, (getMarkerpos "respawn_west" select 1) + random 4 - random 4,0];
+	player setDir (markerDir "VVS1");
+};
 };
 if (player distance [0,0,0] < 100 && !isNil "baseFlagPole") then {
 	waitUntil {getMarkerColor "VVS1" != ""};
-	player setPos [(getMarkerpos "respawn_west" select 0) + random 5 - random 5, (getMarkerpos "respawn_west" select 1) + random 5 - random 5,0]
+	player setPos [(getMarkerpos "respawn_west" select 0) + random 4 - random 4, (getMarkerpos "respawn_west" select 1) + random 4 - random 4,0];
+	player setDir (markerDir "VVS1");
 };

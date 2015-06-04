@@ -8,11 +8,11 @@
 
 private ["_position","_cut","_dialog","_s_alt","_s_alt_text","_sound","_sound2","_soundPath"];
 	waitUntil { !isNull player };
-[] execVM "ATM_airdrop\functions.sqf";
+	[] execVM "ATM_airdrop\functions.sqf";
 
-		_position = GetPos player;
-		_z = _position select 2;
-		Altitude = 500;
+	_position = GetPos player;
+	_z = _position select 2;
+	Altitude = 500;
 
 	hintSilent localize "STR_AOW_HALOJumpHint";
 	openMap true;
@@ -44,7 +44,6 @@ private ["_position","_cut","_dialog","_s_alt","_s_alt_text","_sound","_sound2",
 	};
 
 	_target = player;
-
 	_loadout=[_target] call ATM_Getloadout;
 
 	_posJump = getMarkerPos "mkr_halo";
@@ -57,18 +56,18 @@ private ["_position","_cut","_dialog","_s_alt","_s_alt_text","_sound","_sound2",
 
 	0=[_target] call ATM_Frontpack;
 
-{
+if (leader group player == player) then {
+	{
 	if (!isPlayer _x && _x distance baseFlagPole < 100) then {
-		_x setPos [_a + random 50,_y + random 50,_z+Altitude];
-		removeBackpackGlobal _x;
-		_x addBackpackGlobal "B_Parachute";
+		[_x,_a,_y,_z] execVM "ATM_airdrop\AIairdrop.sqf";};
+	} forEach units (group player);
 };
-} forEach units (group player);
 
 	removeBackpack _target;
 	_target addBackpack "B_Parachute";
 	removeHeadgear _target;
 	_target addHeadgear "H_CrewHelmetHeli_B";
+	hintSilent "";
 
 while {(getPos _target select 2) > 2} do {
 	if(isTouchingGround _target and player == vehicle player) then{
@@ -91,5 +90,3 @@ sleep 2;
 	0=[_target,_loadout] call ATM_Setloadout;
 
 hintsilent "";
-
-if (true) exitWith {};

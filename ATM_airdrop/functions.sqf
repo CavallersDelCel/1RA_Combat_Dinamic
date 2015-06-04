@@ -20,12 +20,13 @@ fnc_alt_onsliderchange =
 };
 
 ATM_Getloadout={
+_unit2 = _this select 0;
 _gear = [];
-	_headgear = headgear player;
-	_back_pack = backpack player;
-	_back_pack_items = getItemCargo (unitBackpack player);
-	_back_pack_weap = getWeaponCargo (unitBackpack player);
-	_back_pack_maga = getMagazineCargo (unitBackpack player);
+	_headgear = headgear _unit2;
+	_back_pack = backpack _unit2;
+	_back_pack_items = getItemCargo (unitBackpack _unit2);
+	_back_pack_weap = getWeaponCargo (unitBackpack _unit2);
+	_back_pack_maga = getMagazineCargo (unitBackpack _unit2);
 
 
 	_gear =
@@ -41,13 +42,13 @@ _gear = [];
 };
 
 ATM_Setloadout={
-_unit = _this select 0;
+    _unit = _this select 0;
 	_gear = _this select 1;
 	removeheadgear _unit;
-	removeBackPack _unit;
-	_unit addBackpack "B_AssaultPack_blk";
-	removeBackPack _unit;
-	if ((_gear select 1) != "") then {_unit addBackPack (_gear select 1);clearAllItemsFromBackpack _unit;};
+	removeBackpackGlobal _unit;
+	_unit addBackpackGlobal "B_AssaultPack_blk";
+	removeBackpackGlobal _unit;
+	if ((_gear select 1) != "") then {_unit addBackpackGlobal (_gear select 1);clearAllItemsFromBackpack _unit;};
 	if ((_gear select 0) != "") then {_unit addHeadgear (_gear select 0);};
 	if (count ((_gear select 3) select 0) > 0) then
 	{

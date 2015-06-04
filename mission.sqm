@@ -108,7 +108,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="zCurator";
+					text="AOW_Curator_1";
 				};
 			};
 		};
@@ -331,7 +331,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="zCurator_1";
+					text="AOW_Curator_2";
 				};
 			};
 		};

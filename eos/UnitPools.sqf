@@ -81,17 +81,26 @@ switch (_faction) do {
 	_heliCrew= 0;
 };
     case 6: {//CIVILIAN
+    _MotPool= ["C_Offroad_01_repair_F","C_Van_01_fuel_F","C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_Quadbike_01_F","C_SUV_01_F","C_Van_01_transport_F","C_Van_01_box_F"];
     if (paramsArray select 6 == 0) then {// Altis civ
     	_InfPool = ["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_polo_1_F","C_man_polo_1_F_afro","C_man_polo_1_F_euro","C_man_polo_1_F_asia","C_man_polo_2_F","C_man_polo_2_F_afro","C_man_polo_2_F_euro","C_man_polo_2_F_asia","C_man_polo_3_F","C_man_polo_3_F_afro","C_man_polo_3_F_euro","C_man_polo_3_F_asia","C_man_polo_4_F","C_man_polo_4_F_afro","C_man_polo_4_F_euro","C_man_polo_4_F_asia","C_man_polo_5_F","C_man_polo_5_F_afro","C_man_polo_5_F_euro","C_man_polo_5_F_asia","C_man_polo_6_F","C_man_polo_6_F_afro","C_man_polo_6_F_euro","C_man_polo_6_F_asia","C_man_p_fugitive_F","C_man_p_fugitive_F_afro","C_man_p_fugitive_F_euro","C_man_p_fugitive_F_asia","C_man_p_beggar_F","C_man_p_beggar_F_afro","C_man_p_beggar_F_euro","C_man_p_beggar_F_asia","C_man_w_worker_F","C_man_hunter_1_F","C_man_p_shorts_1_F","C_man_p_shorts_1_F_afro","C_man_p_shorts_1_F_euro","C_man_p_shorts_1_F_asia","C_man_shorts_1_F","C_man_shorts_1_F_afro","C_man_shorts_1_F_euro","C_man_shorts_1_F_asia","C_man_shorts_2_F","C_man_shorts_2_F_afro","C_man_shorts_2_F_euro","C_man_shorts_2_F_asia","C_man_shorts_3_F","C_man_shorts_3_F_afro","C_man_shorts_3_F_euro","C_man_shorts_3_F_asia","C_man_shorts_4_F","C_man_shorts_4_F_afro","C_man_shorts_4_F_euro","C_man_shorts_4_F_asia","C_journalist_F","C_Orestes","C_Nikos","C_Nikos_aged"];
 };
-    if (paramsArray select 6 == 1) then {//Middle East
+    if (paramsArray select 6 == 1) then {//CAF Middle East
     	_InfPool= ["CAF_AG_ME_CIV_02","CAF_AG_ME_CIV","CAF_AG_ME_CIV_04","CAF_AG_ME_CIV_03"];
+
 };
-    if (paramsArray select 6 == 2) then {//African
+    if (paramsArray select 6 == 2) then {//CAF African
     	_InfPool= ["CAF_AG_AFR_CIV_02","CAF_AG_AFR_CIV_03","CAF_AG_AFR_CIV_04","CAF_AG_AFR_CIV"];
 };
+    if (paramsArray select 6 == 3) then {//LEIGHTS African
+    	_InfPool= ["LOP_AFR_Civ_Man_01","LOP_AFR_Civ_Man_02","LOP_AFR_Civ_Man_03","LOP_AFR_Civ_Man_04","LOP_AFR_Civ_Man_05","LOP_AFR_Civ_Man_06"];
+    	_MotPool = ["LOP_AFR_Civ_Offroad","LOP_AFR_Civ_Hatchback","LOP_AFR_Civ_Ural","LOP_AFR_Civ_Ural_open","LOP_AFR_Civ_UAZ","LOP_AFR_Civ_Landrover","LOP_AFR_Civ_UAZ_Open"];
+};
+    if (paramsArray select 6 == 4) then {//LEIGHTS Middle East
+    	_InfPool= ["LOP_Tak_Civ_Man_01","LOP_Tak_Civ_Man_02","LOP_Tak_Civ_Man_04"];
+    	_MotPool = ["LOP_TAK_Civ_Offroad","LOP_TAK_Civ_Hatchback","LOP_TAK_Civ_Landrover","LOP_TAK_Civ_Ural","LOP_TAK_Civ_Ural_open","LOP_TAK_Civ_UAZ","LOP_TAK_Civ_UAZ_Open"];
+};
     _ArmPool= 0;
-    _MotPool= ["C_Offroad_01_repair_F","C_Van_01_fuel_F","C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_Quadbike_01_F","C_SUV_01_F","C_Van_01_transport_F","C_Van_01_box_F"];
     _ACHPool= ["C_Heli_Light_01_civil_F"];
     _CHPool= 0;
     _stPool= 0;
@@ -218,136 +227,124 @@ switch (_faction) do {
 };
 // ----------------------------------------LEIGHTS OPFOR----------------------------------------
 // ---------------------------------------------------------------------------------------------------------
-	case 16: {// OPFOR UKRAINIAN
-	_InfPool=	["LOP_US_Soldier_TL","LOP_US_Soldier_SL","LOP_US_Soldier_Medic","LOP_US_Soldier_AR","LOP_US_Soldier_AT","LOP_US_Soldier_Marksman","LOP_US_Soldier_Engineer","LOP_US_Soldier","LOP_US_Soldier_GL",""];
-	_ArmPool=	["LOP_US_BMP1","LOP_US_BMP1D","LOP_US_BMP1K","LOP_US_BMP1P","LOP_US_BMP2","LOP_US_BTR60","LOP_US_BTR70"];
-	_MotPool=	["LOP_US_KAMAZ_Transport","LOP_US_KAMAZ_Covered"];
+	case 16: {// OPFOR NOVORUSSIAN
+	_InfPool=	["LOP_US_Infantry_Rifleman","LOP_US_Infantry_Pilot","LOP_US_Infantry_TL","LOP_US_Infantry_SL","LOP_US_Infantry_Corpsman","LOP_US_Infantry_Officer","LOP_US_Infantry_Marksman","LOP_US_Infantry_AA","LOP_US_Infantry_AT","LOP_US_Infantry_AT_Asst","LOP_US_Infantry_GL","LOP_US_Infantry_MG","LOP_US_Infantry_MG_Asst","LOP_US_Infantry_Engineer"];
+	_ArmPool=	["LOP_US_T72BB","LOP_US_T72BA","LOP_US_BMP2D","LOP_US_BMP2","LOP_US_BMP1","LOP_US_BMP1D","LOP_US_ZSU234","LOP_US_BTR60","LOP_US_BTR70"];
+	_MotPool=	["LOP_US_BM21","LOP_US_Ural","LOP_US_Ural_open","LOP_US_UAZ","LOP_US_UAZ_Open"];
 	_ACHPool=	0;
 	_CHPool=	0;
 	_stPool=	["LOP_US_NSV_TriPod"];
 	_shipPool=	["O_Boat_Transport_01_F"];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
-	_crewPool=	["LOP_US_Soldier_Crewman"];
+	_crewPool=	["LOP_US_Infantry_Crewman"];
 	_heliCrew=	0;
 };
 	case 17: {// OPFOR CHDKZ
-	_InfPool= ["LOP_ChDKZ_Soldier_TL","LOP_ChDKZ_Lopotev","LOP_ChDKZ_Bardak","LOP_ChDKZ_Soldier_SL","LOP_ChDKZ_Soldier_Medic","LOP_ChDKZ_Soldier_AR","LOP_ChDKZ_Soldier_A_AR","LOP_ChDKZ_Soldier_AT","LOP_ChDKZ_Soldier_A_AT","LOP_ChDKZ_Soldier_Marksman","LOP_ChDKZ_Soldier_Engineer","LOP_ChDKZ_Soldier","LOP_ChDKZ_Soldier_GL"];
-	_ArmPool=	["LOP_ChDKZ_BMD2","LOP_ChDKZ_BMP1","LOP_ChDKZ_BMP1D","LOP_ChDKZ_BMP1K","LOP_ChDKZ_BMP1P","LOP_ChDKZ_BMP2","LOP_ChDKZ_BTR60","LOP_ChDKZ_BTR70","LOP_ChDKZ_M113","LOP_ChDKZ_T72BA","LOP_ChDKZ_T72BB","LOP_ChDKZ_ZSU234"];
-	_MotPool=	["LOP_ChDKZ_GAZ66_r142","LOP_ChDKZ_BM21","LOP_ChDKZ_GAZ66_ap2","LOP_ChDKZ_UAZ","LOP_ChDKZ_URAL_open"];
-	_ACHPool=	["LOP_ChDKZ_Mi8","LOP_ChDKZ_Mi8MTW"];
-	_CHPool=	["LOP_ChDKZ_Mi8","LOP_ChDKZ_Mi8MTW"];
+	_InfPool= ["LOP_ChDKZ_Infantry_Bardak","LOP_ChDKZ_Infantry_Commander","LOP_ChDKZ_Infantry_TL","LOP_ChDKZ_Infantry_Corpsman","LOP_ChDKZ_Infantry_SL","LOP_ChDKZ_Infantry_Rifleman","LOP_ChDKZ_Infantry_GL","LOP_ChDKZ_Infantry_AT","LOP_ChDKZ_Infantry_MG","LOP_ChDKZ_Infantry_Marksman","LOP_ChDKZ_Infantry_Engineer"];
+	_ArmPool=	["LOP_ChDKZ_T72BB","LOP_ChDKZ_T72BA","LOP_ChDKZ_BMP2D","LOP_ChDKZ_BMP2","LOP_ChDKZ_BMP1","LOP_ChDKZ_BMP1D","LOP_ChDKZ_ZSU234","LOP_ChDKZ_BTR60","LOP_ChDKZ_BTR70"];
+	_MotPool=	["LOP_ChDKZ_BM21","LOP_ChDKZ_Ural","LOP_ChDKZ_Ural_open","LOP_ChDKZ_UAZ","LOP_ChDKZ_UAZ_Open"];
+	_ACHPool=	["LOP_ChDKZ_Mi8MT_Cargo","LOP_ChDKZ_Mi8MTV3_FAB","LOP_ChDKZ_Mi8MTV3_UPK23"];
+	_CHPool=	["LOP_ChDKZ_Mi8MT_Cargo","LOP_ChDKZ_Mi8MTV3_FAB","LOP_ChDKZ_Mi8MTV3_UPK23"];
 	_stPool=	["LOP_ChDKZ_NSV_TriPod"];
 	_shipPool=	["O_Boat_Transport_01_F"];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
-	_crewPool=	["LOP_ChDKZ_Soldier_Crewman"];
-	_heliCrew=	["LOP_ChDKZ_Soldier_Pilot"];
+	_crewPool=	["LOP_ChDKZ_Infantry_Crewman"];
+	_heliCrew=	["LOP_ChDKZ_Infantry_Pilot"];
 };
 	case 18: {// OPFOR SLA
-	_InfPool= ["LOP_SLA_Soldier_TL","LOP_SLA_Soldier_SL","LOP_SLA_Soldier_Medic","LOP_SLA_Officer","LOP_SLA_Soldier_AR","LOP_SLA_Soldier_A_AR","LOP_SLA_Soldier_AT","LOP_SLA_Soldier_A_AT","LOP_SLA_Soldier_Marksman","LOP_SLA_Soldier_Engineer","LOP_SLA_Soldier","LOP_SLA_Soldier_GL"];
-	_ArmPool=	["LOP_SLA_ZSU234","LOP_SLA_BMP1","LOP_SLA_BMP1D","LOP_SLA_BMP1K","LOP_SLA_BMP1P","LOP_SLA_BMP2","LOP_SLA_BTR60","LOP_SLA_BTR70","LOP_SLA_T72BA","LOP_SLA_T72BB"];
-	_MotPool=	["LOP_SLA_BM21","LOP_SLA_UAZ","LOP_SLA_Ural_open"];
-	_ACHPool=	["LOP_SLA_Mi8","LOP_SLA_Mi8MTW"];
-	_CHPool=	["LOP_SLA_Mi8","LOP_SLA_Mi8MTW"];
+	_InfPool= ["LOP_SLA_Infantry_Rifleman","LOP_SLA_Infantry_TL","LOP_SLA_Infantry_SL","LOP_SLA_Infantry_Corpsman","LOP_SLA_Infantry_Officer","LOP_SLA_Infantry_Marksman","LOP_SLA_Infantry_AA","LOP_SLA_Infantry_AT","LOP_SLA_Infantry_AT_Asst","LOP_SLA_Infantry_GL","LOP_SLA_Infantry_MG","LOP_SLA_Infantry_MG_Asst","LOP_SLA_Infantry_Engineer"];
+	_ArmPool=	["LOP_SLA_T72BB","LOP_SLA_T72BA","LOP_SLA_BMP2D","LOP_SLA_BMP2","LOP_SLA_BMP1","LOP_SLA_BMP1D","LOP_SLA_ZSU234","LOP_SLA_BTR60","LOP_SLA_BTR70"];
+	_MotPool=	["LOP_SLA_BM21","LOP_SLA_Ural","LOP_SLA_Ural_open","LOP_SLA_UAZ","LOP_SLA_UAZ_Open"];
+	_ACHPool=	["LOP_SLA_Mi8MT_Cargo","LOP_SLA_Mi8MTV3_FAB","LOP_SLA_Mi8MTV3_UPK23"];
+	_CHPool=	["LOP_SLA_Mi8MT_Cargo","LOP_SLA_Mi8MTV3_FAB","LOP_SLA_Mi8MTV3_UPK23"];
 	_stPool=	["LOP_SLA_NSV_TriPod"];
 	_shipPool=	["O_Boat_Transport_01_F"];
 	_diverPool=	["O_diver_exp_F","O_diver_F","O_diver_TL_F"];
-	_crewPool=	["LOP_SLA_Soldier_Crewman"];
-	_heliCrew=	["LOP_SLA_Soldier_Pilot"];
+	_crewPool=	["LOP_SLA_Infantry_Crewman"];
+	_heliCrew=	["LOP_SLA_Infantry_Pilot"];
 };
 	case 19: {// BLUFOR AFGHAN ARMY
-	_InfPool=	["LOP_AA_Soldier_TL","LOP_AA_Soldier_SL","LOP_AA_Soldier_Medic","LOP_AA_Officer","LOP_AA_Soldier_AR","LOP_AA_Soldier_A_AR","LOP_AA_Soldier_AT","LOP_AA_Soldier_A_AT","LOP_AA_Soldier_Marksman","LOP_AA_Soldier_Engineer","LOP_AA_Soldier","LOP_AA_Soldier_GL"];
-	_ArmPool=	["LOP_AA_BMP1","LOP_AA_BMP1","LOP_AA_M113_D","LOP_AA_ZSU234"];
-	_MotPool=	["LOP_AA_BM21","LOP_AA_M1025_M2_D","LOP_AA_M1025_Mk19_D","LOP_AA_M998_D_4DR","LOP_AA_Technical_M2"];
+	_InfPool=	["LOP_AA_Infantry_TL","LOP_AA_Infantry_SL","LOP_AA_Infantry_Corpsman","LOP_AA_Infantry_Rifleman","LOP_AA_Infantry_AT","LOP_AA_Infantry_AT_Asst","LOP_AA_Infantry_MG_Asst","LOP_AA_Infantry_MG","LOP_AA_Infantry_Engineer","LOP_AA_Infantry_Marksman","LOP_AA_Infantry_GL"];
+	_ArmPool=	["LOP_AA_M113_W","LOP_AA_BMP2","LOP_AA_BMP1","LOP_AA_ZSU234"];
+	_MotPool=	["LOP_AA_Truck","LOP_AA_Offroad","LOP_AA_Offroad_Police","LOP_AA_Offroad_M2","LOP_AA_Offroad_M2_Police","LOP_AA_M998_D_4DR","LOP_AA_M1025_W_M2","LOP_AA_M1025_W_Mk19","LOP_AA_M1025_D"];
 	_ACHPool=	0;
 	_CHPool=	0;
 	_stPool=	["LOP_AA_Static_M2","LOP_AA_Static_M2_MiniTripod","LOP_AA_Static_Mk19_TriPod"];
 	_shipPool=	["B_Boat_Armed_01_minigun_F","B_Boat_Transport_01_F"];
 	_diverPool= ["B_diver_exp_F","B_diver_F","B_diver_TL_F"];
-	_crewPool= ["LOP_AA_Soldier_Crewman"];
+	_crewPool= ["LOP_AA_Infantry_Crewman"];
 	_heliCrew=	0;
 };
 	case 20: {// BLUFOR CDF
-	_InfPool=	["LOP_CDF_Soldier_TL","LOP_CDF_Soldier_SL","LOP_CDF_Soldier_Medic","LOP_CDF_Officer","LOP_CDF_Soldier_AR","LOP_CDF_Soldier_A_AR","LOP_CDF_Soldier_AT","LOP_CDF_Soldier_A_AT","LOP_CDF_Soldier_Marksman","LOP_CDF_Soldier_Engineer","LOP_CDF_Soldier","LOP_CDF_Soldier_GL"];
-	_ArmPool=	["LOP_CDF_BMP1","LOP_CDF_BMP1D","LOP_CDF_BMP1K","LOP_CDF_BMP1P","LOP_CDF_BMP2","LOP_CDF_BTR60","LOP_CDF_BTR70","LOP_CDF_M113_W","LOP_CDF_T72BA","LOP_CDF_T72BB","LOP_CDF_T72BB"];
-	_MotPool=	["LOP_CDF_BM21","LOP_CDF_KAMAZ_Transport","LOP_CDF_Landrover_M2","LOP_CDF_UAZ"];
-	_ACHPool=	["LOP_CDF_Mi8","LOP_CDF_Mi8"];
-	_CHPool=	["LOP_CDF_Mi8","LOP_CDF_Mi8"];
-	_stPool=	["LOP_CDF_NSV_TriPod","LOP_CDF_Static_Mk19_TriPod","LOP_CDF_Static_M2_MiniTripod","LOP_CDF_Static_M2"];
+	_InfPool=	["LOP_CDF_Infantry_Rifleman","LOP_CDF_Infantry_TL","LOP_CDF_Infantry_SL","LOP_CDF_Infantry_Corpsman","LOP_CDF_Infantry_Officer","LOP_CDF_Infantry_Marksman","LOP_CDF_Infantry_AA","LOP_CDF_Infantry_AT","LOP_CDF_Infantry_AT_Asst","LOP_CDF_Infantry_GL","LOP_CDF_Infantry_MG","LOP_CDF_Infantry_MG_Asst","LOP_CDF_Infantry_Engineer"];
+	_ArmPool=	["LOP_CDF_T72BB","LOP_CDF_T72BA","LOP_CDF_BMD1","LOP_CDF_BMP2D","LOP_CDF_BMP2","LOP_CDF_BMP1","LOP_CDF_BMP1D","LOP_CDF_ZSU234","LOP_CDF_BTR60","LOP_CDF_BTR70"];
+	_MotPool=	["LOP_CDF_KAMAZ_Covered","LOP_CDF_KAMAZ_Transport","LOP_CDF_KAMAZ_Repair","LOP_CDF_KAMAZ_Fuel","LOP_CDF_KAMAZ_Ammo","LOP_CDF_KAMAZ_Medical","LOP_CDF_BM21","LOP_CDF_Ural","LOP_CDF_Ural_open","LOP_CDF_UAZ","LOP_CDF_UAZ_Open"];
+	_ACHPool=	["LOP_CDF_Mi24V_UPK23","LOP_CDF_Mi24V_FAB","LOP_CDF_Mi24V_AT","LOP_CDF_Mi8MT_Cargo","LOP_CDF_Mi8MTV3_FAB","LOP_CDF_Mi8MTV3_UPK23"];
+	_CHPool=	["LOP_CDF_Mi24V_UPK23","LOP_CDF_Mi24V_FAB","LOP_CDF_Mi24V_AT","LOP_CDF_Mi8MT_Cargo","LOP_CDF_Mi8MTV3_FAB","LOP_CDF_Mi8MTV3_UPK23"];
+	_stPool=	["LOP_CDF_NSV_TriPod","LOP_CDF_Static_M2","LOP_CDF_Static_M2_MiniTripod","LOP_CDF_Static_Mk19_TriPod"];
 	_shipPool=	["B_Boat_Armed_01_minigun_F","B_Boat_Transport_01_F"];
 	_diverPool= ["B_diver_exp_F","B_diver_F","B_diver_TL_F"];
-	_crewPool= ["LOP_CDF_Soldier_Crewman"];
-	_heliCrew=	["LOP_CDF_Soldier_Pilot"];
+	_crewPool= ["LOP_CDF_Infantry_Crewman"];
+	_heliCrew= ["LOP_CDF_Infantry_Pilot"];
 };
 	case 21: {// BLUFOR IRAQI ARMY
-	_InfPool=	["LOP_IA_Soldier_TL","LOP_IA_Soldier_SL","LOP_IA_Soldier_Medic","LOP_IA_Officer","LOP_IA_Soldier_AR","LOP_IA_Soldier_A_AR","LOP_IA_Soldier_AT","LOP_IA_Soldier_A_AT","LOP_IA_Soldier_Marksman","LOP_IA_Soldier_Engineer","LOP_IA_Soldier","LOP_IA_Soldier_GL"];
-	_ArmPool=	["LOP_IA_BMP1","LOP_IA_M113_D","LOP_IA_BMP2","LOP_IA_M1A1_D","LOP_IA_T72BA_D","LOP_IA_ZSU234"];
-	_MotPool=	["LOP_IA_GAZ66_r142","LOP_IA_GAZ66_ap2","LOP_IA_M1025_M2_D","LOP_IA_M1025_Mk19_D","LOP_IA_M998_D_4DR","LOP_IA_Technical_M2","LOP_IA_UAZ","LOP_IA_URAL_open"];
+	_InfPool=	["LOP_IA_Infantry_TL","LOP_IA_Infantry_SL","LOP_IA_Infantry_Corpsman","LOP_IA_Infantry_Rifleman","LOP_IA_Infantry_AT","LOP_IA_Infantry_AT_Asst","LOP_IA_Infantry_MG_Asst","LOP_IA_Infantry_MG","LOP_IA_Infantry_Engineer","LOP_IA_Infantry_Marksman","LOP_IA_Infantry_GL"];
+	_ArmPool=	["LOP_IA_M113_W","LOP_IA_BMP2","LOP_IA_BMP1","LOP_IA_ZSU234"];
+	_MotPool=	["LOP_IA_Truck","LOP_IA_Offroad","LOP_IA_Offroad_M2","LOP_IA_M998_D_4DR","LOP_IA_M1025_W_M2","LOP_IA_M1025_W_Mk19","LOP_IA_M1025_D"];
 	_ACHPool=	0;
 	_CHPool=	0;
 	_stPool=	["LOP_IA_Static_M2","LOP_IA_Static_M2_MiniTripod","LOP_IA_Static_Mk19_TriPod"];
 	_shipPool=	["B_Boat_Armed_01_minigun_F","B_Boat_Transport_01_F"];
 	_diverPool= ["B_diver_exp_F","B_diver_F","B_diver_TL_F"];
-	_crewPool= ["LOP_IA_Soldier_Crewman"];
+	_crewPool= ["LOP_IA_Infantry_Crewman"];
 	_heliCrew=	0;
 };
 	case 22: {// INDEP AFRICAN MILITA
-	_InfPool=	["LOP_AFRCiv_Soldier_TL","LOP_AFRCiv_Soldier_SL","LOP_AFRCiv_Soldier_Medic","LOP_AFRCiv_Soldier_AR","LOP_AFRCiv_Soldier_AT","LOP_AFRCiv_Soldier_Marksman","LOP_AFRCiv_Soldier_IED","LOP_AFRCiv_Soldier","LOP_AFRCiv_Soldier_GL","LOP_AFR_Soldier_TL","LOP_AFR_Soldier_SL","LOP_AFR_Soldier_Medic","LOP_AFR_Soldier_AR","LOP_AFR_Soldier_AT","LOP_AFR_Soldier_Marksman","LOP_AFR_Soldier_IED","LOP_AFR_Soldier","LOP_AFR_Soldier_GL"];
-	_ArmPool=	["LOP_AFR_BMP1","LOP_AFR_BMP2","LOP_AFR_BTR60","LOP_AFR_BTR70","LOP_AFR_M113","LOP_AFR_T72BA"];
-	_MotPool=	["LOP_AFR_Landrover_M2","LOP_AFR_Technical_M2","LOP_AFRCiv_Technical_M2"];
+	_InfPool=	["LOP_AFR_Infantry_TL","LOP_AFR_Infantry_SL","LOP_AFR_Infantry_Corpsman","LOP_AFR_Infantry_AR","LOP_AFR_Infantry_AT","LOP_AFR_Infantry_Marksman","LOP_AFR_Infantry_IED","LOP_AFR_Infantry","LOP_AFR_Infantry_GL"];
+	_ArmPool=	["LOP_AFR_BTR60","LOP_AFR_T72BA","LOP_AFR_M113_W"];
+	_MotPool=	["LOP_AFR_Landrover","LOP_AFR_Landrover_M2","LOP_AFR_Offroad_M2","LOP_AFR_Offroad","LOP_AFR_Truck"];
 	_ACHPool=	0;
 	_CHPool=	0;
-	_stPool=	["LOP_AFR_Static_M2","LOP_AFR_Static_M2_MiniTripod","LOP_AFR_Static_Mk19_TriPod","LOP_AFR_NSV_TriPod"];
+	_stPool=	["LOP_AFR_Static_M2","LOP_AFR_Static_M2_MiniTripod","LOP_AFR_Static_Mk19_TriPod"];
 	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
-	_crewPool= ["LOP_AFR_Driver","LOP_AFRCiv_Driver"];
+	_crewPool= ["LOP_AFR_Driver"];
 	_heliCrew=	0;
 };
-	case 23: {// INDEP ULTRANATIONALISTS
-	_InfPool=	["LOP_UA_Soldier_TL","LOP_UA_Soldier_SL","LOP_UA_Soldier_Medic","LOP_UA_Officer","LOP_UA_Soldier_AR","LOP_UA_Soldier_A_AR","LOP_UA_Soldier_AT","LOP_UA_Soldier_A_AT","LOP_UA_Soldier_Marksman","LOP_UA_Soldier_Engineer","LOP_UA_Soldier","LOP_UA_Soldier_GL"];
-	_ArmPool=	["LOP_UA_BMP1","LOP_UA_BMP1D","LOP_UA_BMP1K","LOP_UA_BMP1P","LOP_UA_BMP2","LOP_UA_BTR60","LOP_UA_BTR70","LOP_UA_T72BA","LOP_UA_T72BB","LOP_UA_ZSU234"];
-	_MotPool=	["LOP_UA_BM21","LOP_UA_UAZ","LOP_UA_Ural_open"];
-	_ACHPool=	["LOP_UA_Mi8","LOP_UA_Mi8MTW"];
-	_CHPool=	["LOP_UA_Mi8","LOP_UA_Mi8MTW"];
-	_stPool=	["LOP_UA_NSV_TriPod"];
-	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
-	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
-	_crewPool= ["LOP_UA_Soldier_Crewman"];
-	_heliCrew=	["LOP_UA_Soldier_Pilot"];
-};
-	case 24: {// INDEP IRAQI TERRORISTS
-	_InfPool=	["LOP_IT_Soldier_TL","LOP_IT_Soldier_SL","LOP_IT_Soldier_Medic","LOP_IT_Soldier_AR","LOP_IT_Soldier_AT","LOP_IT_Soldier_Marksman","LOP_IT_Soldier_IED","LOP_IT_Soldier","LOP_IT_Soldier_GL"];
-	_ArmPool=	["LOP_IT_BMP1","LOP_IT_BMP2","LOP_IT_BTR60","LOP_IT_BTR70","LOP_IT_M113_D","LOP_IT_T72BA","LOP_IT_ZSU234"];
-	_MotPool=	["LOP_IT_M1025_M2_D","LOP_IT_M1025_Mk19_D","LOP_IT_M998_D_4DR","LOP_IT_Technical_M2"];
+	case 23: {// INDEP ISTS
+	_InfPool=	["LOP_ISTS_Infantry_TL","LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Medic","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_Engineer","LOP_ISTS_Soldier","LOP_ISTS_Infantry_GL"];
+	_ArmPool=	["LOP_ISTS_M113_W","LOP_ISTS_BTR60","LOP_ISTS_T72BA"];
+	_MotPool=	["LOP_ISTS_Landrover","LOP_ISTS_Landrover_M2","LOP_ISTS_Offroad","LOP_ISTS_Offroad_M2","LOP_ISTS_Truck"];
 	_ACHPool=	0;
 	_CHPool=	0;
-	_stPool=	["LOP_IT_Static_M2","LOP_IT_Static_M2","LOP_IT_Static_Mk19_TriPod"];
+	_stPool=	["LOP_ISTS_Static_M2","LOP_ISTS_Static_M2_MiniTripod","LOP_ISTS_Static_Mk19_TriPod"];
 	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
-	_crewPool= ["LOP_IT_Driver"];
+	_crewPool= ["LOP_ISTS_Soldier"];
 	_heliCrew=	0;
 };
-	case 25: {// INDEP RACS
-	_InfPool=	["LOP_RACS_Soldier_TL","LOP_RACS_Soldier_SL","LOP_RACS_Soldier_Medic","LOP_RACS_Officer","LOP_RACS_Soldier_AR","LOP_RACS_Soldier_A_AR","LOP_RACS_Soldier_AT","LOP_RACS_Soldier_A_AT","LOP_RACS_Soldier_Marksman","LOP_RACS_Soldier_Engineer","LOP_RACS_Soldier","LOP_RACS_Soldier_GL"];
-	_ArmPool=	["LOP_RACS_M113_D","LOP_RACS_T72BA"];
-	_MotPool=	["LOP_RACS_Landrover_M2","LOP_RACS_Technical_M2"];
-	_ACHPool=	["LOP_RACS_MH9_armed","LOP_RACS_MH9","LOP_RACS_UH60M"];
-	_CHPool=	["LOP_RACS_MH9_armed","LOP_RACS_MH9","LOP_RACS_UH60M"];
+	case 24: {// INDEP RACS
+	_InfPool=	["LOP_RACS_Infantry_TL","LOP_RACS_Infantry_SL","LOP_RACS_Infantry_Corpsman","LOP_RACS_Infantry_Rifleman","LOP_RACS_Infantry_AT","LOP_RACS_Infantry_AT_Asst","LOP_RACS_Infantry_MG_Asst","LOP_RACS_Infantry_MG","LOP_RACS_Infantry_Engineer","LOP_RACS_Infantry_Marksman","LOP_RACS_Infantry_GL"];
+	_ArmPool=	["LOP_RACS_M113_W","LOP_RACS_T72BA"];
+	_MotPool=	["LOP_RACS_Truck","LOP_RACS_Offroad","LOP_RACS_Offroad_M2","LOP_RACS_Landrover","LOP_RACS_Landrover_M2"];
+	_ACHPool=	["LOP_RACS_MH9","LOP_RACS_MH9_armed","LOP_RACS_UH60M"];
+	_CHPool=	["LOP_RACS_MH9","LOP_RACS_MH9_armed","LOP_RACS_UH60M"];
 	_stPool=	["LOP_RACS_Static_M2","LOP_RACS_Static_M2_MiniTripod","LOP_RACS_Static_Mk19_TriPod"];
 	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
-	_crewPool= ["LOP_RACS_Soldier_Crewman"];
-	_heliCrew=	["LOP_RACS_Soldier_Pilot"];
+	_crewPool= ["LOP_RACS_Infantry_Crewman"];
+	_heliCrew=	["LOP_RACS_Infantry_Pilot"];
 };
-	case 26: {// INDEP AFGHAN MILITIA
-	_InfPool=	["LOP_AM_Soldier_TL","LOP_AM_Soldier_SL","LOP_AM_Soldier_Medic","LOP_AM_Soldier_AR","LOP_AM_Soldier_AT","LOP_AM_Soldier_Marksman","LOP_AM_Soldier_Engineer","LOP_AM_Soldier","LOP_AM_Soldier_GL"];
-	_ArmPool=	0;
-	_MotPool=	["LOP_AM_GAZ66o","LOP_AM_Landrover_M2","LOP_AM_Technical_M2"];
+	case 25: {// INDEP AFGHAN MILITIA
+	_InfPool=	["LOP_AM_Infantry_TL","LOP_AM_Infantry_SL","LOP_AM_Infantry_Medic","LOP_AM_Infantry_AR","LOP_AM_Infantry_AT","LOP_AM_Infantry_Marksman","LOP_AM_Infantry_Engineer","LOP_AM_Soldier","LOP_AM_Infantry_GL"];
+	_ArmPool=	["LOP_AM_M113_W","LOP_AM_BTR60","LOP_AM_T72BA"];
+	_MotPool=	["LOP_AM_Landrover","LOP_AM_Landrover_M2","LOP_AM_Offroad","LOP_AM_Offroad_M2","LOP_AM_Truck"];
 	_ACHPool=	0;
 	_CHPool=	0;
-	_stPool=	["LOP_AM_Static_M2","LOP_AM_Static_M2_MiniTripod","LOP_AM_Static_Mk19_TriPod","LOP_AM_NSV_TriPod"];
+	_stPool=	["LOP_AM_Static_M2","LOP_AM_Static_M2_MiniTripod","LOP_AM_Static_Mk19_TriPod"];
 	_shipPool=	["I_Boat_Transport_01_F","I_G_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 	_diverPool=	["I_diver_exp_F","I_diver_F","I_diver_TL_F"];
-	_crewPool= ["LOP_AM_Soldier_GL"];
+	_crewPool= ["LOP_AM_Soldier"];
 	_heliCrew=	0;
 };
 };

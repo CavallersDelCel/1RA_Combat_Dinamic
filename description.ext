@@ -4,13 +4,25 @@ OnLoadMission = "$STR_AOW_Title";
 loadScreen = "images\Overview.jpg";
 overviewPicture = "images\Overview.jpg";
 disabledAI = 1;
+
+// Respawn + Revive
 respawn = 3;
 RespawnDelay = 15;
-respawnTemplates[] = {"Counter","Revive"};
+respawnTemplates[] = {"MenuPosition","Revive"};
 respawnOnStart = -1;
 reviveDelay = 8;
 reviveForceRespawnDelay = 5;
 reviveBleedOutDelay = 180;
+
+// Clean up
+corpseManagerMode = 1;
+corpseLimit = 10;
+corpseRemovalMinTime = 10;
+corpseRemovalMaxTime = 600;
+wreckManagerMode = 1;
+wreckLimit = 5;
+wreckRemovalMinTime = 10;
+wreckRemovalMaxTime = 600;
 
 class Header
 {
@@ -43,7 +55,6 @@ class CfgFunctions
   #include "ASORVS\cfgfunctions.hpp"
   #include "CHVD\CfgFunctions.hpp"
   #include "EPD\EPDcfgFunctions.hpp"
-  #include "ais_injury\cfgFunctionsAIS.hpp"
 };
 
 class Params
@@ -76,7 +87,7 @@ class Params
       title = $STR_AOW_Dynamic_weather;
       values[] = {0,1,2,3,4,5};
       texts[] = {"Clear","Overcast","Rain","Fog","Random","Disabled"};
-      default = 4;
+      default = 5;
     };
     class AOW_BlankParam2
     {// 4
@@ -95,8 +106,8 @@ class Params
     class AOW_CivilianLife
     {// 6
       title = $STR_AOW_Civil_Fact;
-      values[] = {0,1,2};
-      texts[] = {"Altis Civilians","CAF_AG : Middle East Civilians","CAF_AG : Africa Civilians"};
+      values[] = {0,1,2,3,4};
+      texts[] = {"Altis Civilians","CAF_AG : Middle East Civilians","CAF_AG : Africa Civilians","Leights OPFOR Pack : African Civilians","Leights OPFOR Pack : Takistani Civilians"};
       default = 0;
     };
     class AOW_PlayerFatigue
@@ -156,7 +167,7 @@ class AOW_AISkillAcc
 title = $STR_AOW_AISkillAcc;
 values[] = {1,2,3,4,5,6,7,8,9,10};
 texts[] = {"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-default = 5;
+default = 4;
        };
 class AOW_AIDistance
 {// 15
@@ -176,7 +187,14 @@ class AOW_DisableReviveF
 {// 17
 title = $STR_AOW_DisableReviveF;
 values[] = {0,1};
-texts[] = {"Built in revive for players + recruited AI","Off (to be used with addon version revive)"};
+texts[] = {"Built in revive","Off (to be used with addon version revive)"};
 default = 0;
+       };
+       class AOW_VehiclesCleanUP
+       {// 18
+        title = $STR_AOW_VehiclesCleanUP;
+        values[] = {0,1};
+        texts[] = {"Automaticaly delete empty vehicles far from players","Never delete empty vehicles"};
+        default = 0;
        };
 };

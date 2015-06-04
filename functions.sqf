@@ -1,4 +1,4 @@
-MHQ_fnc_addAction =
+AOW_fnc_addAction =
 {
     private["_object","_args"];
     _object = _this select 0;
@@ -7,14 +7,14 @@ MHQ_fnc_addAction =
     _object addaction _args;
 
 };
-AOW_fnc_getFreeMarkerName =
+AOW_fnc_getFreeNames =
 {
-	_allMarkerNames = missionNamespace getVariable ["allMarkerNames", []];
-	_newMarkerName = format ["AOW_BASE_%1", count _allMarkerNames];
-	_allMarkerNames pushBack _newMarkerName;
-	missionNamespace setVariable ["allMarkerNames", _allMarkerNames];
-	publicVariable "allMarkerNames";
-	_newMarkerName
+	_allNames = missionNamespace getVariable ["AOW_allRandomNames", []];
+	_newName = format ["AOW_RANDOM_NAME_%1", count _allNames];
+	_allNames pushBack _newName;
+	missionNamespace setVariable ["AOW_allRandomNames", _allNames];
+	publicVariable "AOW_allRandomNames";
+	_newName
 };
 AOW_fnc_base_allowdamage =
 {

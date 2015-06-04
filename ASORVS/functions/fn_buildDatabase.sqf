@@ -62,6 +62,7 @@ _allVehicleClasses = (configFile >> "CfgVehicles") call BIS_fnc_getCfgSubClasses
 		_type = getNumber(_cfg >> "type");
 		_side = getNumber(_cfg >> "side");
 		_vehicleClass = getText(configFile >> "CfgVehicles" >> _classname >> "vehicleClass");
+		_isAutonomous = getnumber (_cfg >> "isUav");
 
 		_isbackpack = getNumber(_cfg >> "isbackpack");
 		if((_scope >= 2) && (_picture != "") && (_displayName != "")) then {
@@ -70,23 +71,30 @@ _allVehicleClasses = (configFile >> "CfgVehicles") call BIS_fnc_getCfgSubClasses
 					_capacity = getNumber (_cfg >> "maximumLoad");
 					_backpacks set [count _backpacks, [DB_Backpacks, _classname, _displayName, _picture, _capacity, count _backpacks]];
 				};
-				case ((_classname isKindOf "Helicopter") && (_vehicleClass != "Autonomous")) : {
+				// HELICOPTER
+				case (_classname isKindOf "Helicopter" && _isAutonomous == 0) : {
 					_helicopters pushBack [DB_Helicopters, _classname, _displayname, _picture, nil, count _helicopters, _side];
 				};
-				case((_classname isKindOf "Plane") && (_vehicleClass != "Autonomous")) : {
+				// PLANE
+				case(_classname isKindOf "Plane" && _isAutonomous == 0) : {
 					_planes pushBack [DB_Planes, _classname, _displayname, _picture, nil, count _planes, _side];
 				};
-				case((_classname isKindOf "Tank") || (_classname isKindOf "Wheeled_APC_F") && (_vehicleCLass != "Support")) : {
+				// ARMORED
+				case((_classname isKindOf "Tank") || (_classname isKindOf "Wheeled_APC_F") && (_vehicleCLass != "Support") && (_isAutonomous == 0)) : {
 					_tanks pushBack [DB_Tanks, _classname, _displayname, _picture, nil, count _tanks, _side];
 				};
-				case(_vehicleCLass == "Autonomous") : {
+				// DRONE
+				case(_isAutonomous != 0) : {
 					_autonomous pushBack [DB_Autonomous, _classname, _displayname, _picture, nil, count _autonomous, _side];};
-				case((_classname isKindOf "Car") && !(_classname isKindOf "Wheeled_APC_F") &&  (_vehicleClass != "Autonomous") && (_vehicleCLass != "Support")) : {
+				// MOTORIZED
+				case((_classname isKindOf "Car") && !(_classname isKindOf "Wheeled_APC_F") &&  (_isAutonomous == 0) && (_vehicleCLass != "Support")) : {
 					_cars pushBack [DB_Cars, _classname, _displayname, _picture, nil, count _cars, _side];
 				};
+				// SEA
 				case(_classname isKindOf "Ship") : {
 					_ships pushBack [DB_Ships, _classname, _displayname, _picture, nil, count _ships, _side];
 				};
+				// SUPPORT
 				case(_vehicleCLass == "Support") : {
 					_support pushBack [DB_Support, _classname, _displayname, _picture, nil, count _support, _side];
 				};

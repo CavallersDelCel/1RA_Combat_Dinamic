@@ -18,10 +18,9 @@ if(typeName _skills == "SCALAR")then{
     _x setSkill ["spotDistance",(_skillArray select 3)];
     _x setSkill ["spotTime",(_skillArray select 4)];
     _x setSkill ["courage",(_skillArray select 5)];
-    _x setSkill ["commanding",(_skillArray select 6)];
-    _x setSkill ["general",(_skillArray select 7)];
-	_x setSkill ["endurance",(_skillArray select 8)];
-	_x setSkill ["reloadspeed",(_skillArray select 9)];
+    _x setSkill ["reloadspeed",(_skillArray select 6)];
+    _x setSkill ["commanding",(_skillArray select 7)];
+    _x setSkill ["general",(_skillArray select 8)];
 
 	if (EOS_DAMAGE_MULTIPLIER != 1) then {
         _x addeventhandler ["HandleDamage",{

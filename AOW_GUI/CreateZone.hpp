@@ -205,7 +205,7 @@ class AOW_Zone_Button_2: Cruoriss_RscButton
 	w = 0.0413045 * safezoneW;
 	h = 0.055 * safezoneH;
 	sizeEx = "0.029 / (getResolution select 5)";
-    action = "_nul = execVM ""MissionCreator\ZoneCreator\Zone2.sqf""";
+    action = "_nul = execVM ""AOW_MissionCreator\ZoneCreator\Zone2.sqf""";
 };
 class AOW_Zone_Button_1: Cruoriss_RscButton
 {
