@@ -42,6 +42,9 @@ class Header
 #include "AOW_GUI\CreateBase.hpp"
 #include "AOW_GUI\CreateSpawner.hpp"
 
+// 1RA: CC_Magnetar. Fitxer per configurar ACE3
+#include "missionConfig.hpp"
+
 // VARIOUS GUI
 #include "ASORVS\menu.hpp"
 #include "ATM_airdrop\dialog.hpp"
