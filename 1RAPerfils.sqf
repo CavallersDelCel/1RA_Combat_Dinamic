@@ -16,10 +16,10 @@
 //                  Líder d'esquadra    CC - Lider d'esquadra M4A1+M320 OCP                              //
 //                  Líder d'equip       CC - Lider d'equip M4A1+M320 OCP                                 //
 //                  Fuseller            CC - Fuseller M4A1 OCP                                           //
+//                  Fuseller AT4        CC - AT M4A1+AT4 OCP                                             //
 //                  Granader            CC - Granader M4A1+M320 OCP                                      //
 //                  Fuseller automàtic  CC - FA M249 OCP                                                 //
 //                  Metrallador         CC - Metrallador M240B OCP                                       //
-//                  Fuseller AT4        CC - AT M4A1+AT4 OCP                                             //
 //                  Antitanc (Javelin)  CC - AT M4A1+Javelin OCP                                         //
 //                  Antiaèri (Stinger)  CC - AT M4A1+Stinger OCP                                         //
 //                  Tirador designat    CC - Tirador SR-25EC OCP                                         //
@@ -35,6 +35,8 @@
 //         3.4   (2015-04-26) Afegit el perfil anti-aèri per CC_Magnetar, actualitzats els perfils de    //
 //                            "CC - Metrallador M240B OCP" i "CC - FA M249 OCP" per CC_Viper i           //
 //                            i CC_Magnetar.                                                             //
+//         3.4.1 (2015-06-12) Canviada l'arma M249 de "rhs_weap_m249_pip" a "rhs_weap_m249_pip_S" degut  //
+//                            als canvis a la versió 0.3.8 de RHS per CC_Magnetar i CC_Viper.            //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
@@ -412,7 +414,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 player addHeadgear "rhsusf_ach_helmet_headset_ocp";
 
 // Armes
-player addWeapon "rhs_weap_m249_pip";
+player addWeapon "rhs_weap_m249_pip_S";
 player addPrimaryWeaponItem "rhsusf_acc_anpeq15A";
 player addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 player addWeapon "rhsusf_weap_m1911a1";
