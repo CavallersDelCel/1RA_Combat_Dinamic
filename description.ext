@@ -16,6 +16,9 @@ reviveDelay = 8;
 reviveForceRespawnDelay = 5;
 reviveBleedOutDelay = 180;
 
+// 1RA CC_Viper: Activar consola debug per poder fer captures de pantalla
+enableDebugConsole = 1;
+
 // Clean up
 corpseManagerMode = 1;
 corpseLimit = 10;
@@ -62,6 +65,8 @@ class CfgFunctions
   #include "EPD\EPDcfgFunctions.hpp"
 };
 
+// 1RA CC_Viper: Els parametres estan ajustats i traduïts
+
 class Params
 {
     class A0W_BlankParam1
@@ -91,7 +96,7 @@ class Params
     {// 3
       title = $STR_AOW_Dynamic_weather;
       values[] = {0,1,2,3,4,5};
-      texts[] = {"Clear","Overcast","Rain","Fog","Random","Disabled"};
+      texts[] = {"Net","Ennuvolat","Pluja","Boira","Aleatori","Desactivat"};
       default = 1;
     };
     class AOW_BlankParam2
@@ -105,21 +110,21 @@ class Params
     {// 5
       title = $STR_AOW_Max_AI;
       values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-      texts[] = {"0 ( Recruit Disabled )","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
+      texts[] = {"0 ( Recrutament desactivat )","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
       default = 16;
     };
     class AOW_CivilianLife
     {// 6
       title = $STR_AOW_Civil_Fact;
       values[] = {0,1,2,3,4};
-      texts[] = {"Altis Civilians","CAF_AG : Middle East Civilians","CAF_AG : Africa Civilians","Leights OPFOR Pack : African Civilians","Leights OPFOR Pack : Takistani Civilians"};
+      texts[] = {"Civils d'Altis","CAF_AG : Civils del mig oest","CAF_AG : Civils Africans","Leights OPFOR Pack : Civils Africans","Leights OPFOR Pack : Civils Takistanesos"};
       default = 0;
     };
     class AOW_PlayerFatigue
     {// 7
       title = $STR_AOW_Fatigue;
       values[] = {0,1,2};
-      texts[] = {"No Fatigue / Unlimited Stamina","Normal Fatigue / Normal Stamina","Low fatigue / High Stamina"};
+      texts[] = {"Sense fatiga / Resistencia ilimitada","Fatiga normal / Resistencia normal","Baixa fatiga / Resistencia alta"};
       default = 1;
     };
  class AOW_DamageMultiplier
@@ -127,7 +132,7 @@ class Params
 {
 title = $STR_AOW_DamageMultiplier;
 values[] = {10,1,2,3};
-texts[] = {"0.5 (Hard)","1 (Normal)","2 (Easy)","3 (Very Easy)"};
+texts[] = {"0.5 (Dificil)","1 (Normal)","2 (Facil)","3 (Molt facil)"};
 default = 1;
        };
 class AOW_DisableSupport
@@ -135,7 +140,7 @@ class AOW_DisableSupport
 {
 title = $STR_AOW_Support_requester;
 values[] = {0,1,2,3};
-texts[] = {"Disabled","Only Logistic (Transport/SupplyDrop)","Only Offensive (CAS/Artillery)","All Enabled"};
+texts[] = {"Desactivat","Nomes logistica (Transport/Llançament de subministraments)","Nomes ofensiu (CAS/Artilleria)","Tot activat"};
 default = 3;
        };
 class AOW_BlankParam5
@@ -150,21 +155,21 @@ class AOW_EnableAmbient
 {// 11
 title = $STR_AOW_EnableAmbient;
 values[] = {0,1,2,3,4};
-texts[] = {"No","Yes (No Mod)","Yes (EASTvsWEST)","Yes (RHS ESCALATION)","Yes (IRON FRONT)"};
-default = 0;
+texts[] = {"No","Si (No Mod)","Si (EASTvsWEST)","Si (RHS ESCALATION)","Si (IRON FRONT)"};
+default = 1;
        };
 class AOW_AIAmbiant
 {// 12
 title = $STR_AOW_AIAmbiant;
 values[] = {2,3,6,9,12,15,18,21};
-texts[] = {"2","3","6 groups","9","12","15","18","21"};
+texts[] = {"2","3","6 grups","9","12","15","18","21"};
 default = 2;
        };
 class AOW_UPSMON_param
 {// 13
 title = $STR_AOW_UPSMON_param;
 values[] = {0,1,2};
-texts[] = {"Disabled","UPSMON (Low performance hit, only affect non ambiant infantry)","VCOM AI (Medium performance hit, affect every unit)"};
+texts[] = {"Desactivat","UPSMON (Impacte baix al rendiment, nomes afecte a les unitats que no son d'ambient)","VCOM AI (Impacte mig al rendiment, afecta a totes les unitats)"};
 default = 0;
        };
 class AOW_AISkillAcc
@@ -178,7 +183,7 @@ class AOW_AIDistance
 {// 15
 title = $STR_AOW_AIDistance;
 values[] = {1000,1500,2000,2500,3000,4000,5000,0};
-texts[] = {"1000","1500 meters","2000","2500","3000","4000","5000","Unlimited (caching disabled)"};
+texts[] = {"1000","1500 meters","2000","2500","3000","4000","5000","Sense limits (caching desactivat)"};
 default = 1500;
        };
 class AOW_BlankParam3
@@ -199,7 +204,7 @@ default = 1;
        {// 18
         title = $STR_AOW_VehiclesCleanUP;
         values[] = {0,1};
-        texts[] = {"Eliminar automàticament vehicles buits lluny dels jugadors","No eliminar mai vehicles buits"};
+        texts[] = {"Eliminar automaticament vehicles buits lluny dels jugadors","No eliminar mai vehicles buits"};
         default = 0;
        };
 };
