@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: 1RAPerfils.sqf                                                                                 //
 // Autor: CC_Viper, CC_Magnetar, CC_OMSmolina, CC_TBlack                                                 //
-// Versió: 3.4                                                                                           //
+// Versió: 3.4.1                                                                                         //
 // Creació del Document: 25/04/2015                                                                      //
 // Descripció: Aquest document serveix per definir els diferents perfils que utlitzen els jugadors del   //
 //             grup de Cavallers del Cel (http://www.cavallersdelcel.cat). Es requereixen els següents   //
