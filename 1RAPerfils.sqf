@@ -478,7 +478,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 player addHeadgear "rhsusf_ach_helmet_headset_ocp";
 
 // Armes
-player addWeapon "rhs_weap_m240B";
+player addWeapon "rhs_weap_m240B_CAP";
 player addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
