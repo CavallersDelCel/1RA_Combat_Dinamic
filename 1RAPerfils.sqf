@@ -35,9 +35,9 @@
 //         3.4   (2015-04-26) Afegit el perfil anti-aèri per CC_Magnetar, actualitzats els perfils de    //
 //                            "CC - Metrallador M240B OCP" i "CC - FA M249 OCP" per CC_Viper i           //
 //                            i CC_Magnetar.                                                             //
-//         3.4.1 (2015-06-12) Canviada l'arma M249 de "rhs_weap_m249_pip" a "rhs_weap_m249_pip_S" i      //
-//                            l'arma M240 de "rhs_weap_m240B" a "rhs_weap_m240B_CAP" degut als canvis    //
-//                            a la versió 0.3.8 de RHS per CC_Magnetar i CC_Viper.                       //
+//         3.4.1 (2015-06-12) Canviada l'arma M249 de "rhs_weap_m249_pip" a "rhs_weap_m249_pip_S" i la   //
+//                            M240B de "rhs_weap_m240B" a "rhs_weap_m240B" degut als canvis a la versió  //
+//                            0.3.8 de RHS per CC_Magnetar i CC_Viper.                                   //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
