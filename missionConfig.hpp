@@ -1,6 +1,6 @@
 class ACE_Settings {
 	class ace_common_forceAllSettings {
-		value = 1;
+		value = 0;
 		typeName = "BOOL";
 		force = 1;
 	};
