@@ -9,4 +9,9 @@ while {true} do {
         AOW_Curator_2 addCuratorEditableObjects [allUnits,true];
         AOW_Curator_2 addCuratorEditableObjects [vehicles,true];
     };
+	
+	if (serverCommandAvailable "#kick") then {
+		AOW_Curator_3 addCuratorEditableObjects [allUnits,true];
+		AOW_Curator_3 addCuratorEditableObjects [vehicles,true];
+	};
 };

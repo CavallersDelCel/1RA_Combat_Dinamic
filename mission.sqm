@@ -25,7 +25,7 @@ class Mission
 	randomSeed=9543892;
 	class Intel
 	{
-		briefingName="[1RA] Combat dinamic [CC] 1.9";
+		briefingName="[1RA] Combat dinamic [CC] 1.10";
 		overviewText="@STR_AOW_Title";
 		startWeather=0;
 		startWind=0.099999994;
@@ -64,7 +64,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=1;
 					text="zeus1";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'esquadra M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""sl"",true]";
 					description="Lider d'Esquadra";
 				};
 				class Item1
@@ -78,8 +78,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
-					text="BLUFOR_PLAYER_2";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metge M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					text="this setVariable[""cc_tipusUnitat"",""me"",true]";
+					init="";
 					description="Metge";
 				};
 				class Item2
@@ -94,7 +94,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_3";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item3
@@ -108,7 +108,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_4";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item4
@@ -122,7 +122,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_5";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item5
@@ -137,7 +137,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_6";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""ar"",true]";
 					description="Fuseller Automatic";
 				};
 				class Item6
@@ -152,7 +152,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_7";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item7
@@ -166,7 +166,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_8";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item8
@@ -180,7 +180,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_9";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item9
@@ -195,7 +195,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_10";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metrallador M240B OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""mg"",true]";
 					description="Metrallador";
 				};
 				class Item10
@@ -210,7 +210,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_11";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item11
@@ -224,7 +224,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_12";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item12
@@ -238,7 +238,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_13";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item13
@@ -253,7 +253,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_14";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""ar"",true]";
 					description="Fuseller automatic";
 				};
 			};
@@ -277,7 +277,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=1;
 					text="BLUFOR_PLAYER_15";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'esquadra M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""sl"",true]";
 					description="Lider d'Esquadra";
 				};
 				class Item1
@@ -292,7 +292,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_16";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metge M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""me"",true]";
 					description="Metge";
 				};
 				class Item2
@@ -307,7 +307,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_17";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item3
@@ -321,7 +321,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_18";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item4
@@ -335,7 +335,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_19";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item5
@@ -350,7 +350,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_20";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""ar"",true]";
 					description="Fuseller Automatic";
 				};
 				class Item6
@@ -365,7 +365,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_21";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item7
@@ -379,7 +379,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_22";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item8
@@ -393,7 +393,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_23";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item9
@@ -408,7 +408,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_24";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Metrallador M240B OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""mg"",true]";
 					description="Metrallador";
 				};
 				class Item10
@@ -423,7 +423,7 @@ class Mission
 					rank="SERGEANT";
 					skill=1;
 					text="BLUFOR_PLAYER_25";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Lider d'equip M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""tl"",true]";
 					description="Lider d'equip de foc";
 				};
 				class Item11
@@ -437,7 +437,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_26";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Fuseller M4A1 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""rfl"",true]";
 					description="Fuseller";
 				};
 				class Item12
@@ -451,7 +451,7 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="BLUFOR_PLAYER_27";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - Granader M4A1+M320 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""gr"",true]";
 					description="Granader";
 				};
 				class Item13
@@ -466,7 +466,7 @@ class Mission
 					rank="CORPORAL";
 					skill=1;
 					text="BLUFOR_PLAYER_28";
-					init="if !(local this) exitWith {}; loadout = [this,[profileNamespace,""CC - FA M249 OCP""]] call BIS_fnc_loadInventory;";
+					init="this setVariable[""cc_tipusUnitat"",""ar"",true]";
 					description="Fuseller automatic";
 				};
 			};
