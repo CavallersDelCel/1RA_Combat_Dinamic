@@ -97,7 +97,7 @@ class Params
       title = $STR_AOW_Dynamic_weather;
       values[] = {0,1,2,3,4,5};
       texts[] = {"Net","Ennuvolat","Pluja","Boira","Aleatori","Desactivat"};
-      default = 1;
+      default = 5;
     };
     class AOW_BlankParam2
     {// 4
