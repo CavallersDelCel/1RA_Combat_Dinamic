@@ -95,7 +95,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
 	//                     - 2: Full Satellite + Buildings                                                //
 	//====================================================================================================//
 
-	["ace_microdagr_MapDataAvailable", 2, true, true] call ACE_common_fnc_setSetting;
+	["ace_microdagr_MapDataAvailable", 0, true, true] call ACE_common_fnc_setSetting;
 	
 	//====================================================================================================//
 	// MK6 Settings: http://ace3mod.com/wiki/missionmaker/modules.html#1.12-mk6-settings                  //

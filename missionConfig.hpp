@@ -70,7 +70,7 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_microdagr_MapDataAvailable {
-		value = 2;
+		value = 0;
 		typeName = "SCALAR";
 		force = 1;
 	};
