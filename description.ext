@@ -1,6 +1,6 @@
 Author = "Cruoriss, mod by Viper, Magnetar";
 OnLoadName = "Combat dinamic";
-OnLoadMission = "Combat dinàmic (All Out Warfare) es una missió que permet la creació de tasques i enemics de forma ràpida i efectiva.";
+OnLoadMission = "Combat dinamic (All Out Warfare) es una missio que permet la creacio de tasques i enemics de forma rapida i efectiva.";
 
 // 1RA CC_Viper: Preview picture
 loadScreen = "images\portada_cd.paa";
