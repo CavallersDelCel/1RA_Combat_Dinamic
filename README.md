@@ -2,9 +2,9 @@
 
 **Autors**: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack.
 
-**Versió**: 3.6.0
+**Versió**: 3.7.0
 
-**Darrera modificació**: 2015/06/21
+**Darrera modificació**: 2015/06/27
 
 **Descripció**: Aquest document serveix per definir els diferents perfils de virtual arsenal que utlitzen els jugadors del grup
 1er Regiment Aerotransportant (1RA) de la Comunitat Catalana de Simulació, Cavallers del Cel (http://www.cavallersdelcel.cat).
