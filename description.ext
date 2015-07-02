@@ -205,6 +205,6 @@ default = 1;
         title = $STR_AOW_VehiclesCleanUP;
         values[] = {0,1};
         texts[] = {"Eliminar automaticament vehicles buits lluny dels jugadors","No eliminar mai vehicles buits"};
-        default = 0;
+        default = 1;
        };
 };
