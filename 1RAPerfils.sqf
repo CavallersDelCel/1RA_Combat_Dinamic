@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: 1RAPerfils.sqf                                                                                 //
 // Autor: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack                                                //
-// Versió: 3.7                                                                                           //
+// Versió: 3.8                                                                                           //
 // Creació del Document: 25/04/2015                                                                      //
 // Descripció: Aquest document serveix per definir els diferents perfils que utlitzen els jugadors del   //
 //             grup de Cavallers del Cel (http://www.cavallersdelcel.cat). Es requereixen els següents   //
@@ -52,6 +52,7 @@
 //                            objectes varis i equip medic. Inclusió de nou perfil Observador.           //
 //         3.7   (27/06/2015) Canviat ItemRadio de tots els perfils pel model tf_anprc152 als liders     //
 //                            i el model tf_rf7800str a la resta per CC_Viper                            //
+//         3.8   (04/07/2015) Modificats metges per CC_Viper                                             //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
@@ -885,7 +886,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["ACE_quikclot",15];
 (unitBackpack player) addItemCargoGlobal ["ACE_tourniquet",3];
 (unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500",5];
-(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",3];
+(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 
@@ -1346,8 +1347,8 @@ player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["ACE_quikclot",10];
 (unitBackpack player) addItemCargoGlobal ["ACE_tourniquet",3];
 (unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500",2];
-(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",2];
-(unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit",2];
+(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",1];
+(unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5];
 (unitBackpack player) addItemCargoGlobal ["rhs_uniform_cu_ocp",1];
 

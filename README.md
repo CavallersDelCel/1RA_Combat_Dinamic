@@ -2,9 +2,9 @@
 
 **Autors**: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack.
 
-**Versió**: 3.7.0
+**Versió**: 3.8.0
 
-**Darrera modificació**: 2015/06/27
+**Darrera modificació**: 2015/07/04
 
 **Descripció**: Aquest document serveix per definir els diferents perfils de virtual arsenal que utlitzen els jugadors del grup
 1er Regiment Aerotransportant (1RA) de la Comunitat Catalana de Simulació, Cavallers del Cel (http://www.cavallersdelcel.cat).
@@ -60,3 +60,4 @@ El següent llistat mostra els perfils suportats:
 * **3.5.0** *2015/06/20*: Afegits els perfils `CC - Bussejador lider M4A1`, `CC - Bussejador M4A1`, `CC - Bussejador metge M4A1` i `CC - Bussejador explosius M4A1` per CC_Magnetar i CC_Viper.
 * **3.6.0** *2015/06/21*: Conversió dels perfils a ACE3 i addició del perfil d'Observador `CC - Observador M4A1 OCP` per CC_Viper
 * **3.7.0** *2015/06/27*: Canviat ItemRadio de tots els perfils pel model tf_anprc152 als liders i el model tf_rf7800str a la resta per CC_Viper.
+* **3.8.0** *2015/07/04*: Modificats metges per CC_Viper  .
