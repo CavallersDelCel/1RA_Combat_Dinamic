@@ -51,8 +51,10 @@
 //         3.6   (21/06/2015) Modificació completa de CC_Viper per pasar de l'AGM al ACE3, canvis en     //
 //                            objectes varis i equip medic. Inclusió de nou perfil Observador.           //
 //         3.7   (27/06/2015) Canviat ItemRadio de tots els perfils pel model tf_anprc152 als liders     //
-//                            i el model tf_rf7800str a la resta per CC_Viper                            //
-//         3.8   (04/07/2015) Modificats metges per CC_Viper                                             //
+//                            i el model tf_rf7800str a la resta per CC_Viper.                           //
+//         3.8   (04/07/2015) Modificada l'equipació dels metges per CC_Viper. El perfil d'observadors   //
+//                            inclou una ràdio de llarg abast "tf_rt1523g_big_rhs" i una ràdio curta     //
+//                            "tf_anprc152" per CC_Magnetar.                                             //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
@@ -1118,7 +1120,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_SpottingScope",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -1143,7 +1145,7 @@ player addWeapon "ACE_Vector";
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
-player linkItem "tf_rf7800str";
+player linkItem "tf_anprc152";
 
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
