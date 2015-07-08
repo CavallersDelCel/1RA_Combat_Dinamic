@@ -28,7 +28,16 @@ switch (paramsArray select 9) do
 // Use saved loadout if it exist
 _respawnloadout = profileNamespace getVariable "CD_Equipament_Check";
 if (!isNil "_respawnloadout") then {
-	[player, [profileNamespace, "CD_Equipament"]] call BIS_fnc_loadInventory;};
+
+	_carregarPerfils = ["Carregar perfils (Si) o mantenir equipació prèvia al morir (No)?", "Perfils 1RA", true, true] call BIS_fnc_guiMessage;
+	if (_carregarPerfils) then {
+		cc_script_perfils = [] execVM "cc_equipacio_rhs_usarmy_d_perfils.sqf";
+	} else {
+		[player, [profileNamespace, "CD_Equipament"]] call BIS_fnc_loadInventory;
+	};
+} else {
+	cc_script_perfils = [] execVM "cc_equipacio_rhs_usarmy_d_perfils.sqf";
+};
 
 sleep 1;
 // If game just started then create base, if player jip or another player create base then teleport to base

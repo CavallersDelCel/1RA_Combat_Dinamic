@@ -51,7 +51,7 @@
 private["_unitat","_tipusUnitat","_loadout", "_perfil"];
 
 _unitat = player;
-_tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
+_tipusUnitat = _unitat getVariable ["cc_tipusUnitat", "NIL"];
 
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
