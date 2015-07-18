@@ -160,12 +160,15 @@ cartell04 setObjectTextureGlobal [0, "images\Cartell_04_ServerCC_A3.paa"];
 // 1RA: CC_Viper: Fi dels canvis per afegir el virtual arsenal, noves imatges, banderes i cartells //
 
 // Vehicle repair
-_mRepair = createMarker ["Repair_marker", getPos Hrepair];
+_mRepair = createMarker ["Repair_marker", getPos HRepair];
 _mrepair setMarkerType "b_maint";
 _mRepair setMarkerText localize "str_AOW_Marker_V_Service";
-_mRepair setMarkerDir (getDir Hrepair);
+_mRepair setMarkerDir (getDir HRepair);
 Repair_trigger setPos getPos HRepair;
-Repair_trigger setDir getDir Hrepair;
+Repair_trigger setDir getDir HRepair;
+
+// 1RA: CC_Viper:  //
+// allCurators removeCuratorEditableObjects [[tallagespa], false];
 
 // Move support requester to base location
 switch (paramsArray select 9) do

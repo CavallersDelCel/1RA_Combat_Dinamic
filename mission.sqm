@@ -25,7 +25,7 @@ class Mission
 	randomSeed=9543892;
 	class Intel
 	{
-		briefingName="[1RA] Combat dinamic [CC] 1.11.7";
+		briefingName="[1RA] Combat dinamic [CC] 1.11.10";
 		overviewText="Combat dinamic (All Out Warfare) es una missio que permet la creacio de tasques i enemics de forma rapida i efectiva.";
 		startWeather=0;
 		startWind=0.099999994;
