@@ -8,11 +8,11 @@ _side = _this select 1;
 _ambiantside = (paramsArray select 11);
 if (_ambiantside != 4) then {
 _BLUveh = ["B_Boat_Transport_01_F","B_Boat_Armed_01_minigun_F"];
-_OPFveh = ["O_Boat_Transport_01_F","O_Boat_Armed_01_hmg_F"];
+_OPFveh = [""];
 _INDveh = ["I_Boat_Transport_01_F","I_Boat_Armed_01_minigun_F"];
 } else {
 _BLUveh = ["B_Boat_Transport_01_F"];
-_OPFveh = ["O_Boat_Transport_01_F"];
+_OPFveh = [""];
 _INDveh = ["LIB_LCVP"];
 };
 _men = [];
