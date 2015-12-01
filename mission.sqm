@@ -11,8 +11,7 @@ class Mission
 		"A3_Modules_F",
 		"A3_Modules_F_Supports",
 		"a3_map_altis",
-		"a3_characters_f",
-		"3DEN"
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
@@ -20,7 +19,6 @@ class Mission
 		"a3_characters_f",
 		"A3_Modules_F_Supports",
 		"A3_Modules_F",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"a3_map_altis"
 	};
