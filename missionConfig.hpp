@@ -1,4 +1,5 @@
 class ACE_Settings {
+
     class ace_common_forceAllSettings {
         value = 0;
         typeName = "BOOL";
@@ -35,6 +36,11 @@ class ACE_Settings {
         force = 1;
     };
     class ace_frag_SpallEnabled {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_frag_ReflectionsEnabled {
         value = 0;
         typeName = "BOOL";
         force = 1;
@@ -99,6 +105,11 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
+    class ace_map_BFT_ShowPlayerNames {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
     class ace_map_mapIllumination {
         value = 1;
         typeName = "BOOL";
@@ -125,7 +136,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_map_DefaultChannel {
-        value = 1;
+        value = -1;
         typeName = "SCALAR";
         force = 1;
     };
@@ -145,12 +156,12 @@ class ACE_Settings {
         force = 1;
     };
     class ace_map_gestures_GroupColorConfigurations {
-
+        
         typeName = "ARRAY";
         force = 1;
     };
     class ace_map_gestures_GroupColorConfigurationMapping {
-
+        
         typeName = "ARRAY";
         force = 1;
     };
@@ -167,6 +178,11 @@ class ACE_Settings {
     class ace_medical_medicSetting {
         value = 2;
         typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_medical_increaseTrainingInLocations {
+        value = 0;
+        typeName = "BOOL";
         force = 1;
     };
     class ace_medical_enableFor {
@@ -230,7 +246,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_medical_remoteControlledAI {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -269,6 +285,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_medical_medicSetting_basicEpi {
+        value = 1;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_medical_medicSetting_PAK {
         value = 1;
         typeName = "SCALAR";
@@ -289,6 +310,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_medical_useLocation_basicEpi {
+        value = 0;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_medical_useLocation_PAK {
         value = 3;
         typeName = "SCALAR";
@@ -305,7 +331,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_medical_useCondition_SurgicalKit {
-        value = 0;
+        value = 1;
         typeName = "SCALAR";
         force = 1;
     };
@@ -334,6 +360,11 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
+    class ace_medical_delayUnconCaptive {
+        value = 3;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_medical_menu_allow {
         value = 2;
         typeName = "SCALAR";
@@ -345,7 +376,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_microdagr_MapDataAvailable {
-        value = 2;
+        value = 0;
         typeName = "SCALAR";
         force = 1;
     };
@@ -360,6 +391,11 @@ class ACE_Settings {
         force = 1;
     };
     class ace_mk6mortar_allowCompass {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_mk6mortar_useAmmoHandling {
         value = 1;
         typeName = "BOOL";
         force = 1;
@@ -380,8 +416,23 @@ class ACE_Settings {
         force = 1;
     };
     class ace_nightvision_disableNVGsWithSights {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_overheating_overheatingDispersion {
         value = 1;
         typeName = "BOOL";
+        force = 1;
+    };
+    class ace_overheating_unJamOnreload {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_overheating_unJamFailChance {
+        value = 0.1;
+        typeName = "SCALAR";
         force = 1;
     };
     class ace_rearm_level {
@@ -445,7 +496,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_respawn_RemoveDeadBodiesDisconnected {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -460,7 +511,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_spectator_filterUnits {
-        value = 1;
+        value = 2;
         typeName = "SCALAR";
         force = 1;
     };
