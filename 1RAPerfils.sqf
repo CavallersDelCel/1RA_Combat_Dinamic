@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: 1RAPerfils.sqf                                                                                 //
 // Autor: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack                                                //
-// Versió: 3.8                                                                                           //
+// Versió: 3.9.1                                                                                           //
 // Creació del Document: 25/04/2015                                                                      //
 // Descripció: Aquest document serveix per definir els diferents perfils que utlitzen els jugadors del   //
 //             grup de Cavallers del Cel (http://www.cavallersdelcel.cat). Es requereixen els següents   //
@@ -15,24 +15,25 @@
 //             Els següents perfils estan definits en aquest document:                                   //
 //                                                                                                       //
 //                  ROL                 PERFIL associat                                                  //
-//                  Líder d'esquadra     CC - Lider d'esquadra M4A1+M320 OCP                             //
-//                  Líder d'equip        CC - Lider d'equip M4A1+M320 OCP                                //
-//                  Fuseller             CC - Fuseller M4A1 OCP                                          //
-//                  Fuseller AT4         CC - AT M4A1+AT4 OCP                                            //
-//                  Granader             CC - Granader M4A1+M320 OCP                                     //
-//                  Fuseller automàtic   CC - FA M249 OCP                                                //
-//                  Metrallador          CC - Metrallador M240B OCP                                      //
-//                  Antitanc (Javelin)   CC - AT M4A1+Javelin OCP                                        //
-//                  Antiaèri (Stinger)   CC - AT M4A1+Stinger OCP                                        //
-//                  Tirador designat     CC - Tirador SR-25EC OCP                                        //
-//                  Metge                CC - Metge M4A1 OCP                                             //
-//                  Explosius            CC - Explosius M4A1 OCP                                         //
-//                  Franctirador         CC - Franctirador M2010ESR OCP                                  //
-//                  Observador           CC - Observador M4A1 OCP                                        //
-//                  Bussejador líder     CC - Bussejador lider M4A1                                      //
-//                  Bussejador           CC - Bussejador M4A1                                            //
-//                  Bussejador metge     CC - Bussejador metge M4A1                                      //
-//                  Bussejador explosius CC - Bussejador explosius M4A1                                  //
+//                  Líder d'esquadra     CC - Lider d'esquadra MARPAT WD                                 //
+//                  Líder d'equip        CC - Lider d'equip MARPAT WD                                    //
+//                  Fuseller             CC - Fuseller MARPAT WD                                         //
+//                  Fuseller AT4         CC - Fuseller AT4 MARPAT WD                                     //
+//                  Granader             CC - Granader MARPAT WD                                         //
+//                  IAR                  CC - FA M27IAR MARPAT WD                                        //
+//                  Fuseller automàtic   CC - FA M249 MARPAT WD                                          //
+//                  Metrallador          CC - Metrallador M240B MARPAT WD                                //
+//                  Antitanc (Javelin)   CC - AT Javelin MARPAT WD                                       //
+//                  Antiaèri (Stinger)   CC - AA Stinger MARPAT WD                                       //
+//                  Tirador designat     CC - Tirador MARPAT WD                                          //
+//                  Metge                CC - Metge MARPAT WD                                            //
+//                  Explosius            CC - Explosius MARPAT WD                                        //
+//                  Franctirador         CC - Franctirador MARPAT WD                                     //
+//                  Observador           CC - Observador MARPAT WD                                       //
+//                  Bussejador líder     CC - Bussejador lider                                           //
+//                  Bussejador           CC - Bussejador                                                 //
+//                  Bussejador metge     CC - Bussejador metge                                           //
+//                  Bussejador explosius CC - Bussejador explosius                                       //
 //                                                                                                       //
 // Canvis: 1.0   (26/12/2013) Document inicial per CC_OMSmolina, CC_TBlack i CC_Viper.                   //
 //         ...   (26/12/2013 a 21/04/2015) Canvis varis per CC_Viper (actualitzacions, RHS, AGM,...)     //
@@ -55,6 +56,13 @@
 //         3.8   (04/07/2015) Modificada l'equipació dels metges per CC_Viper. El perfil d'observadors   //
 //                            inclou una ràdio de llarg abast "tf_rt1523g_big_rhs" i una ràdio curta     //
 //                            "tf_anprc152" per CC_Magnetar.                                             //
+//         3.8.1 (29/07/2015) Afegit el HuntIR al perfil de líder d'esquadra per CC_Magnetar.            //
+//         3.9   (04/03/2016) Canviats els camuflatges per MARPAT WD a l'uniforme, SPC a l'armilla i     //
+//                            casc OPS Core Ranger Green. Inclòs perfil FA M27 IAR MARPAT WD. Canviats   //
+//                            els noms dels perfils. Retocat equipament vari degut a la diferent         //
+//                            capacitat de les armilles SPC.                                             //
+//         3.9.1 (23/03/2016) Canviada la ACE_atropine per ACE_adenosine. Corregit falta d'un carregador //
+//                            a la M249 i a la M240. Corregit falta de missil al Javelin.                //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
@@ -77,7 +85,7 @@ _blackScreen = execVM "fnc\effects\blackScreen.sqf";
 player sidechat format ["%1", "Carregant i desant tots els perfils. Trigarà 3 minuts, espera si us plau..."];
 
 //=======================================================================================================//
-// Líder d'Esquadra CC - Lider d'esquadra M4A1+M320 OCP                                                  //
+// Líder d'Esquadra CC - Lider d'esquadra M4A1+M320 MARPAT WD                                            //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -92,7 +100,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -101,9 +109,10 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addItemCargoGlobal ["rhsusf_acc_rotex5_grey",1];
 (uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
+(uniformContainer player) addMagazineCargoGlobal ["ACE_HuntIR_M203",1];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_squadleader";
+player addVest "rhsusf_spc_squadleader";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -111,11 +120,11 @@ player addVest "rhsusf_iotv_ocp_squadleader";
 (vestContainer player) addItemCargoGlobal ["ACE_tourniquet",1];
 (vestContainer player) addItemCargoGlobal ["ACE_MapTools",1];
 (vestContainer player) addItemCargoGlobal ["ACE_microDAGR",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(vestContainer player) addItemCargoGlobal ["ACE_HuntIR_monitor",1];
+(vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",9];
+(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",7];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m714_White",1];
+(vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",4];
 
 // Motxilla
 player addBackpack "tf_rt1523g_big_rhs";
@@ -131,9 +140,10 @@ player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m715_Green",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m716_yellow",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m713_Red",1];
+(unitBackpack player) addMagazineCargoGlobal ["ACE_HuntIR_M203",1];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1_m320";
@@ -154,12 +164,12 @@ player linkItem "tf_anprc152";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Lider d'esquadra M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Lider d'esquadra M4A1+M320 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Lider d'esquadra MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Lider d'esquadra MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Líder d'Equip: CC - Lider d'equip M4A1+M320 OCP                                                       //
+// Líder d'Equip: CC - Lider d'equip M4A1+M320 MARPAT WD                                                 //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -174,7 +184,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme 
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -185,7 +195,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_teamleader";
+player addVest "rhsusf_spc_teamleader";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -218,7 +228,7 @@ player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m14_th3",2];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1_m320";
@@ -239,12 +249,12 @@ player linkItem "tf_anprc152";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Lider d'equip M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Lider d'equip M4A1+M320 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Lider d'equip MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Lider d'equip MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Fuseller: CC - Fuseller M4A1 OCP                                                                      //
+// Fuseller: CC - Fuseller M4A1 MARPAT WD                                                                //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -259,7 +269,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -270,7 +280,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
 // Armilla 
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -283,7 +293,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -293,7 +303,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_green",1];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -314,12 +324,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Fuseller M4A1 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Fuseller M4A1 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Fuseller MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Fuseller MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Granader: CC - Granader M4A1+M320 OCP                                                                 //
+// Granader: CC - Granader M4A1+M320 MARPAT WD                                                           //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -334,7 +344,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -346,7 +356,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",6];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_grenadier";
+player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -359,7 +369,7 @@ player addVest "rhsusf_iotv_ocp_grenadier";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",7];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",7];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
@@ -370,7 +380,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",12];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1_m320";
@@ -391,12 +401,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Granader M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Granader M4A1+M320 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Granader MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Granader MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Fuseller Automàtic: CC - FA M249 OCP                                                                  //
+// IAR: CC - FA M27 IAR MARPAT WD                                                                        //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -411,38 +421,113 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
+(uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_CableTie",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",1];
+(uniformContainer player) addItemCargoGlobal ["rhsusf_acc_rotex5_grey",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
-// Armilla
-player addVest "rhsusf_iotv_ocp_SAW";
+// Armilla 
+player addVest "rhsusf_spc_iar";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_quikclot",3];
 (vestContainer player) addItemCargoGlobal ["ACE_tourniquet",1];
-(vestContainer player) addItemCargoGlobal ["ACE_CableTie",1];
+(vestContainer player) addItemCargoGlobal ["G_Tactical_Clear",1];
 (vestContainer player) addItemCargoGlobal ["ACE_MapTools",1];
-(vestContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
+(vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
+(unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_red",1];
+(unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_green",1];
+
+// Casc
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
+
+// Armes
+player addWeapon "rhs_weap_m27iar";
+player addPrimaryWeaponItem "rhsusf_acc_SF3P556";
+player addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+player addPrimaryWeaponItem "rhsusf_acc_ACOG";
+player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
+player addWeapon "rhsusf_weap_m1911a1";
+player addWeapon "lerca_1200_tan";
+
+// Objectes
+player linkItem "ItemMap";
+player linkItem "ItemCompass";
+player linkItem "tf_microdagr";
+player linkItem "tf_rf7800str";
+
+// Insígnia
+[player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
+
+sleep 5;
+_namespace = profileNamespace;
+_loadout = [player,[_namespace,"CC - FA M27IAR MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << FA M27IAR MARPAT WD >> desat"];
+sleep 5;
+
+//=======================================================================================================//
+// Fuseller Automàtic: CC - FA M249 MARPAT WD                                                            //
+//=======================================================================================================//
+
+// Treure tots els objectes
+removeAllWeapons player;
+removeAllItems player;
+removeAllAssignedItems player;
+removeAllItemsWithMagazines player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
+removeGoggles player;
+
+// Uniforme
+player forceAddUniform "rhs_uniform_FROG01_wd";
+(uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
+(uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+(uniformContainer player) addItemCargoGlobal ["ACE_CableTie",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_MapTools",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+
+// Armilla
+player addVest "rhsusf_spc_mg";
+(vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
+(vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
+(vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
+(vestContainer player) addItemCargoGlobal ["ACE_quikclot",3];
+(vestContainer player) addItemCargoGlobal ["ACE_tourniquet",1];
+(vestContainer player) addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",1];
+(vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",2];
+
+
+// Motxilla
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 (unitBackpack player) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",3];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m249_pip_S";
@@ -462,12 +547,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - FA M249 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << FA M249 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - FA M249 MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << FA M249 MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Metrallador: CC - Metrallador M240B OCP                                                               //
+// Metrallador: CC - Metrallador M240B MARPAT WD                                                         //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -482,16 +567,17 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["AGM_Bandage",6];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_SAW";
+player addVest "rhsusf_spc_mg";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -500,19 +586,17 @@ player addVest "rhsusf_iotv_ocp_SAW";
 (vestContainer player) addItemCargoGlobal ["ACE_CableTie",1];
 (vestContainer player) addItemCargoGlobal ["ACE_MapTools",1];
 (vestContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",2];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
+(vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",3];
+
 
 // Motxilla		
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 (unitBackpack player) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",2];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m240B_CAP";
@@ -531,12 +615,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Metrallador M240B OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Metrallador M240B OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Metrallador M240B MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Metrallador M240B MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Fuseller AT4: CC - AT M4A1+AT4 OCP                                                                    //
+// Fuseller AT4: CC - AT M4A1+AT4 MARPAT WD                                                              //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -551,7 +635,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -562,7 +646,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -575,7 +659,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -586,7 +670,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhs_m136_hedp_mag",1];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -608,12 +692,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - AT M4A1+AT4 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << AT M4A1+AT4 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Fuseller AT4 MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Fuseller AT4 MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Antitanc: CC - AT M4A1+Javelin OCP                                                                    //
+// Antitanc: CC - AT M4A1+Javelin MARPAT WD                                                              //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -627,7 +711,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -638,7 +722,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",2];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -651,7 +735,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -662,7 +746,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",1];
 	
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 	
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -684,12 +768,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - AT M4A1+Javelin OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << AT M4A1+Javelin OCP >> desat"];
+_loadout = [player,[_namespace,"CC - AT Javelin MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << AT Javelin MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Antitanc: CC - AA M4A1+Stinger OCP                                                                    //
+// Antitanc: CC - AA M4A1+Stinger MARPAT WD                                                              //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -703,7 +787,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -714,7 +798,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",2];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -727,7 +811,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -738,7 +822,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_fim92_mag",1];
 	
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 	
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -760,12 +844,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - AA M4A1+Stinger OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << AA M4A1+Stinger OCP >> desat"];
+_loadout = [player,[_namespace,"CC - AA Stinger MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << AA Stinger MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Tirador designat: CC - Tirador SR-25EC OCP                                                            //
+// Tirador designat: CC - Tirador SR-25EC MARPAT WD                                                      //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -780,34 +864,33 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_CableTie",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
 (uniformContainer player) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",1];
+(uniformContainer player) addItemCargoGlobal ["G_Tactical_Clear",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_MapTools",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_Kestrel4500",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_ATragMX",1];
+(uniformContainer player) addItemCargoGlobal ["ACE_RangeCard",1];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(uniformContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_marksman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_quikclot",3];
 (vestContainer player) addItemCargoGlobal ["ACE_tourniquet",1];
-(vestContainer player) addItemCargoGlobal ["G_Tactical_Clear",1];
-(vestContainer player) addItemCargoGlobal ["ACE_MapTools",1];
-(vestContainer player) addItemCargoGlobal ["ACE_Kestrel4500",1];
-(vestContainer player) addItemCargoGlobal ["ACE_ATragMX",1];
-(vestContainer player) addItemCargoGlobal ["ACE_RangeCard",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["rhsusf_acc_SR25S",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -817,7 +900,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",8];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_sr25_ec";
@@ -838,12 +921,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Tirador SR-25EC OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Tirador SR-25EC OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Tirador MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Tirador MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Metge: CC - Metge M4A1 OCP                                                                            //
+// Metge: CC - Metge M4A1 MARPAT WD                                                                      //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -858,29 +941,27 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",8];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",8];
-(uniformContainer player) addItemCargoGlobal ["ACE_atropine",12];
+(uniformContainer player) addItemCargoGlobal ["ACE_adenosine",12];
 (uniformContainer player) addItemCargoGlobal ["ACE_CableTie",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_tourniquet",3];
 (uniformContainer player) addItemCargoGlobal ["rhsusf_acc_rotex5_grey",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_Medic";
+player addVest "rhsusf_spc_corpsman";
 (vestContainer player) addItemCargoGlobal ["G_Tactical_Clear",1];
 (vestContainer player) addItemCargoGlobal ["ACE_MapTools",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 (vestContainer player) addItemCargoGlobal ["ACE_personalAidKit",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",15];
 (unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",8];
@@ -891,9 +972,10 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+(unitBackpack player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -914,12 +996,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Metge M4A1 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Metge M4A1 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Metge MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Metge MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Explosius: CC - Explosius M4A1 OCP                                                                    //
+// Explosius: CC - Explosius M4A1 MARPAT WD                                                              //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -934,7 +1016,7 @@ removeHeadgear player;
 removeGoggles player;
 
 // Uniforme
-player forceAddUniform "rhs_uniform_cu_ocp";
+player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",1];
@@ -946,7 +1028,7 @@ player forceAddUniform "rhs_uniform_cu_ocp";
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_squadleader";
+player addVest "rhsusf_spc_squadleader";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -960,7 +1042,7 @@ player addVest "rhsusf_iotv_ocp_squadleader";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_Clacker",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_DefusalKit",1];
@@ -970,7 +1052,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",1];
 
 // Casc
-player addHeadgear "rhsusf_ach_helmet_headset_ocp";
+player addHeadgear "rhsusf_opscore_rg_cover_pelt";
 
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -991,12 +1073,12 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Explosius M4A1 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Explosius M4A1 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Explosius MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Explosius MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Franctirador: CC - Franctirador M2010ESR OCP                                                          //
+// Franctirador: CC - Franctirador M2010ESR MARPAT WD                                                    //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -1018,11 +1100,11 @@ player forceAddUniform "U_B_GhillieSuit";
 (uniformContainer player) addItemCargoGlobal ["ACE_CableTie",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
 (uniformContainer player) addItemCargoGlobal ["rhsusf_acc_M2010S",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 (uniformContainer player) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",2];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_marksman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -1034,13 +1116,10 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_Kestrel4500",1];
 (vestContainer player) addItemCargoGlobal ["ACE_ATragMX",1];
 (vestContainer player) addItemCargoGlobal ["ACE_RangeCard",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",6];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+(vestContainer player) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",4];
 
 // Motxilla
-player addBackpack "rhsusf_assault_eagleaiii_ocp";
+player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -1049,7 +1128,7 @@ player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",8];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Armes
 player addWeapon "rhs_weap_XM2010_sa";
@@ -1070,12 +1149,12 @@ player linkItem "tf_anprc152";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Franctirador M2010ESR OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Franctirador M2010ESR OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Franctirador MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Franctirador MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
-// Observador: CC - Observador M4A1 OCP                                                          //
+// Observador: CC - Observador M4A1 MARPAT WD                                                            //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -1100,11 +1179,11 @@ player forceAddUniform "U_B_GhillieSuit";
 (uniformContainer player) addItemCargoGlobal ["G_Tactical_Clear",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_MapTools",1];
 (uniformContainer player) addItemCargoGlobal ["rhsusf_acc_rotex5_grey",1];
-(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
+(uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",2];
 
 // Armilla
-player addVest "rhsusf_iotv_ocp_rifleman";
+player addVest "rhsusf_spc_marksman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
 (vestContainer player) addItemCargoGlobal ["ACE_elasticBandage",3];
@@ -1113,11 +1192,9 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_Kestrel4500",1];
 (vestContainer player) addItemCargoGlobal ["ACE_ATragMX",1];
 (vestContainer player) addItemCargoGlobal ["ACE_RangeCard",1];
-(vestContainer player) addItemCargoGlobal ["ACE_Tripod",1];
-(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
+(vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",2];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6];
-(vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
 // Motxilla
 player addBackpack "tf_rt1523g_big_rhs";
@@ -1130,7 +1207,7 @@ player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Armes
 player addWeapon "rhs_weap_m4a1";
@@ -1152,8 +1229,8 @@ player linkItem "tf_anprc152";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Observador M4A1 OCP"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Observador M4A1 OCP >> desat"];
+_loadout = [player,[_namespace,"CC - Observador MARPAT WD"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Observador MARPAT WD >> desat"];
 sleep 5;
 
 //=======================================================================================================//
@@ -1203,10 +1280,10 @@ player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",7];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m67",2];
-(unitBackpack player) addItemCargoGlobal ["rhs_uniform_cu_ocp",1];
+(unitBackpack player) addItemCargoGlobal ["rhs_uniform_FROG01_wd",1];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Ulleres
 player addGoggles "G_Diving";
@@ -1230,8 +1307,8 @@ player linkItem "tf_anprc152";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Bussejador lider M4A1"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Bussejador lider M4A1>> desat"];
+_loadout = [player,[_namespace,"CC - Bussejador lider"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Bussejador lider >> desat"];
 sleep 5;
 
 //=======================================================================================================//
@@ -1277,10 +1354,10 @@ player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
-(unitBackpack player) addItemCargoGlobal ["rhs_uniform_cu_ocp",1];
+(unitBackpack player) addItemCargoGlobal ["rhs_uniform_FROG01_wd",1];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Ulleres
 player addGoggles "G_Diving";
@@ -1304,8 +1381,8 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Bussejador M4A1"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Bussejador M4A1 >> desat"];
+_loadout = [player,[_namespace,"CC - Bussejador"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Bussejador >> desat"];
 sleep 5;
 
 //=======================================================================================================//
@@ -1328,7 +1405,7 @@ player forceAddUniform "U_B_Wetsuit";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",8];
 (uniformContainer player) addItemCargoGlobal ["ACE_epinephrine",8];
-(uniformContainer player) addItemCargoGlobal ["ACE_atropine",12];
+(uniformContainer player) addItemCargoGlobal ["ACE_adenosine",12];
 (uniformContainer player) addItemCargoGlobal ["ACE_MapTools",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_key_west",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_salineIV_500",1];
@@ -1347,15 +1424,14 @@ player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",5];
 (unitBackpack player) addItemCargoGlobal ["ACE_elasticBandage",10];
 (unitBackpack player) addItemCargoGlobal ["ACE_quikclot",10];
-(unitBackpack player) addItemCargoGlobal ["ACE_tourniquet",3];
 (unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500",2];
 (unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5];
-(unitBackpack player) addItemCargoGlobal ["rhs_uniform_cu_ocp",1];
+(unitBackpack player) addItemCargoGlobal ["rhs_uniform_FROG01_wd",1];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Ulleres
 player addGoggles "G_Diving";
@@ -1379,8 +1455,8 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Bussejador metge M4A1"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Bussejador metge M4A1 >> desat"];
+_loadout = [player,[_namespace,"CC - Bussejador metge"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Bussejador metge >> desat"];
 sleep 5;
 
 //=======================================================================================================//
@@ -1427,11 +1503,11 @@ player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["ACE_tourniquet",1];
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5];
-(unitBackpack player) addMagazineCargoGlobal ["DemoCharge_Remote_Mag",3];
-(unitBackpack player) addItemCargoGlobal ["rhs_uniform_cu_ocp",1];
+(unitBackpack player) addMagazineCargoGlobal ["DemoCharge_Remote_Mag",2];
+(unitBackpack player) addItemCargoGlobal ["rhs_uniform_FROG01_wd",1];
 
 // Casc
-player addHeadgear "rhs_Booniehat_ocp";
+player addHeadgear "rhs_Booniehat_marpatwd";
 
 // Ulleres
 player addGoggles "G_Diving";
@@ -1455,8 +1531,8 @@ player linkItem "tf_rf7800str";
 
 sleep 5;
 _namespace = profileNamespace;
-_loadout = [player,[_namespace,"CC - Bussejador explosius M4A1"]] call BIS_fnc_saveInventory;
-player sidechat format ["%1", "Perfil << Bussejador explosius M4A1 >> desat"];
+_loadout = [player,[_namespace,"CC - Bussejador explosius"]] call BIS_fnc_saveInventory;
+player sidechat format ["%1", "Perfil << Bussejador explosius >> desat"];
 
 //=======================================================================================================//
 // Tots els perfils estan guardats                                                                       //

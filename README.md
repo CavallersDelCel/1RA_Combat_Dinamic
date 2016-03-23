@@ -2,9 +2,9 @@
 
 **Autors**: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack.
 
-**Versió**: 3.8.0g
+**Versió**: 3.9.1
 
-**Darrera modificació**: 2015/07/04
+**Darrera modificació**: 23/03/2016
 
 **Descripció**: Aquest document serveix per definir els diferents perfils de virtual arsenal que utlitzen els jugadors del grup
 1er Regiment Aerotransportant (1RA) de la Comunitat Catalana de Simulació, Cavallers del Cel (http://www.cavallersdelcel.cat).
@@ -28,26 +28,27 @@ Els perfils requereixen els següents mods per funcionar correctament:
 
 El següent llistat mostra els perfils suportats:
 
-| **Rol**        | **Nom del Perfil**          | 
-| ------------- | ------------- |
-| Líder d'esquadra | `CC - Lider d'esquadra M4A1+M320 OCP` |
-| Líder d'equip | `CC - Lider d'equip M4A1+M320 OCP` |
-| Fuseller | `CC - Fuseller M4A1 OCP` |
-| Fuseller AT4 | `CC - AT M4A1+AT4 OCP` |
-| Granader | `CC - Granader M4A1+M320 OCP` |
-| Fuseller automàtic | `CC - FA M249 OCP` |
-| Metrallador | `CC - Metrallador M240B OCP` |
-| Antitanc (Javelin) | `CC - AT M4A1+Javelin OCP` |
-| Antiaèri (Stinger) | `CC - AT M4A1+Stinger OCP` |
-| Tirador designat | `CC - Tirador SR-25EC OCP` |
-| Metge | `CC - Metge M4A1 OCP` |
-| Explosius | `CC - Explosius M4A1 OCP` |
-| Franctirador | `CC - Franctirador M2010ESR OCP` |
-| Observador | `CC - Observador M4A1 OCP` |
-| Bussejador líder | `CC - Bussejador lider M4A1` |
-| Bussejador | `CC - Bussejador M4A1` |
-| Bussejador metge | `CC - Bussejador metge M4A1` |
-| Bussejador explosius | `CC - Bussejador explosius M4A1` |
+| **Rol**             | **Nom del Perfil**               | 
+| ------------------- | -------------------------------- |
+| Líder d'esquadra    | CC - Lider d'esquadra MARPAT WD  |
+| Líder d'equip       | CC - Lider d'equip MARPAT WD     |
+| Fuseller            | CC - Fuseller MARPAT WD          |
+| Fuseller AT4        | CC - Fuseller AT4 MARPAT WD      |
+| Granader            | CC - Granader MARPAT WD          |
+| IAR                 | CC - FA M27IAR MARPAT WD         |
+| Fuseller automàtic  | CC - FA M249 MARPAT WD           |
+| Metrallador         | CC - Metrallador M240B MARPAT WD |
+| Antitanc (Javelin)  | CC - AT Javelin MARPAT WD        |
+| Antiaèri (Stinger)  | CC - AA Stinger MARPAT WD        |
+| Tirador designat    | CC - Tirador MARPAT WD           |
+| Metge               | CC - Metge MARPAT WD             |
+| Explosius           | CC - Explosius MARPAT WD         |
+| Franctirador        | CC - Franctirador MARPAT WD      |
+| Observador          | CC - Observador MARPAT WD        |
+| Bussejador líder    | CC - Bussejador lider            |
+| Bussejador          | CC - Bussejador                  |
+| Bussejador metge    | CC - Bussejador metge            |
+| Bussejador explosius| CC - Bussejador explosius        |
 
 ### Historial de canvis:
 
@@ -61,3 +62,6 @@ El següent llistat mostra els perfils suportats:
 * **3.6.0** *2015/06/21*: Conversió dels perfils a ACE3 i addició del perfil d'Observador `CC - Observador M4A1 OCP` per CC_Viper
 * **3.7.0** *2015/06/27*: Canviat ItemRadio de tots els perfils pel model `tf_anprc152` als líders i el model `tf_rf7800str` a la resta per CC_Viper.
 * **3.8.0** *2015/07/04*: Modificada l'equipació dels metges per CC_Viper. El perfil d'observadors inclou una ràdio de llarg abast `tf_rt1523g_big_rhs` i una ràdio curta `tf_anprc152` per CC_Magnetar. 
+* **3.8.1** *2015/07/29*: Afegit el HuntIR al perfil de líder d'esquadra per CC_Magnetar.
+* **3.9.0** *2016/03/04*: Canviats els camuflatges per MARPAT WD a l'uniforme, SPC a l'armilla i casc OPS Core Ranger Green. Inclòs perfil FA M27 IAR MARPAT WD. Canviats els noms dels perfils. Retocat equipament vari degut a la diferent capacitat de les armilles SPC.
+* **3.9.1** *2016/03/23*: Canviada la ACE_atropine per ACE_adenosine. Corregit falta d'un carregador a la M249 i a la M240. Corregit falta de missil al Javelin.
