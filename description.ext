@@ -156,7 +156,7 @@ class AOW_EnableAmbient
 title = $STR_AOW_EnableAmbient;
 values[] = {0,1,2,3,4};
 texts[] = {"No","Si (No Mod)","Si (EASTvsWEST)","Si (RHS ESCALATION)","Si (IRON FRONT)"};
-default = 1;
+default = 0;
        };
 class AOW_AIAmbiant
 {// 12
