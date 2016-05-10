@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: 1RAPerfils.sqf                                                                                 //
 // Autor: CC_Viper, CC_Magnetar, CC_OMSmolina i CC_TBlack                                                //
-// Versió: 3.9.1                                                                                           //
+// Versió: 3.9.1                                                                                         //
 // Creació del Document: 25/04/2015                                                                      //
 // Descripció: Aquest document serveix per definir els diferents perfils que utlitzen els jugadors del   //
 //             grup de Cavallers del Cel (http://www.cavallersdelcel.cat). Es requereixen els següents   //
@@ -62,7 +62,7 @@
 //                            els noms dels perfils. Retocat equipament vari degut a la diferent         //
 //                            capacitat de les armilles SPC.                                             //
 //         3.9.1 (23/03/2016) Canviada la ACE_atropine per ACE_adenosine. Corregit falta d'un carregador //
-//                            a la M249 i a la M240. Corregit falta de missil al Javelin.                //
+//                            a la M249 i a la M240. Corregit falta de missil al Javelin                 //
 //                                                                                                       //
 // Notes: Qualsevol canvi a aquest document ha de ser notificat a CC_Viper. No es permeten modificacions //
 //        personals d'aquest document durant les partides oficials dels Cavallers del Cel. Qualsevol     //
@@ -76,16 +76,16 @@ _guardarPerfils = ["Estàs segur de desar els perfils?", "Perfils 1RA", true, tr
 if ( !_guardarPerfils ) exitWith{
 	// No fer res si la resposta és negativa (Cancel) i sortir del script
 };
+
 // Desactivar qualsevol moviment del jugador
 disableUserInput true;
 
-_blackScreen = execVM "fnc\effects\blackScreen.sqf";
-
 // Informa al jugador del que s'està fent.
-player sidechat format ["%1", "Carregant i desant tots els perfils. Trigarà 3 minuts, espera si us plau..."];
+titleCut ["Carregant i desant tots els perfils. Trigarà 3 minuts, espera si us plau...", "BLACK FADED", 999];
+
 
 //=======================================================================================================//
-// Líder d'Esquadra CC - Lider d'esquadra M4A1+M320 MARPAT WD                                            //
+// Líder d'esquadra CC - Lider d'esquadra M4A1+M320 MARPAT WD                                            //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -162,14 +162,14 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Lider d'esquadra MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Lider d'esquadra MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
-// Líder d'Equip: CC - Lider d'equip M4A1+M320 MARPAT WD                                                 //
+// Líder d'equip: CC - Lider d'equip M4A1+M320 MARPAT WD                                                 //
 //=======================================================================================================//
 
 // Treure tots els objectes
@@ -183,7 +183,7 @@ removeBackpack player;
 removeHeadgear player;
 removeGoggles player;
 
-// Uniforme 
+// Uniforme
 player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addItemCargoGlobal ["ACE_EarPlugs",1];
 (uniformContainer player) addItemCargoGlobal ["ACE_morphine",2];
@@ -247,11 +247,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Lider d'equip MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Lider d'equip MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Fuseller: CC - Fuseller M4A1 MARPAT WD                                                                //
@@ -279,7 +279,7 @@ player forceAddUniform "rhs_uniform_FROG01_wd";
 (uniformContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",3];
 (uniformContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",1];
 
-// Armilla 
+// Armilla
 player addVest "rhsusf_spc_rifleman";
 (vestContainer player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (vestContainer player) addItemCargoGlobal ["ACE_packingBandage",3];
@@ -322,11 +322,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Fuseller MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Fuseller MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Granader: CC - Granader M4A1+M320 MARPAT WD                                                           //
@@ -399,11 +399,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Granader MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Granader MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // IAR: CC - FA M27 IAR MARPAT WD                                                                        //
@@ -545,11 +545,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - FA M249 MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << FA M249 MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Metrallador: CC - Metrallador M240B MARPAT WD                                                         //
@@ -589,7 +589,7 @@ player addVest "rhsusf_spc_mg";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",3];
 
 
-// Motxilla		
+// Motxilla
 player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
@@ -613,11 +613,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Metrallador M240B MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Metrallador M240B MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Fuseller AT4: CC - AT M4A1+AT4 MARPAT WD                                                              //
@@ -690,11 +690,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Fuseller AT4 MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Fuseller AT4 MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Antitanc: CC - AT M4A1+Javelin MARPAT WD                                                              //
@@ -744,10 +744,10 @@ player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_red",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_green",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",1];
-	
+
 // Casc
 player addHeadgear "rhsusf_opscore_rg_cover_pelt";
-	
+
 // Armes
 player addWeapon "rhs_weap_m4a1";
 player addPrimaryWeaponItem "rhsusf_acc_SF3P556";
@@ -766,11 +766,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - AT Javelin MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << AT Javelin MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Antitanc: CC - AA M4A1+Stinger MARPAT WD                                                              //
@@ -820,10 +820,10 @@ player addBackpack "rhsusf_assault_eagleaiii_coy";
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_red",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_m18_green",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_fim92_mag",1];
-	
+
 // Casc
 player addHeadgear "rhsusf_opscore_rg_cover_pelt";
-	
+
 // Armes
 player addWeapon "rhs_weap_m4a1";
 player addPrimaryWeaponItem "rhsusf_acc_SF3P556";
@@ -842,11 +842,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - AA Stinger MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << AA Stinger MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Tirador designat: CC - Tirador SR-25EC MARPAT WD                                                      //
@@ -919,11 +919,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Tirador MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Tirador MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Metge: CC - Metge M4A1 MARPAT WD                                                                      //
@@ -994,11 +994,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Metge MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Metge MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Explosius: CC - Explosius M4A1 MARPAT WD                                                              //
@@ -1071,11 +1071,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Explosius MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Explosius MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Franctirador: CC - Franctirador M2010ESR MARPAT WD                                                    //
@@ -1147,11 +1147,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Franctirador MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Franctirador MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Observador: CC - Observador M4A1 MARPAT WD                                                            //
@@ -1227,11 +1227,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Observador MARPAT WD"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Observador MARPAT WD >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador líder: CC - Bussejador lider M4A1                                                          //
@@ -1305,11 +1305,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador lider"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador lider >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador: CC - Bussejador M4A1                                                                      //
@@ -1379,11 +1379,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador metge: CC - Bussejador metge M4A1                                                          //
@@ -1453,11 +1453,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador metge"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador metge >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador explosius: CC - Bussejador explosius M4A1                                                  //
@@ -1529,7 +1529,7 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador explosius"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador explosius >> desat"];
@@ -1537,9 +1537,7 @@ player sidechat format ["%1", "Perfil << Bussejador explosius >> desat"];
 //=======================================================================================================//
 // Tots els perfils estan guardats                                                                       //
 //=======================================================================================================//
-terminate _blackScreen;
-sleep 5;
-cutText ["","BLACK IN",10];
+titleCut ["Tots els perfils desats.", "BLACK IN", 5];
 disableUserInput false;
 sleep 5;
 player sidechat format ["%1", "Tots els perfils desats."];
